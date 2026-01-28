@@ -1,0 +1,65 @@
+name: Issue Labeling
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label by Title
+        uses: actions/labeler@v4
+        with:
+          configuration-path: .github/labeler.yml
+```
+
+---
+
+### **Project Structure**
+```
+RSSReader/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── story.md
+│   │   ├── task.md
+│   │   └── bug.md
+│   └── workflows/
+│       ├── ci.yml
+│       └── label-automation.yml
+├── docs/
+│   ├── architecture/
+│   │   └── feed-subscription.md
+│   ├── STANDARDS.md
+│   ├── CONVENTIONS.md
+│   └── agent-prompts/
+│       ├── architect.md
+│       ├── scrum-master.md
+│       ├── engineer.md
+│       └── qa.md
+├── RSSReader/
+│   ├── Models/
+│   ├── Views/
+│   ├── ViewModels/
+│   ├── Services/
+│   └── Utilities/
+├── RSSReaderTests/
+├── Package.swift
+├── .swiftlint.yml
+└── README.md
+```
+
+---
+
+## Agent Coordination Mechanisms
+
+### **1. GitHub Labels as State Machine**
+```
+Product Flow:
+[product] → [arch-review] → [ready-for-breakdown] → [ready-for-dev] → [in-progress] → [in-review] → [done]
+
+Agent Triggers:
+- Architect: Monitors issues with [arch-review]
+- Scrum Master: Monitors issues with [ready-for-breakdown]
+- Engineer: Monitors issues with [ready-for-dev]
+- QA: Monitors PRs with [ready-for-review]

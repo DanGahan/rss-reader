@@ -1,0 +1,25 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Build
+        run: xcodebuild build -scheme RSSReader -destination 'platform=macOS'
+      
+      - name: Test
+        run: xcodebuild test -scheme RSSReader -destination 'platform=macOS' \
+          -enableCodeCoverage YES
+      
+      - name: SwiftLint
+        run: swiftlint lint --strict
+      
+      - name: Coverage Report
+        run: xcrun xccov view --report --only-targets \
+          DerivedData/Logs/Test/*.xcresult
