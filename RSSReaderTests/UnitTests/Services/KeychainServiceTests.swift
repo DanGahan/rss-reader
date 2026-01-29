@@ -11,7 +11,6 @@ import Testing
 
 @Suite("KeychainService Tests", .serialized)
 struct KeychainServiceTests {
-
     // MARK: - Test Helpers
 
     private func makeToken(
@@ -144,7 +143,6 @@ struct KeychainServiceTests {
 
 @Suite("KeychainError Tests")
 struct KeychainErrorTests {
-
     @Test("Unexpected data error description")
     func unexpectedDataDescription() {
         let error = KeychainError.unexpectedData
