@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CDFolder" representedClassName="CDFolder" syncable="YES" codeGenerationType="manual">
+    <entity name="CDFolder" representedClassName="CDFolder" syncable="YES">
         <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="sortOrder" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDFeed" inverseName="folder" inverseEntity="CDFeed"/>
     </entity>
-    <entity name="CDFeed" representedClassName="CDFeed" syncable="YES" codeGenerationType="manual">
+    <entity name="CDFeed" representedClassName="CDFeed" syncable="YES">
         <attribute name="feedURL" attributeType="String"/>
         <attribute name="iconURL" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -19,7 +19,7 @@
         <relationship name="articles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDArticle" inverseName="feed" inverseEntity="CDArticle"/>
         <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFolder" inverseName="feeds" inverseEntity="CDFolder"/>
     </entity>
-    <entity name="CDArticle" representedClassName="CDArticle" syncable="YES" codeGenerationType="manual">
+    <entity name="CDArticle" representedClassName="CDArticle" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
@@ -42,7 +42,7 @@
             <fetchIndexElement property="dateAdded" type="Binary" order="descending"/>
         </fetchIndex>
     </entity>
-    <entity name="CDAppSettings" representedClassName="CDAppSettings" syncable="YES" codeGenerationType="manual">
+    <entity name="CDAppSettings" representedClassName="CDAppSettings" syncable="YES">
         <attribute name="articleRetentionCount" attributeType="Integer 32" defaultValueString="1000" usesScalarValueType="YES"/>
         <attribute name="articleRetentionDays" attributeType="Integer 32" defaultValueString="30" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>

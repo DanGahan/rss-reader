@@ -15,14 +15,13 @@ import Foundation
 /// This allows SPM-based tests to run without a compiled
 /// `.xcdatamodeld` bundle, which only Xcode produces.
 enum CoreDataModel {
-    /// Shared model instance. Core Data requires a single model
-    /// per class name to avoid ambiguity, so we cache it.
-    // swiftlint:disable:next identifier_name
-    private static let _shared: NSManagedObjectModel = buildModel()
+    // Shared model instance. Core Data requires a single model
+    // per class name to avoid ambiguity, so we cache it.
+    private static let shared: NSManagedObjectModel = buildModel()
 
     /// Returns the shared managed object model.
     static func makeModel() -> NSManagedObjectModel {
-        _shared
+        shared
     }
 
     private static func buildModel() -> NSManagedObjectModel {

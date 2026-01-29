@@ -100,57 +100,16 @@ struct CDFolderTests {
     func unreadCount() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Tech")
-
-        let feed1 = CDFeed.create(
-            in: context,
-            title: "Feed 1",
-            feedURL: "https://example.com/1"
-        )
-        feed1.folder = folder
-
-        let feed2 = CDFeed.create(
-            in: context,
-            title: "Feed 2",
-            feedURL: "https://example.com/2"
-        )
-        feed2.folder = folder
+        let feed1 = makeFeed(context: context, title: "Feed 1", folder: folder)
+        let feed2 = makeFeed(context: context, title: "Feed 2", folder: folder)
 
         // Feed 1: 2 unread, 1 read
-        CDArticle.create(
-            in: context,
-            id: "a1",
-            title: "Article 1",
-            link: "https://example.com/a1",
-            published: Date(),
-            feed: feed1
-        )
-        CDArticle.create(
-            in: context,
-            id: "a2",
-            title: "Article 2",
-            link: "https://example.com/a2",
-            published: Date(),
-            feed: feed1
-        )
-        let readArticle = CDArticle.create(
-            in: context,
-            id: "a3",
-            title: "Article 3",
-            link: "https://example.com/a3",
-            published: Date(),
-            feed: feed1
-        )
-        readArticle.isRead = true
+        makeArticle(context: context, id: "a1", feed: feed1)
+        makeArticle(context: context, id: "a2", feed: feed1)
+        makeArticle(context: context, id: "a3", feed: feed1).isRead = true
 
         // Feed 2: 1 unread
-        CDArticle.create(
-            in: context,
-            id: "a4",
-            title: "Article 4",
-            link: "https://example.com/a4",
-            published: Date(),
-            feed: feed2
-        )
+        makeArticle(context: context, id: "a4", feed: feed2)
 
         try context.save()
         #expect(folder.unreadCount == 3)
@@ -161,5 +120,38 @@ struct CDFolderTests {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Empty")
         #expect(folder.unreadCount == 0)
+    }
+
+    // MARK: - Helpers
+
+    @discardableResult
+    private func makeFeed(
+        context: NSManagedObjectContext,
+        title: String,
+        folder: CDFolder
+    ) -> CDFeed {
+        let feed = CDFeed.create(
+            in: context,
+            title: title,
+            feedURL: "https://example.com/\(title)"
+        )
+        feed.folder = folder
+        return feed
+    }
+
+    @discardableResult
+    private func makeArticle(
+        context: NSManagedObjectContext,
+        id: String,
+        feed: CDFeed
+    ) -> CDArticle {
+        CDArticle.create(
+            in: context,
+            id: id,
+            title: "Article \(id)",
+            link: "https://example.com/\(id)",
+            published: Date(),
+            feed: feed
+        )
     }
 }

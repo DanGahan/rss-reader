@@ -28,27 +28,27 @@ public class CDFolder: NSManagedObject {
 
 // MARK: - Fetch Request
 
-extension CDFolder {
+public extension CDFolder {
     @nonobjc
-    public class func fetchRequest() -> NSFetchRequest<CDFolder> {
+    class func fetchRequest() -> NSFetchRequest<CDFolder> {
         NSFetchRequest<CDFolder>(entityName: "CDFolder")
     }
 }
 
 // MARK: - Generated Accessors for Feeds
 
-extension CDFolder {
+public extension CDFolder {
     @objc(addFeedsObject:)
-    @NSManaged public func addToFeeds(_ value: CDFeed)
+    @NSManaged func addToFeeds(_ value: CDFeed)
 
     @objc(removeFeedsObject:)
-    @NSManaged public func removeFromFeeds(_ value: CDFeed)
+    @NSManaged func removeFromFeeds(_ value: CDFeed)
 
     @objc(addFeeds:)
-    @NSManaged public func addToFeeds(_ values: NSSet)
+    @NSManaged func addToFeeds(_ values: NSSet)
 
     @objc(removeFeeds:)
-    @NSManaged public func removeFromFeeds(_ values: NSSet)
+    @NSManaged func removeFromFeeds(_ values: NSSet)
 }
 
 // MARK: - Convenience

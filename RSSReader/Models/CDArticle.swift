@@ -25,9 +25,9 @@ public class CDArticle: NSManagedObject {
 
 // MARK: - Fetch Request
 
-extension CDArticle {
+public extension CDArticle {
     @nonobjc
-    public class func fetchRequest() -> NSFetchRequest<CDArticle> {
+    class func fetchRequest() -> NSFetchRequest<CDArticle> {
         NSFetchRequest<CDArticle>(entityName: "CDArticle")
     }
 }

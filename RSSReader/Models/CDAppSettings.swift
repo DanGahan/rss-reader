@@ -19,9 +19,9 @@ public class CDAppSettings: NSManagedObject {
 
 // MARK: - Fetch Request
 
-extension CDAppSettings {
+public extension CDAppSettings {
     @nonobjc
-    public class func fetchRequest() -> NSFetchRequest<CDAppSettings> {
+    class func fetchRequest() -> NSFetchRequest<CDAppSettings> {
         NSFetchRequest<CDAppSettings>(entityName: "CDAppSettings")
     }
 }

@@ -33,27 +33,27 @@ public class CDFeed: NSManagedObject {
 
 // MARK: - Fetch Request
 
-extension CDFeed {
+public extension CDFeed {
     @nonobjc
-    public class func fetchRequest() -> NSFetchRequest<CDFeed> {
+    class func fetchRequest() -> NSFetchRequest<CDFeed> {
         NSFetchRequest<CDFeed>(entityName: "CDFeed")
     }
 }
 
 // MARK: - Generated Accessors for Articles
 
-extension CDFeed {
+public extension CDFeed {
     @objc(addArticlesObject:)
-    @NSManaged public func addToArticles(_ value: CDArticle)
+    @NSManaged func addToArticles(_ value: CDArticle)
 
     @objc(removeArticlesObject:)
-    @NSManaged public func removeFromArticles(_ value: CDArticle)
+    @NSManaged func removeFromArticles(_ value: CDArticle)
 
     @objc(addArticles:)
-    @NSManaged public func addToArticles(_ values: NSSet)
+    @NSManaged func addToArticles(_ values: NSSet)
 
     @objc(removeArticles:)
-    @NSManaged public func removeFromArticles(_ values: NSSet)
+    @NSManaged func removeFromArticles(_ values: NSSet)
 }
 
 // MARK: - Convenience
