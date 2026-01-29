@@ -51,7 +51,7 @@ struct Article: Identifiable, Hashable {
         hasher.combine(id)
     }
 
-    static func == (lhs: Article, rhs: Article) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }
 

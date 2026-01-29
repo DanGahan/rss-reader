@@ -22,7 +22,7 @@ struct Feed: Identifiable, Hashable, Codable {
         hasher.combine(id)
     }
 
-    static func == (lhs: Feed, rhs: Feed) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }
 }

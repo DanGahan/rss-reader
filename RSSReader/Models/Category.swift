@@ -27,7 +27,7 @@ struct Category: Identifiable, Hashable {
         hasher.combine(id)
     }
 
-    static func == (lhs: Category, rhs: Category) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }
 }

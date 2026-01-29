@@ -27,7 +27,7 @@ enum AppError: LocalizedError, Identifiable, Equatable {
             return "Authentication failed: \(message)"
         case .networkError(let message):
             return "Network error: \(message)"
-        case .apiError(let code, let message):
+        case let .apiError(code, message):
             return "Feedly API error (\(code)): \(message)"
         case .invalidResponse:
             return "Invalid response from server"
