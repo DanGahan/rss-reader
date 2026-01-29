@@ -17,6 +17,10 @@ let package = Package(
     ],
     dependencies: [
         .package(
+            url: "https://github.com/nmdias/FeedKit.git",
+            from: "9.1.2"
+        ),
+        .package(
             url: "https://github.com/swiftlang/swift-testing.git",
             branch: "main"
         )
@@ -24,11 +28,15 @@ let package = Package(
     targets: [
         .target(
             name: "RSSReader",
+            dependencies: [
+                .product(name: "FeedKit", package: "FeedKit")
+            ],
             path: "RSSReader",
             exclude: [
                 "Info.plist",
                 "RSSReader.entitlements",
-                "App/RSSReaderApp.swift"
+                "App/RSSReaderApp.swift",
+                "RSSReader.xcdatamodeld"
             ],
             swiftSettings: [
                 .swiftLanguageMode(.v5)
