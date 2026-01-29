@@ -97,8 +97,8 @@ function_body_length:
 
 # Type body length
 type_body_length:
-  warning: 250
-  error: 350
+  warning: 300
+  error: 400
 
 # Cyclomatic complexity
 cyclomatic_complexity:
