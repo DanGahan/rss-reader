@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="CDFeed" representedClassName="CDFeed" syncable="YES" codeGenerationType="class">
-        <attribute name="feedURL" attributeType="String"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="lastRefreshed" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="title" attributeType="String"/>
-        <attribute name="unreadCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDArticle" inverseName="feed" inverseEntity="CDArticle"/>
-        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFolder" inverseName="feeds" inverseEntity="CDFolder"/>
-    </entity>
-    <entity name="CDArticle" representedClassName="CDArticle" syncable="YES" codeGenerationType="class">
-        <attribute name="author" optional="YES" attributeType="String"/>
-        <attribute name="content" optional="YES" attributeType="String"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="isRead" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="isStarred" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="publishedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="summary" optional="YES" attributeType="String"/>
-        <attribute name="title" attributeType="String"/>
-        <attribute name="url" optional="YES" attributeType="String"/>
-        <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFeed" inverseName="articles" inverseEntity="CDFeed"/>
-    </entity>
-    <entity name="CDFolder" representedClassName="CDFolder" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDFolder" representedClassName="CDFolder" syncable="YES">
+        <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="sortOrder" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDFeed" inverseName="folder" inverseEntity="CDFeed"/>
+        <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDFeed" inverseName="folder" inverseEntity="CDFeed"/>
+    </entity>
+    <entity name="CDFeed" representedClassName="CDFeed" syncable="YES">
+        <attribute name="feedURL" attributeType="String"/>
+        <attribute name="iconURL" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastError" optional="YES" attributeType="String"/>
+        <attribute name="lastFetched" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="refreshInterval" attributeType="Integer 32" defaultValueString="600" usesScalarValueType="YES"/>
+        <attribute name="siteURL" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDArticle" inverseName="feed" inverseEntity="CDArticle"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFolder" inverseName="feeds" inverseEntity="CDFolder"/>
+    </entity>
+    <entity name="CDArticle" representedClassName="CDArticle" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="isRead" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="link" attributeType="String"/>
+        <attribute name="published" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFeed" inverseName="articles" inverseEntity="CDFeed"/>
+        <fetchIndex name="byFeedAndPublished">
+            <fetchIndexElement property="feed" type="Binary" order="ascending"/>
+            <fetchIndexElement property="published" type="Binary" order="descending"/>
+        </fetchIndex>
+        <fetchIndex name="byIsRead">
+            <fetchIndexElement property="isRead" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byDateAdded">
+            <fetchIndexElement property="dateAdded" type="Binary" order="descending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="CDAppSettings" representedClassName="CDAppSettings" syncable="YES">
+        <attribute name="articleRetentionCount" attributeType="Integer 32" defaultValueString="1000" usesScalarValueType="YES"/>
+        <attribute name="articleRetentionDays" attributeType="Integer 32" defaultValueString="30" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastCleanupDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="refreshInterval" attributeType="Integer 32" defaultValueString="600" usesScalarValueType="YES"/>
     </entity>
 </model>
