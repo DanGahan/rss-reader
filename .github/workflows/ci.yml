@@ -4,22 +4,42 @@ on:
   pull_request:
     branches: [main, develop]
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-test:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       - name: Build
-        run: xcodebuild build -scheme RSSReader -destination 'platform=macOS'
-      
+        run: |
+          xcodebuild build \
+            -scheme RSSReader \
+            -destination 'platform=macOS'
+
       - name: Test
-        run: xcodebuild test -scheme RSSReader -destination 'platform=macOS' \
-          -enableCodeCoverage YES
-      
+        run: |
+          xcodebuild test \
+            -scheme RSSReader \
+            -destination 'platform=macOS' \
+            -enableCodeCoverage YES \
+            -resultBundlePath TestResults.xcresult
+
+      - name: Coverage Report
+        run: |
+          xcrun xccov view --report --only-targets \
+            TestResults.xcresult
+
+  lint:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
       - name: SwiftLint
         run: swiftlint lint --strict
-      
-      - name: Coverage Report
-        run: xcrun xccov view --report --only-targets \
-          DerivedData/Logs/Test/*.xcresult
