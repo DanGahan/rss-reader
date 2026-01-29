@@ -39,13 +39,14 @@ struct FeedlyAPIServiceTests {
     ) -> HTTPURLResponse {
         // swiftlint:disable:next force_unwrapping
         let responseURL = URL(string: url)!
-        // swiftlint:disable:next force_unwrapping
-        return HTTPURLResponse(
+        let response = HTTPURLResponse(
             url: responseURL,
             statusCode: statusCode,
             httpVersion: nil,
             headerFields: nil
-        )!
+        )
+        // swiftlint:disable:next force_unwrapping
+        return response!
     }
 
     // MARK: - Authorization URL Tests
