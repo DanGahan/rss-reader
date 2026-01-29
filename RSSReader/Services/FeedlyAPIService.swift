@@ -7,8 +7,8 @@
 
 import Foundation
 
-// swiftlint:disable:next type_body_length
 /// Concrete implementation of the Feedly API v3 client.
+// swiftlint:disable:next type_body_length
 final class FeedlyAPIService: FeedlyAPIServiceProtocol {
     // MARK: - Properties
 
