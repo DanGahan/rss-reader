@@ -95,7 +95,7 @@
 		A2000070 /* ViewModelPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPlaceholder.swift; sourceTree = "<group>"; };
 
 		/* Core Data */
-		A2000080 /* RSSReader.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = RSSReader.xcdatamodeld; path = RSSReader/RSSReader.xcdatamodeld; sourceTree = "<group>"; };
+		A2000080 /* RSSReader.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = RSSReader.xcdatamodeld; sourceTree = "<group>"; };
 
 		/* Unit Tests */
 		A2000030 /* AppErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorTests.swift; sourceTree = "<group>"; };
