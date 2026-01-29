@@ -1,4 +1,4 @@
-// swiftlint:disable file_length force_unwrapping
+// swiftlint:disable file_length
 //
 //  FeedlyAPIServiceTests.swift
 //  RSSReaderTests
@@ -11,6 +11,7 @@ import Testing
 @testable import RSSReader
 
 @Suite("FeedlyAPIService Tests", .serialized)
+// swiftlint:disable:next type_body_length
 struct FeedlyAPIServiceTests {
     // MARK: - Test Helpers
 
@@ -36,8 +37,11 @@ struct FeedlyAPIServiceTests {
         statusCode: Int,
         url: String = "https://cloud.feedly.com/v3/test"
     ) -> HTTPURLResponse {
-        HTTPURLResponse(
-            url: URL(string: url)!,
+        // swiftlint:disable:next force_unwrapping
+        let responseURL = URL(string: url)!
+        // swiftlint:disable:next force_unwrapping
+        return HTTPURLResponse(
+            url: responseURL,
             statusCode: statusCode,
             httpVersion: nil,
             headerFields: nil
@@ -67,7 +71,7 @@ struct FeedlyAPIServiceTests {
     func exchangeCodeForToken() async throws {
         let (service, _) = makeSUT()
 
-        let tokenJSON = """
+        let tokenJSON = Data("""
         {
             "accessToken": "access-123",
             "refreshToken": "refresh-456",
@@ -76,7 +80,7 @@ struct FeedlyAPIServiceTests {
             "scope": "https://cloud.feedly.com/subscriptions",
             "createdAt": 1706400000
         }
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
             #expect(request.httpMethod == "POST")
@@ -100,13 +104,13 @@ struct FeedlyAPIServiceTests {
     func getCurrentUser() async throws {
         let (service, _) = makeSUT()
 
-        let userJSON = """
+        let userJSON = Data("""
         {
             "id": "user/123",
             "email": "test@example.com",
             "fullName": "Test User"
         }
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
             #expect(request.httpMethod == "GET")
@@ -132,7 +136,7 @@ struct FeedlyAPIServiceTests {
     func getSubscriptions() async throws {
         let (service, _) = makeSUT()
 
-        let subsJSON = """
+        let subsJSON = Data("""
         [
             {
                 "id": "feed/1",
@@ -142,7 +146,7 @@ struct FeedlyAPIServiceTests {
                 ]
             }
         ]
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
             #expect(
@@ -164,14 +168,14 @@ struct FeedlyAPIServiceTests {
     func getUnreadCounts() async throws {
         let (service, _) = makeSUT()
 
-        let countsJSON = """
+        let countsJSON = Data("""
         {
             "unreadcounts": [
                 {"id": "feed/1", "count": 42},
                 {"id": "feed/2", "count": 7}
             ]
         }
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
             #expect(
@@ -192,15 +196,16 @@ struct FeedlyAPIServiceTests {
     func getStreamContents() async throws {
         let (service, _) = makeSUT()
 
-        let streamJSON = """
+        let streamJSON = Data("""
         {
             "id": "feed/1",
             "title": "Test Stream",
             "continuation": "next-page-token"
         }
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
+            // swiftlint:disable:next force_unwrapping
             let url = request.url!.absoluteString
             #expect(url.contains("streams/contents"))
             #expect(url.contains("streamId=feed/1"))
@@ -223,13 +228,14 @@ struct FeedlyAPIServiceTests {
     func getStreamContentsWithContinuation() async throws {
         let (service, _) = makeSUT()
 
-        let streamJSON = """
+        let streamJSON = Data("""
         {
             "id": "feed/1"
         }
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
+            // swiftlint:disable:next force_unwrapping
             let url = request.url!.absoluteString
             #expect(url.contains("continuation=abc123"))
             return (self.makeResponse(statusCode: 200), streamJSON)
@@ -333,7 +339,7 @@ struct FeedlyAPIServiceTests {
     func serverErrorThrowsAPIError() async {
         let (service, _) = makeSUT()
 
-        let errorBody = "Internal Server Error".data(using: .utf8)!
+        let errorBody = Data("Internal Server Error".utf8)
         MockURLProtocol.requestHandler = { _ in
             (self.makeResponse(statusCode: 500), errorBody)
         }
@@ -388,9 +394,9 @@ struct FeedlyAPIServiceTests {
     func requestHeaders() async throws {
         let (service, _) = makeSUT()
 
-        let userJSON = """
+        let userJSON = Data("""
         {"id": "user/1", "email": "test@test.com"}
-        """.data(using: .utf8)!
+        """.utf8)
 
         MockURLProtocol.requestHandler = { request in
             #expect(
@@ -412,7 +418,6 @@ struct FeedlyAPIServiceTests {
 
 @Suite("RateLimiter Tests")
 struct RateLimiterTests {
-
     @Test("Allows requests within limit")
     func allowsRequestsWithinLimit() async throws {
         let limiter = RateLimiter(requestsPerMinute: 10)
