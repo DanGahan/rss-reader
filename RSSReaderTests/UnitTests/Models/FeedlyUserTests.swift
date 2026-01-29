@@ -11,7 +11,6 @@ import Testing
 
 @Suite("FeedlyUser Tests")
 struct FeedlyUserTests {
-
     // MARK: - Display Name Tests
 
     @Test("Display name returns fullName when available")
@@ -58,7 +57,7 @@ struct FeedlyUserTests {
         }
         """
 
-        let data = json.data(using: .utf8)!
+        let data = try #require(json.data(using: .utf8))
         let user = try JSONDecoder().decode(FeedlyUser.self, from: data)
 
         #expect(user.id == "user123")
@@ -81,7 +80,7 @@ struct FeedlyUserTests {
         }
         """
 
-        let data = json.data(using: .utf8)!
+        let data = try #require(json.data(using: .utf8))
         let user = try JSONDecoder().decode(FeedlyUser.self, from: data)
 
         #expect(user.id == "user123")

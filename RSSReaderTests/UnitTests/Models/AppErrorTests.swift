@@ -10,7 +10,6 @@ import Testing
 
 @Suite("AppError Tests")
 struct AppErrorTests {
-
     // MARK: - Error Description Tests
 
     @Test("Authentication failed error description")

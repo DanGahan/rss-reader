@@ -8,7 +8,6 @@
 import XCTest
 
 final class RSSReaderUITests: XCTestCase {
-
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
