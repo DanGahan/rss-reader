@@ -1,4 +1,3 @@
-cat > run-agent.sh << 'EOF'
 #!/bin/bash
 
 AGENT=$1
@@ -104,7 +103,7 @@ build_allowlist() {
     local commands=("$@")
     local allowlist=""
     for cmd in "${commands[@]}"; do
-        allowlist="$allowlist --dangerously-skip-confirmation-for '$cmd'"
+        allowlist="$allowlist '$cmd'"
     done
     echo "$allowlist"
 }
@@ -146,6 +145,3 @@ case $AGENT in
     exit 1
     ;;
 esac
-EOF
-
-chmod +x run-agent.sh
