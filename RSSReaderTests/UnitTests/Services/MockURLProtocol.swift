@@ -8,7 +8,7 @@
 import Foundation
 
 /// A mock URL protocol for intercepting and stubbing network requests.
-final class MockURLProtocol: URLProtocol {
+class MockURLProtocol: URLProtocol {
     /// Handler to provide mock responses for requests.
     nonisolated(unsafe) static var requestHandler: (
         (URLRequest) throws -> (HTTPURLResponse, Data?)
@@ -28,9 +28,9 @@ final class MockURLProtocol: URLProtocol {
     }
 
     override func startLoading() {
-        MockURLProtocol.capturedRequests.append(request)
+        Self.capturedRequests.append(request)
 
-        guard let handler = MockURLProtocol.requestHandler else {
+        guard let handler = Self.requestHandler else {
             client?.urlProtocolDidFinishLoading(self)
             return
         }

@@ -1,3 +1,4 @@
+// swiftlint:disable file_length force_unwrapping
 //
 //  FeedlyAPIServiceTests.swift
 //  RSSReaderTests
@@ -11,7 +12,6 @@ import Testing
 
 @Suite("FeedlyAPIService Tests", .serialized)
 struct FeedlyAPIServiceTests {
-
     // MARK: - Test Helpers
 
     private func makeSUT() -> (FeedlyAPIService, URLSession) {

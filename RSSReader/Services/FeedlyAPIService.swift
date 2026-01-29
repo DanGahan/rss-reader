@@ -54,6 +54,7 @@ final class FeedlyAPIService: FeedlyAPIServiceProtocol {
 
     // MARK: - Authentication
 
+    // swiftlint:disable force_unwrapping
     func getAuthorizationURL() -> URL {
         var components = URLComponents(
             string: "\(baseURL)/auth/auth"
@@ -69,6 +70,7 @@ final class FeedlyAPIService: FeedlyAPIServiceProtocol {
         ]
         return components.url!
     }
+    // swiftlint:enable force_unwrapping
 
     func exchangeCodeForToken(
         code: String
@@ -204,9 +206,30 @@ final class FeedlyAPIService: FeedlyAPIServiceProtocol {
     ) async throws -> T {
         try await rateLimiter.waitForSlot()
 
-        var components = URLComponents(
+        let request = try buildURLRequest(
+            endpoint: endpoint,
+            method: method,
+            body: body,
+            queryItems: queryItems,
+            authenticated: authenticated
+        )
+
+        let (data, response) = try await executeRequest(request)
+        return try handleAPIResponse(data: data, response: response)
+    }
+
+    private func buildURLRequest(
+        endpoint: String,
+        method: String,
+        body: Data?,
+        queryItems: [URLQueryItem]?,
+        authenticated: Bool
+    ) throws -> URLRequest {
+        guard var components = URLComponents(
             string: baseURL + endpoint
-        )!
+        ) else {
+            throw AppError.invalidResponse
+        }
         if let queryItems {
             components.queryItems = queryItems
         }
@@ -236,11 +259,14 @@ final class FeedlyAPIService: FeedlyAPIServiceProtocol {
             request.httpBody = body
         }
 
-        let data: Data
-        let response: URLResponse
+        return request
+    }
 
+    private func executeRequest(
+        _ request: URLRequest
+    ) async throws -> (Data, URLResponse) {
         do {
-            (data, response) = try await session.data(for: request)
+            return try await session.data(for: request)
         } catch let error as URLError {
             if error.code == .notConnectedToInternet ||
                 error.code == .networkConnectionLost {
@@ -250,14 +276,18 @@ final class FeedlyAPIService: FeedlyAPIServiceProtocol {
         } catch {
             throw AppError.networkError(error.localizedDescription)
         }
+    }
 
+    private func handleAPIResponse<T: Decodable>(
+        data: Data,
+        response: URLResponse
+    ) throws -> T {
         guard let httpResponse = response as? HTTPURLResponse else {
             throw AppError.invalidResponse
         }
 
         switch httpResponse.statusCode {
         case 200...299:
-            // Handle empty response bodies
             if data.isEmpty || T.self == EmptyResponse.self {
                 // swiftlint:disable:next force_cast
                 return EmptyResponse() as! T
@@ -287,6 +317,4 @@ final class FeedlyAPIService: FeedlyAPIServiceProtocol {
 // MARK: - Empty Response Helper
 
 /// Placeholder type for API calls that return no meaningful body.
-struct EmptyResponse: Decodable {
-    init() {}
-}
+struct EmptyResponse: Decodable {}
