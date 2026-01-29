@@ -33,6 +33,12 @@
 		/* Utilities */
 		A1000060 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000060 /* StringExtensions.swift */; };
 
+		/* Core Data */
+		A1000080 /* RSSReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2000080 /* RSSReader.xcdatamodeld */; };
+
+		/* SPM Dependencies */
+		A1000090 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = AC000001 /* FeedKit */; };
+
 		/* Unit Tests */
 		A1000030 /* AppErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000030 /* AppErrorTests.swift */; };
 		A1000031 /* FeedlyUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000031 /* FeedlyUserTests.swift */; };
@@ -88,6 +94,9 @@
 		/* ViewModels */
 		A2000070 /* ViewModelPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPlaceholder.swift; sourceTree = "<group>"; };
 
+		/* Core Data */
+		A2000080 /* RSSReader.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = RSSReader.xcdatamodeld; sourceTree = "<group>"; };
+
 		/* Unit Tests */
 		A2000030 /* AppErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorTests.swift; sourceTree = "<group>"; };
 		A2000031 /* FeedlyUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyUserTests.swift; sourceTree = "<group>"; };
@@ -106,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1000090 /* FeedKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +155,7 @@
 				A7000013 /* ViewModels */,
 				A7000014 /* Services */,
 				A7000015 /* Utilities */,
+				A2000080 /* RSSReader.xcdatamodeld */,
 			);
 			path = RSSReader;
 			sourceTree = "<group>";
@@ -291,6 +302,9 @@
 			dependencies = (
 			);
 			name = RSSReader;
+			packageProductDependencies = (
+				AC000001 /* FeedKit */,
+			);
 			productName = RSSReader;
 			productReference = A2100001 /* RSSReader.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +377,9 @@
 				Base,
 			);
 			mainGroup = A7000000;
+			packageReferences = (
+				AC000002 /* XCRemoteSwiftPackageReference "FeedKit" */,
+			);
 			productRefGroup = A7000004 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +436,7 @@
 				A1000027 /* APIResponses.swift in Sources */,
 				A1000050 /* ServiceProtocols.swift in Sources */,
 				A1000060 /* StringExtensions.swift in Sources */,
+				A1000080 /* RSSReader.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +761,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC000002 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC000001 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC000002 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4000000 /* Project object */;
 }
