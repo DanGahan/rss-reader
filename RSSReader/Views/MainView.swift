@@ -12,6 +12,8 @@ struct MainView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var sidebarViewModel =
         SidebarViewModel()
+    @StateObject private var listViewModel =
+        ArticleListViewModel()
 
     var body: some View {
         NavigationSplitView {
@@ -21,12 +23,15 @@ struct MainView: View {
             // Middle pane - Article List
             ArticleListView(
                 sidebarSelection:
-                    sidebarViewModel.selection
+                    sidebarViewModel.selection,
+                viewModel: listViewModel
             )
         } detail: {
             // Right pane - Article Content
-            ArticleDetailPlaceholderView()
-                .frame(minWidth: 500)
+            ArticleDetailView(
+                articleId:
+                    listViewModel.selectedArticleId
+            )
         }
         .navigationSplitViewStyle(.balanced)
         .toolbar {
@@ -48,21 +53,5 @@ struct MainView: View {
                 )
             }
         }
-    }
-}
-
-// MARK: - Placeholder Views
-
-/// Placeholder for the article detail view.
-struct ArticleDetailPlaceholderView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "doc.text")
-                .font(.largeTitle)
-                .foregroundStyle(.secondary)
-            Text("Select an article to read")
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
