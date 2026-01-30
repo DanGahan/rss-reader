@@ -10,15 +10,19 @@ import SwiftUI
 /// Main 3-pane layout view for authenticated users.
 struct MainView: View {
     @EnvironmentObject var appState: AppState
+    @StateObject private var sidebarViewModel =
+        SidebarViewModel()
 
     var body: some View {
         NavigationSplitView {
             // Left sidebar - Folders & Feeds
-            SidebarView()
+            SidebarView(viewModel: sidebarViewModel)
         } content: {
             // Middle pane - Article List
-            ArticleListPlaceholderView()
-                .frame(minWidth: 300, idealWidth: 400)
+            ArticleListView(
+                sidebarSelection:
+                    sidebarViewModel.selection
+            )
         } detail: {
             // Right pane - Article Content
             ArticleDetailPlaceholderView()
@@ -28,11 +32,20 @@ struct MainView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-                    NotificationCenter.default.post(name: .refresh, object: nil)
+                    NotificationCenter.default.post(
+                        name: .refresh,
+                        object: nil
+                    )
                 } label: {
-                    Label("Refresh", systemImage: "arrow.clockwise")
+                    Label(
+                        "Refresh",
+                        systemImage: "arrow.clockwise"
+                    )
                 }
-                .keyboardShortcut("r", modifiers: [.command])
+                .keyboardShortcut(
+                    "r",
+                    modifiers: [.command]
+                )
             }
         }
     }
@@ -40,21 +53,7 @@ struct MainView: View {
 
 // MARK: - Placeholder Views
 
-/// Placeholder for the article list view until fully implemented.
-struct ArticleListPlaceholderView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "list.bullet")
-                .font(.largeTitle)
-                .foregroundStyle(.secondary)
-            Text("Article List")
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
-
-/// Placeholder for the article detail view until fully implemented.
+/// Placeholder for the article detail view.
 struct ArticleDetailPlaceholderView: View {
     var body: some View {
         VStack {
