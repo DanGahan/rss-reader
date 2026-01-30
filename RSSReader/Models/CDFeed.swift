@@ -29,6 +29,11 @@ public class CDFeed: NSManagedObject {
         }
         return articles.filter { !$0.isRead }.count
     }
+
+    /// Whether the feed has a fetch error.
+    public var hasError: Bool {
+        lastError != nil
+    }
 }
 
 // MARK: - Fetch Request

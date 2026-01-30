@@ -24,6 +24,12 @@ public class CDFolder: NSManagedObject {
         }
         return feeds.reduce(0) { $0 + $1.unreadCount }
     }
+
+    /// Feeds sorted alphabetically by title for display.
+    public var sortedFeeds: [CDFeed] {
+        let feedSet = feeds as? Set<CDFeed> ?? []
+        return feedSet.sorted { $0.title < $1.title }
+    }
 }
 
 // MARK: - Fetch Request
