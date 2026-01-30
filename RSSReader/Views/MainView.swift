@@ -13,9 +13,8 @@ struct MainView: View {
 
     var body: some View {
         NavigationSplitView {
-            // Left sidebar - Categories & Feeds
-            SidebarPlaceholderView()
-                .frame(minWidth: 200, idealWidth: 250, maxWidth: 300)
+            // Left sidebar - Folders & Feeds
+            SidebarView()
         } content: {
             // Middle pane - Article List
             ArticleListPlaceholderView()
@@ -40,20 +39,6 @@ struct MainView: View {
 }
 
 // MARK: - Placeholder Views
-
-/// Placeholder for the sidebar view until fully implemented.
-struct SidebarPlaceholderView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "folder")
-                .font(.largeTitle)
-                .foregroundStyle(.secondary)
-            Text("Categories & Feeds")
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
 
 /// Placeholder for the article list view until fully implemented.
 struct ArticleListPlaceholderView: View {

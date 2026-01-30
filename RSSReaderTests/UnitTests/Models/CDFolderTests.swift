@@ -115,6 +115,29 @@ struct CDFolderTests {
         #expect(folder.unreadCount == 3)
     }
 
+    @Test("sortedFeeds returns feeds alphabetically by title")
+    func sortedFeedsOrder() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let folder = CDFolder.create(in: context, name: "Tech")
+        makeFeed(context: context, title: "Zebra", folder: folder)
+        makeFeed(context: context, title: "Apple", folder: folder)
+        makeFeed(context: context, title: "Mango", folder: folder)
+        try context.save()
+
+        let sorted = folder.sortedFeeds
+        #expect(sorted.count == 3)
+        #expect(sorted[0].title == "Apple")
+        #expect(sorted[1].title == "Mango")
+        #expect(sorted[2].title == "Zebra")
+    }
+
+    @Test("sortedFeeds returns empty array when no feeds")
+    func sortedFeedsEmpty() {
+        let context = CoreDataTestHelper.makeContext()
+        let folder = CDFolder.create(in: context, name: "Empty")
+        #expect(folder.sortedFeeds.isEmpty)
+    }
+
     @Test("Unread count is zero when no feeds")
     func unreadCountNoFeeds() {
         let context = CoreDataTestHelper.makeContext()

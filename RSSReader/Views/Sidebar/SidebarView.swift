@@ -1,0 +1,83 @@
+//
+//  SidebarView.swift
+//  RSSReader
+//
+//  Created on 2026-01-29.
+//
+
+import CoreData
+import SwiftUI
+
+/// Sidebar displaying folders (with expandable feeds) and
+/// an unfiled feeds section. Drives selection state via
+/// `SidebarViewModel`.
+struct SidebarView: View {
+    @StateObject private var viewModel = SidebarViewModel()
+
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\CDFolder.sortOrder),
+            SortDescriptor(\CDFolder.name)
+        ],
+        animation: .default
+    ) private var folders: FetchedResults<CDFolder>
+
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\CDFeed.title)
+        ],
+        predicate: NSPredicate(
+            format: "folder == nil"
+        ),
+        animation: .default
+    ) private var unfiledFeeds: FetchedResults<CDFeed>
+
+    var body: some View {
+        List(selection: $viewModel.selection) {
+            foldersSection
+            unfiledFeedsSection
+        }
+        .listStyle(.sidebar)
+        .frame(minWidth: 200)
+    }
+
+    // MARK: - Sections
+
+    @ViewBuilder
+    private var foldersSection: some View {
+        ForEach(folders, id: \.id) { folder in
+            DisclosureGroup(
+                isExpanded: viewModel.expandedBinding(
+                    for: folder.id
+                )
+            ) {
+                ForEach(
+                    folder.sortedFeeds,
+                    id: \.id
+                ) { feed in
+                    FeedRowView(feed: feed)
+                        .tag(
+                            SidebarSelection.feed(feed.id)
+                        )
+                }
+            } label: {
+                FolderRowView(folder: folder)
+            }
+            .tag(SidebarSelection.folder(folder.id))
+        }
+    }
+
+    @ViewBuilder
+    private var unfiledFeedsSection: some View {
+        if !unfiledFeeds.isEmpty {
+            Section("Unfiled") {
+                ForEach(unfiledFeeds, id: \.id) { feed in
+                    FeedRowView(feed: feed)
+                        .tag(
+                            SidebarSelection.feed(feed.id)
+                        )
+                }
+            }
+        }
+    }
+}

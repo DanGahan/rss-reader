@@ -209,6 +209,29 @@ struct CDFeedTests {
         #expect(feed.unreadCount == 0)
     }
 
+    @Test("hasError is true when lastError is set")
+    func hasErrorWhenErrorExists() {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Broken",
+            feedURL: "https://example.com/feed"
+        )
+        feed.lastError = "Connection timeout"
+        #expect(feed.hasError)
+    }
+
+    @Test("hasError is false when lastError is nil")
+    func hasErrorWhenNoError() {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Healthy",
+            feedURL: "https://example.com/feed"
+        )
+        #expect(!feed.hasError)
+    }
+
     @Test("Unread count is zero when all articles are read")
     func unreadCountAllRead() throws {
         let context = CoreDataTestHelper.makeContext()
