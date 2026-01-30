@@ -9,13 +9,15 @@ import SwiftUI
 
 @main
 struct RSSReaderApp: App {
-    @StateObject private var appState = AppState()
-
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appState)
+                .frame(
+                    minWidth: 1000,
+                    minHeight: 600
+                )
         }
+        .defaultSize(width: 1200, height: 800)
         .commands {
             KeyboardCommands()
         }
