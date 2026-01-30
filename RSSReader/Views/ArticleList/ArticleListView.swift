@@ -16,8 +16,7 @@ import SwiftUI
 struct ArticleListView: View {
     let sidebarSelection: SidebarSelection?
 
-    @StateObject private var viewModel =
-        ArticleListViewModel()
+    @ObservedObject var viewModel: ArticleListViewModel
 
     @FetchRequest(
         sortDescriptors: [
