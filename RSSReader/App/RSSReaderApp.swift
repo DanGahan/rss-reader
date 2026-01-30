@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct RSSReaderApp: App {
+    let persistence = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(
+                    \.managedObjectContext,
+                    persistence.viewContext
+                )
                 .frame(
                     minWidth: 1000,
                     minHeight: 600
