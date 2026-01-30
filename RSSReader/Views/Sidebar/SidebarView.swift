@@ -12,7 +12,7 @@ import SwiftUI
 /// an unfiled feeds section. Drives selection state via
 /// `SidebarViewModel`.
 struct SidebarView: View {
-    @StateObject private var viewModel = SidebarViewModel()
+    @ObservedObject var viewModel: SidebarViewModel
 
     @FetchRequest(
         sortDescriptors: [
