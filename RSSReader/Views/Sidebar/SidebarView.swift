@@ -14,6 +14,9 @@ import SwiftUI
 struct SidebarView: View {
     @ObservedObject var viewModel: SidebarViewModel
 
+    @Environment(\.managedObjectContext)
+    private var viewContext
+
     @FetchRequest(
         sortDescriptors: [
             SortDescriptor(\CDFolder.sortOrder),
@@ -59,6 +62,9 @@ struct SidebarView: View {
                         .tag(
                             SidebarSelection.feed(feed.id)
                         )
+                        .contextMenu {
+                            feedContextMenu(feed: feed)
+                        }
                 }
             } label: {
                 FolderRowView(folder: folder)
@@ -76,8 +82,34 @@ struct SidebarView: View {
                         .tag(
                             SidebarSelection.feed(feed.id)
                         )
+                        .contextMenu {
+                            feedContextMenu(feed: feed)
+                        }
                 }
             }
         }
+    }
+
+    // MARK: - Context Menu
+
+    @ViewBuilder
+    private func feedContextMenu(
+        feed: CDFeed
+    ) -> some View {
+        Button(role: .destructive) {
+            deleteFeed(feed)
+        } label: {
+            Label(
+                "Remove Feed",
+                systemImage: "trash"
+            )
+        }
+    }
+
+    // MARK: - Actions
+
+    private func deleteFeed(_ feed: CDFeed) {
+        viewContext.delete(feed)
+        try? viewContext.save()
     }
 }
