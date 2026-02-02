@@ -14,6 +14,7 @@ struct CDFolderTests {
     // MARK: - Entity Creation
 
     @Test("Folder can be created with required attributes")
+    @MainActor
     func createFolder() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Tech")
@@ -32,6 +33,7 @@ struct CDFolderTests {
     }
 
     @Test("Folder can be created with custom sort order")
+    @MainActor
     func createFolderWithSortOrder() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(
@@ -46,6 +48,7 @@ struct CDFolderTests {
     // MARK: - Relationships
 
     @Test("Folder has one-to-many relationship with feeds")
+    @MainActor
     func folderFeedRelationship() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Tech")
@@ -71,6 +74,7 @@ struct CDFolderTests {
     }
 
     @Test("Deleting folder cascades to feeds")
+    @MainActor
     func cascadeDeleteFeeds() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Tech")
@@ -97,6 +101,7 @@ struct CDFolderTests {
     // MARK: - Computed Properties
 
     @Test("Unread count sums unread articles across feeds")
+    @MainActor
     func unreadCount() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Tech")
@@ -116,6 +121,7 @@ struct CDFolderTests {
     }
 
     @Test("sortedFeeds returns feeds alphabetically by title")
+    @MainActor
     func sortedFeedsOrder() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Tech")
@@ -132,6 +138,7 @@ struct CDFolderTests {
     }
 
     @Test("sortedFeeds returns empty array when no feeds")
+    @MainActor
     func sortedFeedsEmpty() {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Empty")
@@ -139,6 +146,7 @@ struct CDFolderTests {
     }
 
     @Test("Unread count is zero when no feeds")
+    @MainActor
     func unreadCountNoFeeds() {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "Empty")

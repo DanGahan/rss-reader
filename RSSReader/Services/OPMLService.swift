@@ -171,19 +171,17 @@ private extension OPMLService {
         )
         counter.folderCount += 1
 
-        for child in outline.children {
-            if child.isFeed {
-                importFeed(
-                    child,
-                    folder: folder,
-                    existingURLs: existingURLs,
-                    counter: &counter,
-                    in: context
-                )
-            }
-            // Nested sub-folders are flattened — OPML
-            // spec allows nesting, but our UI only
-            // supports one level.
+        // Nested sub-folders are flattened — OPML
+        // spec allows nesting, but our UI only
+        // supports one level.
+        for child in outline.children where child.isFeed {
+            importFeed(
+                child,
+                folder: folder,
+                existingURLs: existingURLs,
+                counter: &counter,
+                in: context
+            )
         }
     }
 
