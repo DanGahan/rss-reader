@@ -5,6 +5,7 @@
 //  Created on 2026-01-30.
 //
 
+import CoreData
 import Foundation
 import Testing
 @testable import RSSReader
@@ -237,5 +238,71 @@ struct ArticleListViewModelTests {
         #expect(vm.isLoading)
         vm.isLoading = false
         #expect(!vm.isLoading)
+    }
+
+    // MARK: - Mark All as Read
+
+    @Test("markAllAsRead marks unread articles as read")
+    @MainActor
+    func markAllAsRead() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let a1 = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "One",
+            link: "https://example.com/1",
+            published: Date()
+        )
+        let a2 = CDArticle.create(
+            in: context,
+            id: "a2",
+            title: "Two",
+            link: "https://example.com/2",
+            published: Date()
+        )
+        let a3 = CDArticle.create(
+            in: context,
+            id: "a3",
+            title: "Three",
+            link: "https://example.com/3",
+            published: Date()
+        )
+        a2.isRead = true
+        try context.save()
+
+        let vm = ArticleListViewModel()
+        vm.markAllAsRead([a1, a2, a3], in: context)
+
+        #expect(a1.isRead)
+        #expect(a2.isRead)
+        #expect(a3.isRead)
+    }
+
+    @Test("markAllAsRead with empty array is no-op")
+    @MainActor
+    func markAllAsReadEmpty() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let vm = ArticleListViewModel()
+        vm.markAllAsRead([], in: context)
+        // No crash, no error — just a no-op
+    }
+
+    @Test("markAllAsRead with all-already-read is no-op")
+    @MainActor
+    func markAllAsReadAlreadyRead() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let a1 = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "One",
+            link: "https://example.com/1",
+            published: Date()
+        )
+        a1.isRead = true
+        try context.save()
+
+        let vm = ArticleListViewModel()
+        vm.markAllAsRead([a1], in: context)
+        #expect(a1.isRead)
     }
 }

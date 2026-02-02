@@ -18,6 +18,9 @@ struct ArticleListView: View {
 
     @ObservedObject var viewModel: ArticleListViewModel
 
+    @Environment(\.managedObjectContext)
+    private var context
+
     @FetchRequest(
         sortDescriptors: [
             SortDescriptor(
@@ -59,6 +62,16 @@ struct ArticleListView: View {
         }
         .onChange(of: viewModel.showUnreadOnly) { _, _ in
             updatePredicate()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .markAllAsRead
+            )
+        ) { _ in
+            viewModel.markAllAsRead(
+                Array(articles),
+                in: context
+            )
         }
     }
 
