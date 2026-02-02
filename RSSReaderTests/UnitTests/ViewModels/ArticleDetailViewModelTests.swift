@@ -151,4 +151,49 @@ struct ArticleDetailViewModelTests {
         let second = vm.formattedDate(date)
         #expect(first == second)
     }
+
+    // MARK: - Open in Safari
+
+    @Test("openInSafari returns false for empty string")
+    @MainActor
+    func openInSafariEmptyString() {
+        let vm = ArticleDetailViewModel()
+        #expect(!vm.openInSafari(urlString: ""))
+    }
+
+    @Test("openInSafari returns false for invalid URL")
+    @MainActor
+    func openInSafariInvalidURL() {
+        let vm = ArticleDetailViewModel()
+        #expect(!vm.openInSafari(urlString: "not a url"))
+    }
+
+    @Test("openInSafari returns false for ftp scheme")
+    @MainActor
+    func openInSafariFtpScheme() {
+        let vm = ArticleDetailViewModel()
+        #expect(
+            !vm.openInSafari(
+                urlString: "ftp://example.com/file"
+            )
+        )
+    }
+
+    @Test("openInSafari returns true for valid https URL")
+    @MainActor
+    func openInSafariValidHttps() {
+        let vm = ArticleDetailViewModel()
+        #expect(
+            vm.openInSafari(
+                urlString: "https://example.com"
+            )
+        )
+    }
+
+    @Test("showOpenedToast is false on init")
+    @MainActor
+    func toastInitialState() {
+        let vm = ArticleDetailViewModel()
+        #expect(!vm.showOpenedToast)
+    }
 }
