@@ -8,8 +8,9 @@
 import CoreData
 import Foundation
 
-/// Handles OPML file import: parses the XML, then
-/// creates Core Data folder and feed entities while
+/// Handles OPML file import and export: parses XML
+/// for import and generates OPML 2.0 XML for export.
+/// Creates Core Data folder and feed entities while
 /// skipping duplicates and preserving hierarchy.
 struct OPMLService {
 
@@ -96,6 +97,43 @@ struct OPMLService {
             feedsSkipped: result.feedsSkipped
         )
     }
+
+    // MARK: - Export
+
+    /// Generates OPML 2.0 XML data from all folders
+    /// and feeds in the given context.
+    func exportOPML(
+        from context: NSManagedObjectContext
+    ) throws -> Data {
+        let folders = try fetchSortedFolders(in: context)
+        let unfiled = try fetchUnfiledFeeds(in: context)
+
+        var xml = """
+        <?xml version="1.0" encoding="UTF-8"?>
+        <opml version="2.0">
+        <head>
+            <title>RSS Reader Export</title>
+        </head>
+        <body>\n
+        """
+
+        for folder in folders {
+            xml += outlineXML(for: folder)
+        }
+
+        for feed in unfiled {
+            xml += feedOutlineXML(for: feed)
+        }
+
+        xml += "</body>\n</opml>\n"
+
+        guard let data = xml.data(using: .utf8) else {
+            throw RSSReaderError.parsingFailed(
+                "Failed to encode OPML as UTF-8"
+            )
+        }
+        return data
+    }
 }
 
 // MARK: - Private Helpers
@@ -180,5 +218,71 @@ private extension OPMLService {
 
         feed.folder = folder
         counter.feedsCreated += 1
+    }
+
+    // MARK: - Export Helpers
+
+    func fetchSortedFolders(
+        in context: NSManagedObjectContext
+    ) throws -> [CDFolder] {
+        let request = CDFolder.fetchRequest()
+        request.sortDescriptors = [
+            NSSortDescriptor(
+                key: "sortOrder", ascending: true
+            ),
+            NSSortDescriptor(
+                key: "name", ascending: true
+            )
+        ]
+        return try context.fetch(request)
+    }
+
+    func fetchUnfiledFeeds(
+        in context: NSManagedObjectContext
+    ) throws -> [CDFeed] {
+        let request = CDFeed.fetchRequest()
+        request.predicate = NSPredicate(
+            format: "folder == nil"
+        )
+        request.sortDescriptors = [
+            NSSortDescriptor(
+                key: "title", ascending: true
+            )
+        ]
+        return try context.fetch(request)
+    }
+
+    func outlineXML(for folder: CDFolder) -> String {
+        let name = escapeXML(folder.name)
+        var xml = "    <outline text=\"\(name)\""
+        xml += " title=\"\(name)\">\n"
+        for feed in folder.sortedFeeds {
+            xml += "    " + feedOutlineXML(for: feed)
+        }
+        xml += "    </outline>\n"
+        return xml
+    }
+
+    func feedOutlineXML(for feed: CDFeed) -> String {
+        let title = escapeXML(feed.title)
+        let feedURL = escapeXML(feed.feedURL)
+        var xml = "    <outline type=\"rss\""
+        xml += " text=\"\(title)\""
+        xml += " title=\"\(title)\""
+        xml += " xmlUrl=\"\(feedURL)\""
+        if let siteURL = feed.siteURL {
+            xml += " htmlUrl=\"\(escapeXML(siteURL))\""
+        }
+        xml += "/>\n"
+        return xml
+    }
+
+    func escapeXML(_ string: String) -> String {
+        string
+            .replacingOccurrences(of: "&", with: "&amp;")
+            .replacingOccurrences(of: "<", with: "&lt;")
+            .replacingOccurrences(of: ">", with: "&gt;")
+            .replacingOccurrences(of: "\"", with: "&quot;")
+            .replacingOccurrences(of: "'", with: "&apos;")
     }
 }

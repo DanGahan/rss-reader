@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import UniformTypeIdentifiers
 
 /// Root content view presenting the 3-pane RSS reader layout.
 struct ContentView: View {
@@ -18,6 +19,9 @@ struct ContentView: View {
         RefreshService()
 
     @State private var showingAddFeed = false
+
+    @Environment(\.managedObjectContext)
+    private var context
 
     var body: some View {
         NavigationSplitView {
@@ -84,6 +88,40 @@ struct ContentView: View {
         }
         .onDisappear {
             refreshService.stopAutoRefresh()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .exportOPML
+            )
+        ) { _ in
+            exportOPML()
+        }
+    }
+
+    // MARK: - OPML Export
+
+    private func exportOPML() {
+        let panel = NSSavePanel()
+        panel.title = "Export Subscriptions"
+        panel.nameFieldStringValue = "subscriptions.opml"
+        panel.allowedContentTypes = [
+            UTType(
+                filenameExtension: "opml"
+            ) ?? .xml
+        ]
+
+        guard panel.runModal() == .OK,
+              let url = panel.url
+        else { return }
+
+        do {
+            let service = OPMLService()
+            let data = try service.exportOPML(
+                from: context
+            )
+            try data.write(to: url)
+        } catch {
+            NSAlert(error: error).runModal()
         }
     }
 }
