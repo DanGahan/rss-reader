@@ -13,6 +13,19 @@ struct KeyboardCommands: Commands {
         CommandGroup(replacing: .newItem) {}
 
         CommandMenu("Navigation") {
+            Button("Mark All as Read") {
+                NotificationCenter.default.post(
+                    name: .markAllAsRead,
+                    object: nil
+                )
+            }
+            .keyboardShortcut(
+                "a",
+                modifiers: [.command, .shift]
+            )
+
+            Divider()
+
             Button("Next Unread") {
                 NotificationCenter.default.post(name: .nextUnread, object: nil)
             }
@@ -53,4 +66,7 @@ extension Notification.Name {
     static let nextArticle = Notification.Name("nextArticle")
     static let refresh = Notification.Name("refresh")
     static let openInSafari = Notification.Name("openInSafari")
+    static let markAllAsRead = Notification.Name(
+        "markAllAsRead"
+    )
 }

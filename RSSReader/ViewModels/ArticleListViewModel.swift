@@ -6,6 +6,7 @@
 //
 
 import Combine
+import CoreData
 import Foundation
 
 /// ViewModel managing article list selection, filtering,
@@ -100,5 +101,21 @@ final class ArticleListViewModel: ObservableObject {
             selectedArticleId = articleIds[i]
             return
         }
+    }
+
+    // MARK: - Batch Actions
+
+    /// Marks all unread articles in the array as read and
+    /// saves the context once.
+    func markAllAsRead(
+        _ articles: [CDArticle],
+        in context: NSManagedObjectContext
+    ) {
+        let unread = articles.filter { !$0.isRead }
+        guard !unread.isEmpty else { return }
+        for article in unread {
+            article.isRead = true
+        }
+        try? context.save()
     }
 }
