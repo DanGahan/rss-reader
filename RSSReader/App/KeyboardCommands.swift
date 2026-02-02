@@ -18,6 +18,17 @@ struct KeyboardCommands: Commands {
                 )
             }
             .keyboardShortcut("n", modifiers: [.command])
+
+            Button("New Folder") {
+                NotificationCenter.default.post(
+                    name: .newFolder,
+                    object: nil
+                )
+            }
+            .keyboardShortcut(
+                "n",
+                modifiers: [.command, .shift]
+            )
         }
 
         CommandGroup(after: .importExport) {
@@ -93,9 +104,15 @@ struct KeyboardCommands: Commands {
 // MARK: - Notification Names
 
 extension Notification.Name {
-    static let nextUnread = Notification.Name("nextUnread")
-    static let previousArticle = Notification.Name("previousArticle")
-    static let nextArticle = Notification.Name("nextArticle")
+    static let nextUnread = Notification.Name(
+        "nextUnread"
+    )
+    static let previousArticle = Notification.Name(
+        "previousArticle"
+    )
+    static let nextArticle = Notification.Name(
+        "nextArticle"
+    )
     static let refresh = Notification.Name("refresh")
     static let openInSafari = Notification.Name("openInSafari")
     static let markAllAsRead = Notification.Name(
@@ -104,5 +121,8 @@ extension Notification.Name {
     static let addFeed = Notification.Name("addFeed")
     static let exportOPML = Notification.Name(
         "exportOPML"
+    )
+    static let newFolder = Notification.Name(
+        "newFolder"
     )
 }
