@@ -21,6 +21,7 @@
 		A1000133 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000133 /* SidebarView.swift */; };
 		A1000134 /* FeedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000134 /* FeedRowView.swift */; };
 		A1000135 /* FolderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000135 /* FolderRowView.swift */; };
+		A1000136 /* AddFeedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000136 /* AddFeedSheet.swift */; };
 
 		/* Models */
 		A1000020 /* FeedlyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020 /* FeedlyUser.swift */; };
@@ -53,6 +54,7 @@
 		A1000118 /* RateLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000118 /* RateLimiter.swift */; };
 		A1000119 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000119 /* RetryPolicy.swift */; };
 		A100011A /* ErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200011A /* ErrorLogger.swift */; };
+		A100011B /* RefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200011B /* RefreshService.swift */; };
 
 		/* ViewModels */
 		A1000120 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000120 /* ArticleListViewModel.swift */; };
@@ -95,6 +97,10 @@
 		A1000168 /* PersistenceControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000168 /* PersistenceControllerTests.swift */; };
 		A1000169 /* RSSReaderErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000169 /* RSSReaderErrorTests.swift */; };
 		A100016A /* RetryPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200016A /* RetryPolicyTests.swift */; };
+		A100016B /* RefreshServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200016B /* RefreshServiceTests.swift */; };
+
+		/* Unit Tests - Views */
+		A1000180 /* AddFeedSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000180 /* AddFeedSheetTests.swift */; };
 
 		/* Integration Tests */
 		A1000170 /* IntegrationTestsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000170 /* IntegrationTestsPlaceholder.swift */; };
@@ -135,6 +141,7 @@
 		A2000133 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		A2000134 /* FeedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRowView.swift; sourceTree = "<group>"; };
 		A2000135 /* FolderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowView.swift; sourceTree = "<group>"; };
+		A2000136 /* AddFeedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedSheet.swift; sourceTree = "<group>"; };
 
 		/* Models */
 		A2000020 /* FeedlyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyUser.swift; sourceTree = "<group>"; };
@@ -167,6 +174,7 @@
 		A2000118 /* RateLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimiter.swift; sourceTree = "<group>"; };
 		A2000119 /* RetryPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryPolicy.swift; sourceTree = "<group>"; };
 		A200011A /* ErrorLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogger.swift; sourceTree = "<group>"; };
+		A200011B /* RefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshService.swift; sourceTree = "<group>"; };
 
 		/* ViewModels */
 		A2000070 /* ViewModelPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPlaceholder.swift; sourceTree = "<group>"; };
@@ -203,6 +211,8 @@
 		A2000168 /* PersistenceControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerTests.swift; sourceTree = "<group>"; };
 		A2000169 /* RSSReaderErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderErrorTests.swift; sourceTree = "<group>"; };
 		A200016A /* RetryPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryPolicyTests.swift; sourceTree = "<group>"; };
+		A200016B /* RefreshServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshServiceTests.swift; sourceTree = "<group>"; };
+		A2000180 /* AddFeedSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedSheetTests.swift; sourceTree = "<group>"; };
 		A2000170 /* IntegrationTestsPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestsPlaceholder.swift; sourceTree = "<group>"; };
 
 		/* UI Tests */
@@ -359,6 +369,7 @@
 				A2000133 /* SidebarView.swift */,
 				A2000134 /* FeedRowView.swift */,
 				A2000135 /* FolderRowView.swift */,
+				A2000136 /* AddFeedSheet.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -389,6 +400,7 @@
 				A2000118 /* RateLimiter.swift */,
 				A2000119 /* RetryPolicy.swift */,
 				A200011A /* ErrorLogger.swift */,
+				A200011B /* RefreshService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -407,6 +419,7 @@
 				A7000022 /* Models */,
 				A7000023 /* ViewModels */,
 				A7000024 /* Services */,
+				A7000025 /* Views */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -458,8 +471,17 @@
 				A2000168 /* PersistenceControllerTests.swift */,
 				A2000169 /* RSSReaderErrorTests.swift */,
 				A200016A /* RetryPolicyTests.swift */,
+				A200016B /* RefreshServiceTests.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A7000025 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2000180 /* AddFeedSheetTests.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +629,7 @@
 				A1000133 /* SidebarView.swift in Sources */,
 				A1000134 /* FeedRowView.swift in Sources */,
 				A1000135 /* FolderRowView.swift in Sources */,
+				A1000136 /* AddFeedSheet.swift in Sources */,
 				A1000020 /* FeedlyUser.swift in Sources */,
 				A1000021 /* AppError.swift in Sources */,
 				A1000022 /* AuthenticationToken.swift in Sources */,
@@ -635,6 +658,7 @@
 				A1000118 /* RateLimiter.swift in Sources */,
 				A1000119 /* RetryPolicy.swift in Sources */,
 				A100011A /* ErrorLogger.swift in Sources */,
+				A100011B /* RefreshService.swift in Sources */,
 				A1000120 /* ArticleListViewModel.swift in Sources */,
 				A1000121 /* ArticleDetailViewModel.swift in Sources */,
 				A1000122 /* SidebarViewModel.swift in Sources */,
@@ -669,6 +693,8 @@
 				A1000168 /* PersistenceControllerTests.swift in Sources */,
 				A1000169 /* RSSReaderErrorTests.swift in Sources */,
 				A100016A /* RetryPolicyTests.swift in Sources */,
+				A100016B /* RefreshServiceTests.swift in Sources */,
+				A1000180 /* AddFeedSheetTests.swift in Sources */,
 				A1000170 /* IntegrationTestsPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,6 +5,7 @@
 //  Created on 2026-01-28.
 //
 
+import Combine
 import SwiftUI
 
 /// Root content view presenting the 3-pane RSS reader layout.
@@ -13,6 +14,10 @@ struct ContentView: View {
         SidebarViewModel()
     @StateObject private var listViewModel =
         ArticleListViewModel()
+    @StateObject private var refreshService =
+        RefreshService()
+
+    @State private var showingAddFeed = false
 
     var body: some View {
         NavigationSplitView {
@@ -47,6 +52,7 @@ struct ContentView: View {
                     "r",
                     modifiers: [.command]
                 )
+                .disabled(refreshService.isRefreshing)
             }
 
             ToolbarItem(placement: .primaryAction) {
@@ -62,6 +68,22 @@ struct ContentView: View {
                     )
                 }
             }
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .addFeed
+            )
+        ) { _ in
+            showingAddFeed = true
+        }
+        .sheet(isPresented: $showingAddFeed) {
+            AddFeedSheet()
+        }
+        .onAppear {
+            refreshService.startAutoRefresh()
+        }
+        .onDisappear {
+            refreshService.stopAutoRefresh()
         }
     }
 }
