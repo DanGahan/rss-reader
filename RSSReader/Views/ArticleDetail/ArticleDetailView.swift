@@ -69,6 +69,37 @@ struct ArticleDetailView: View {
                 viewModel.markAsRead(art, in: context)
             }
         }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .openInSafari
+            )
+        ) { _ in
+            guard let article else { return }
+            viewModel.openInSafariWithFeedback(
+                urlString: article.link
+            )
+        }
+        .overlay(alignment: .bottom) {
+            if viewModel.showOpenedToast {
+                Text("Opened in Safari")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 10)
+                    .background(
+                        .regularMaterial,
+                        in: RoundedRectangle(
+                            cornerRadius: 8
+                        )
+                    )
+                    .padding(.bottom, 16)
+                    .transition(.move(edge: .bottom))
+                    .animation(
+                        .easeInOut,
+                        value: viewModel.showOpenedToast
+                    )
+            }
+        }
     }
 
     // MARK: - Article Content
@@ -162,7 +193,7 @@ struct ArticleDetailView: View {
     ) -> some View {
         HStack {
             Button {
-                viewModel.openInSafari(
+                viewModel.openInSafariWithFeedback(
                     urlString: article.link
                 )
             } label: {

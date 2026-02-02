@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import Combine
 import CoreData
 import Foundation
 
@@ -15,6 +16,11 @@ import Foundation
 /// content, date formatting, and Safari integration.
 @MainActor
 final class ArticleDetailViewModel: ObservableObject {
+
+    /// Whether to show the "Opened in Safari" toast.
+    @Published var showOpenedToast = false
+
+    private var toastTimer: AnyCancellable?
 
     // MARK: - Date Formatting
 
@@ -57,11 +63,37 @@ final class ArticleDetailViewModel: ObservableObject {
         try? context.save()
     }
 
-    /// Opens the article link in the default browser.
-    func openInSafari(urlString: String) {
-        guard let url = URL(string: urlString) else {
+    /// Opens the URL in the background (without activating
+    /// Safari) and returns whether the open was attempted.
+    @discardableResult
+    func openInSafari(urlString: String) -> Bool {
+        guard !urlString.isEmpty,
+              let url = URL(string: urlString),
+              let scheme = url.scheme,
+              ["http", "https"].contains(scheme)
+        else { return false }
+
+        let config = NSWorkspace.OpenConfiguration()
+        config.activates = false
+        NSWorkspace.shared.open(
+            url,
+            configuration: config
+        )
+        return true
+    }
+
+    /// Opens the URL in background Safari and shows a
+    /// brief toast notification.
+    func openInSafariWithFeedback(urlString: String) {
+        guard openInSafari(urlString: urlString) else {
             return
         }
-        NSWorkspace.shared.open(url)
+        showOpenedToast = true
+        toastTimer?.cancel()
+        toastTimer = Just(false)
+            .delay(for: .seconds(2), scheduler: RunLoop.main)
+            .sink { [weak self] value in
+                self?.showOpenedToast = value
+            }
     }
 }

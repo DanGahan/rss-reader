@@ -38,9 +38,20 @@ struct KeyboardCommands: Commands {
             Divider()
 
             Button("Open in Safari") {
-                NotificationCenter.default.post(name: .openInSafari, object: nil)
+                NotificationCenter.default.post(
+                    name: .openInSafari,
+                    object: nil
+                )
             }
             .keyboardShortcut(.return, modifiers: [])
+
+            Button("Open in Background Tab") {
+                NotificationCenter.default.post(
+                    name: .openInSafari,
+                    object: nil
+                )
+            }
+            .keyboardShortcut(.space, modifiers: [])
         }
     }
 }

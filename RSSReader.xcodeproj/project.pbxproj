@@ -16,6 +16,12 @@
 		A1000010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* ContentView.swift */; };
 		A1000011 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000011 /* MainView.swift */; };
 		A1000012 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000012 /* AuthenticationView.swift */; };
+		A1000130 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000130 /* ArticleListView.swift */; };
+		A1000131 /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000131 /* ArticleRowView.swift */; };
+		A1000132 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000132 /* ArticleDetailView.swift */; };
+		A1000133 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000133 /* SidebarView.swift */; };
+		A1000134 /* FeedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000134 /* FeedRowView.swift */; };
+		A1000135 /* FolderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000135 /* FolderRowView.swift */; };
 
 		/* Models */
 		A1000020 /* FeedlyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020 /* FeedlyUser.swift */; };
@@ -26,9 +32,33 @@
 		A1000025 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000025 /* Subscription.swift */; };
 		A1000026 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000026 /* Article.swift */; };
 		A1000027 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000027 /* APIResponses.swift */; };
+		A1000100 /* CDArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000100 /* CDArticle.swift */; };
+		A1000101 /* CDFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000101 /* CDFeed.swift */; };
+		A1000102 /* CDFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000102 /* CDFolder.swift */; };
+		A1000103 /* CDAppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000103 /* CDAppSettings.swift */; };
+		A1000104 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000104 /* CoreDataModel.swift */; };
+		A1000105 /* OPMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000105 /* OPMLDocument.swift */; };
+		A1000106 /* ParsedFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000106 /* ParsedFeed.swift */; };
+		A1000107 /* RSSReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000107 /* RSSReaderError.swift */; };
 
 		/* Services */
 		A1000050 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000050 /* ServiceProtocols.swift */; };
+		A1000110 /* OPMLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000110 /* OPMLService.swift */; };
+		A1000111 /* OPMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000111 /* OPMLParser.swift */; };
+		A1000112 /* FeedParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000112 /* FeedParserService.swift */; };
+		A1000113 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000113 /* PersistenceController.swift */; };
+		A1000114 /* FeedlyAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000114 /* FeedlyAPIService.swift */; };
+		A1000115 /* ArticleCleanupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000115 /* ArticleCleanupService.swift */; };
+		A1000116 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000116 /* KeychainService.swift */; };
+		A1000117 /* FeedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000117 /* FeedErrorHandler.swift */; };
+		A1000118 /* RateLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000118 /* RateLimiter.swift */; };
+		A1000119 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000119 /* RetryPolicy.swift */; };
+		A100011A /* ErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200011A /* ErrorLogger.swift */; };
+
+		/* ViewModels */
+		A1000120 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000120 /* ArticleListViewModel.swift */; };
+		A1000121 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000121 /* ArticleDetailViewModel.swift */; };
+		A1000122 /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000122 /* SidebarViewModel.swift */; };
 
 		/* Utilities */
 		A1000060 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000060 /* StringExtensions.swift */; };
@@ -39,9 +69,36 @@
 		/* SPM Dependencies */
 		A1000090 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = AC000001 /* FeedKit */; };
 
-		/* Unit Tests */
+		/* Unit Tests - Models */
 		A1000030 /* AppErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000030 /* AppErrorTests.swift */; };
 		A1000031 /* FeedlyUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000031 /* FeedlyUserTests.swift */; };
+		A1000140 /* CoreDataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000140 /* CoreDataTestHelper.swift */; };
+		A1000141 /* CDArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000141 /* CDArticleTests.swift */; };
+		A1000142 /* CDFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000142 /* CDFeedTests.swift */; };
+		A1000143 /* CDFolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000143 /* CDFolderTests.swift */; };
+		A1000144 /* CDAppSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000144 /* CDAppSettingsTests.swift */; };
+
+		/* Unit Tests - ViewModels */
+		A1000150 /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000150 /* ArticleListViewModelTests.swift */; };
+		A1000151 /* ArticleDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000151 /* ArticleDetailViewModelTests.swift */; };
+		A1000152 /* SidebarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000152 /* SidebarViewModelTests.swift */; };
+		A1000153 /* ViewModelTestsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000153 /* ViewModelTestsPlaceholder.swift */; };
+
+		/* Unit Tests - Services */
+		A1000160 /* OPMLServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000160 /* OPMLServiceTests.swift */; };
+		A1000161 /* OPMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000161 /* OPMLParserTests.swift */; };
+		A1000162 /* ArticleCleanupServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000162 /* ArticleCleanupServiceTests.swift */; };
+		A1000163 /* FeedErrorHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000163 /* FeedErrorHandlerTests.swift */; };
+		A1000164 /* FeedParserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000164 /* FeedParserServiceTests.swift */; };
+		A1000165 /* FeedlyAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000165 /* FeedlyAPIServiceTests.swift */; };
+		A1000166 /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000166 /* KeychainServiceTests.swift */; };
+		A1000167 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000167 /* MockURLProtocol.swift */; };
+		A1000168 /* PersistenceControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000168 /* PersistenceControllerTests.swift */; };
+		A1000169 /* RSSReaderErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000169 /* RSSReaderErrorTests.swift */; };
+		A100016A /* RetryPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200016A /* RetryPolicyTests.swift */; };
+
+		/* Integration Tests */
+		A1000170 /* IntegrationTestsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000170 /* IntegrationTestsPlaceholder.swift */; };
 
 		/* UI Tests */
 		A1000040 /* RSSReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000040 /* RSSReaderUITests.swift */; };
@@ -74,6 +131,12 @@
 		A2000010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2000011 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A2000012 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		A2000130 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		A2000131 /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
+		A2000132 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		A2000133 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		A2000134 /* FeedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRowView.swift; sourceTree = "<group>"; };
+		A2000135 /* FolderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowView.swift; sourceTree = "<group>"; };
 
 		/* Models */
 		A2000020 /* FeedlyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyUser.swift; sourceTree = "<group>"; };
@@ -84,15 +147,37 @@
 		A2000025 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		A2000026 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		A2000027 /* APIResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
+		A2000100 /* CDArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDArticle.swift; sourceTree = "<group>"; };
+		A2000101 /* CDFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeed.swift; sourceTree = "<group>"; };
+		A2000102 /* CDFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFolder.swift; sourceTree = "<group>"; };
+		A2000103 /* CDAppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDAppSettings.swift; sourceTree = "<group>"; };
+		A2000104 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		A2000105 /* OPMLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLDocument.swift; sourceTree = "<group>"; };
+		A2000106 /* ParsedFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedFeed.swift; sourceTree = "<group>"; };
+		A2000107 /* RSSReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderError.swift; sourceTree = "<group>"; };
 
 		/* Services */
 		A2000050 /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
-
-		/* Utilities */
-		A2000060 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A2000110 /* OPMLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLService.swift; sourceTree = "<group>"; };
+		A2000111 /* OPMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLParser.swift; sourceTree = "<group>"; };
+		A2000112 /* FeedParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserService.swift; sourceTree = "<group>"; };
+		A2000113 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		A2000114 /* FeedlyAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyAPIService.swift; sourceTree = "<group>"; };
+		A2000115 /* ArticleCleanupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupService.swift; sourceTree = "<group>"; };
+		A2000116 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		A2000117 /* FeedErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorHandler.swift; sourceTree = "<group>"; };
+		A2000118 /* RateLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimiter.swift; sourceTree = "<group>"; };
+		A2000119 /* RetryPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryPolicy.swift; sourceTree = "<group>"; };
+		A200011A /* ErrorLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogger.swift; sourceTree = "<group>"; };
 
 		/* ViewModels */
 		A2000070 /* ViewModelPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPlaceholder.swift; sourceTree = "<group>"; };
+		A2000120 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		A2000121 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
+		A2000122 /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
+
+		/* Utilities */
+		A2000060 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 
 		/* Core Data */
 		A2000080 /* RSSReader.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = RSSReader.xcdatamodeld; sourceTree = "<group>"; };
@@ -100,6 +185,27 @@
 		/* Unit Tests */
 		A2000030 /* AppErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorTests.swift; sourceTree = "<group>"; };
 		A2000031 /* FeedlyUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyUserTests.swift; sourceTree = "<group>"; };
+		A2000140 /* CoreDataTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestHelper.swift; sourceTree = "<group>"; };
+		A2000141 /* CDArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDArticleTests.swift; sourceTree = "<group>"; };
+		A2000142 /* CDFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeedTests.swift; sourceTree = "<group>"; };
+		A2000143 /* CDFolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFolderTests.swift; sourceTree = "<group>"; };
+		A2000144 /* CDAppSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDAppSettingsTests.swift; sourceTree = "<group>"; };
+		A2000150 /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
+		A2000151 /* ArticleDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModelTests.swift; sourceTree = "<group>"; };
+		A2000152 /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
+		A2000153 /* ViewModelTestsPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTestsPlaceholder.swift; sourceTree = "<group>"; };
+		A2000160 /* OPMLServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLServiceTests.swift; sourceTree = "<group>"; };
+		A2000161 /* OPMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLParserTests.swift; sourceTree = "<group>"; };
+		A2000162 /* ArticleCleanupServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupServiceTests.swift; sourceTree = "<group>"; };
+		A2000163 /* FeedErrorHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorHandlerTests.swift; sourceTree = "<group>"; };
+		A2000164 /* FeedParserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceTests.swift; sourceTree = "<group>"; };
+		A2000165 /* FeedlyAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyAPIServiceTests.swift; sourceTree = "<group>"; };
+		A2000166 /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
+		A2000167 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		A2000168 /* PersistenceControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerTests.swift; sourceTree = "<group>"; };
+		A2000169 /* RSSReaderErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderErrorTests.swift; sourceTree = "<group>"; };
+		A200016A /* RetryPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryPolicyTests.swift; sourceTree = "<group>"; };
+		A2000170 /* IntegrationTestsPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestsPlaceholder.swift; sourceTree = "<group>"; };
 
 		/* UI Tests */
 		A2000040 /* RSSReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderUITests.swift; sourceTree = "<group>"; };
@@ -200,6 +306,14 @@
 		A7000011 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A2000100 /* CDArticle.swift */,
+				A2000101 /* CDFeed.swift */,
+				A2000102 /* CDFolder.swift */,
+				A2000103 /* CDAppSettings.swift */,
+				A2000104 /* CoreDataModel.swift */,
+				A2000105 /* OPMLDocument.swift */,
+				A2000106 /* ParsedFeed.swift */,
+				A2000107 /* RSSReaderError.swift */,
 				A2000020 /* FeedlyUser.swift */,
 				A2000021 /* AppError.swift */,
 				A2000022 /* AuthenticationToken.swift */,
@@ -218,14 +332,47 @@
 				A2000010 /* ContentView.swift */,
 				A2000011 /* MainView.swift */,
 				A2000012 /* AuthenticationView.swift */,
+				A7000016 /* ArticleList */,
+				A7000017 /* ArticleDetail */,
+				A7000018 /* Sidebar */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A7000016 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				A2000130 /* ArticleListView.swift */,
+				A2000131 /* ArticleRowView.swift */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		A7000017 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A2000132 /* ArticleDetailView.swift */,
+			);
+			path = ArticleDetail;
+			sourceTree = "<group>";
+		};
+		A7000018 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				A2000133 /* SidebarView.swift */,
+				A2000134 /* FeedRowView.swift */,
+				A2000135 /* FolderRowView.swift */,
+			);
+			path = Sidebar;
 			sourceTree = "<group>";
 		};
 		A7000013 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				A2000070 /* ViewModelPlaceholder.swift */,
+				A2000120 /* ArticleListViewModel.swift */,
+				A2000121 /* ArticleDetailViewModel.swift */,
+				A2000122 /* SidebarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -234,6 +381,17 @@
 			isa = PBXGroup;
 			children = (
 				A2000050 /* ServiceProtocols.swift */,
+				A2000110 /* OPMLService.swift */,
+				A2000111 /* OPMLParser.swift */,
+				A2000112 /* FeedParserService.swift */,
+				A2000113 /* PersistenceController.swift */,
+				A2000114 /* FeedlyAPIService.swift */,
+				A2000115 /* ArticleCleanupService.swift */,
+				A2000116 /* KeychainService.swift */,
+				A2000117 /* FeedErrorHandler.swift */,
+				A2000118 /* RateLimiter.swift */,
+				A2000119 /* RetryPolicy.swift */,
+				A200011A /* ErrorLogger.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -259,6 +417,7 @@
 		A7000021 /* IntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
+				A2000170 /* IntegrationTestsPlaceholder.swift */,
 			);
 			path = IntegrationTests;
 			sourceTree = "<group>";
@@ -268,6 +427,11 @@
 			children = (
 				A2000030 /* AppErrorTests.swift */,
 				A2000031 /* FeedlyUserTests.swift */,
+				A2000140 /* CoreDataTestHelper.swift */,
+				A2000141 /* CDArticleTests.swift */,
+				A2000142 /* CDFeedTests.swift */,
+				A2000143 /* CDFolderTests.swift */,
+				A2000144 /* CDAppSettingsTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +439,10 @@
 		A7000023 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A2000150 /* ArticleListViewModelTests.swift */,
+				A2000151 /* ArticleDetailViewModelTests.swift */,
+				A2000152 /* SidebarViewModelTests.swift */,
+				A2000153 /* ViewModelTestsPlaceholder.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -282,6 +450,17 @@
 		A7000024 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A2000160 /* OPMLServiceTests.swift */,
+				A2000161 /* OPMLParserTests.swift */,
+				A2000162 /* ArticleCleanupServiceTests.swift */,
+				A2000163 /* FeedErrorHandlerTests.swift */,
+				A2000164 /* FeedParserServiceTests.swift */,
+				A2000165 /* FeedlyAPIServiceTests.swift */,
+				A2000166 /* KeychainServiceTests.swift */,
+				A2000167 /* MockURLProtocol.swift */,
+				A2000168 /* PersistenceControllerTests.swift */,
+				A2000169 /* RSSReaderErrorTests.swift */,
+				A200016A /* RetryPolicyTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -426,6 +605,12 @@
 				A1000010 /* ContentView.swift in Sources */,
 				A1000011 /* MainView.swift in Sources */,
 				A1000012 /* AuthenticationView.swift in Sources */,
+				A1000130 /* ArticleListView.swift in Sources */,
+				A1000131 /* ArticleRowView.swift in Sources */,
+				A1000132 /* ArticleDetailView.swift in Sources */,
+				A1000133 /* SidebarView.swift in Sources */,
+				A1000134 /* FeedRowView.swift in Sources */,
+				A1000135 /* FolderRowView.swift in Sources */,
 				A1000020 /* FeedlyUser.swift in Sources */,
 				A1000021 /* AppError.swift in Sources */,
 				A1000022 /* AuthenticationToken.swift in Sources */,
@@ -434,7 +619,29 @@
 				A1000025 /* Subscription.swift in Sources */,
 				A1000026 /* Article.swift in Sources */,
 				A1000027 /* APIResponses.swift in Sources */,
+				A1000100 /* CDArticle.swift in Sources */,
+				A1000101 /* CDFeed.swift in Sources */,
+				A1000102 /* CDFolder.swift in Sources */,
+				A1000103 /* CDAppSettings.swift in Sources */,
+				A1000104 /* CoreDataModel.swift in Sources */,
+				A1000105 /* OPMLDocument.swift in Sources */,
+				A1000106 /* ParsedFeed.swift in Sources */,
+				A1000107 /* RSSReaderError.swift in Sources */,
 				A1000050 /* ServiceProtocols.swift in Sources */,
+				A1000110 /* OPMLService.swift in Sources */,
+				A1000111 /* OPMLParser.swift in Sources */,
+				A1000112 /* FeedParserService.swift in Sources */,
+				A1000113 /* PersistenceController.swift in Sources */,
+				A1000114 /* FeedlyAPIService.swift in Sources */,
+				A1000115 /* ArticleCleanupService.swift in Sources */,
+				A1000116 /* KeychainService.swift in Sources */,
+				A1000117 /* FeedErrorHandler.swift in Sources */,
+				A1000118 /* RateLimiter.swift in Sources */,
+				A1000119 /* RetryPolicy.swift in Sources */,
+				A100011A /* ErrorLogger.swift in Sources */,
+				A1000120 /* ArticleListViewModel.swift in Sources */,
+				A1000121 /* ArticleDetailViewModel.swift in Sources */,
+				A1000122 /* SidebarViewModel.swift in Sources */,
 				A1000060 /* StringExtensions.swift in Sources */,
 				A1000080 /* RSSReader.xcdatamodeld in Sources */,
 			);
@@ -446,6 +653,27 @@
 			files = (
 				A1000030 /* AppErrorTests.swift in Sources */,
 				A1000031 /* FeedlyUserTests.swift in Sources */,
+				A1000140 /* CoreDataTestHelper.swift in Sources */,
+				A1000141 /* CDArticleTests.swift in Sources */,
+				A1000142 /* CDFeedTests.swift in Sources */,
+				A1000143 /* CDFolderTests.swift in Sources */,
+				A1000144 /* CDAppSettingsTests.swift in Sources */,
+				A1000150 /* ArticleListViewModelTests.swift in Sources */,
+				A1000151 /* ArticleDetailViewModelTests.swift in Sources */,
+				A1000152 /* SidebarViewModelTests.swift in Sources */,
+				A1000153 /* ViewModelTestsPlaceholder.swift in Sources */,
+				A1000160 /* OPMLServiceTests.swift in Sources */,
+				A1000161 /* OPMLParserTests.swift in Sources */,
+				A1000162 /* ArticleCleanupServiceTests.swift in Sources */,
+				A1000163 /* FeedErrorHandlerTests.swift in Sources */,
+				A1000164 /* FeedParserServiceTests.swift in Sources */,
+				A1000165 /* FeedlyAPIServiceTests.swift in Sources */,
+				A1000166 /* KeychainServiceTests.swift in Sources */,
+				A1000167 /* MockURLProtocol.swift in Sources */,
+				A1000168 /* PersistenceControllerTests.swift in Sources */,
+				A1000169 /* RSSReaderErrorTests.swift in Sources */,
+				A100016A /* RetryPolicyTests.swift in Sources */,
+				A1000170 /* IntegrationTestsPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
