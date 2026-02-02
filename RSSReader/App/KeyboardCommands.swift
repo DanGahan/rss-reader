@@ -20,6 +20,19 @@ struct KeyboardCommands: Commands {
             .keyboardShortcut("n", modifiers: [.command])
         }
 
+        CommandGroup(after: .importExport) {
+            Button("Export Subscriptions...") {
+                NotificationCenter.default.post(
+                    name: .exportOPML,
+                    object: nil
+                )
+            }
+            .keyboardShortcut(
+                "e",
+                modifiers: [.command, .shift]
+            )
+        }
+
         CommandMenu("Navigation") {
             Button("Mark All as Read") {
                 NotificationCenter.default.post(
@@ -89,4 +102,7 @@ extension Notification.Name {
         "markAllAsRead"
     )
     static let addFeed = Notification.Name("addFeed")
+    static let exportOPML = Notification.Name(
+        "exportOPML"
+    )
 }
