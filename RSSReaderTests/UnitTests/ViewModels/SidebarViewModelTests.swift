@@ -195,19 +195,17 @@ struct SidebarViewModelTests {
     @Test("SidebarSelection folder equality")
     func folderEquality() {
         let id = UUID()
-        #expect(
-            SidebarSelection.folder(id)
-                == SidebarSelection.folder(id)
-        )
+        let lhs = SidebarSelection.folder(id)
+        let rhs = SidebarSelection.folder(id)
+        #expect(lhs == rhs)
     }
 
     @Test("SidebarSelection feed equality")
     func feedEquality() {
         let id = UUID()
-        #expect(
-            SidebarSelection.feed(id)
-                == SidebarSelection.feed(id)
-        )
+        let lhs = SidebarSelection.feed(id)
+        let rhs = SidebarSelection.feed(id)
+        #expect(lhs == rhs)
     }
 
     @Test("SidebarSelection folder != feed with same UUID")

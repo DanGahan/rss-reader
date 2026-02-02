@@ -14,6 +14,7 @@ struct CDFeedTests {
     // MARK: - Entity Creation
 
     @Test("Feed can be created with required attributes")
+    @MainActor
     func createFeed() throws {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -41,6 +42,7 @@ struct CDFeedTests {
     }
 
     @Test("Feed can store all optional attributes")
+    @MainActor
     func feedOptionalAttributes() throws {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -70,6 +72,7 @@ struct CDFeedTests {
     // MARK: - Relationships
 
     @Test("Feed has one-to-many relationship with articles")
+    @MainActor
     func feedArticleRelationship() throws {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -101,6 +104,7 @@ struct CDFeedTests {
     }
 
     @Test("Feed belongs to optional folder")
+    @MainActor
     func feedFolderRelationship() throws {
         let context = CoreDataTestHelper.makeContext()
         let folder = CDFolder.create(in: context, name: "News")
@@ -124,6 +128,7 @@ struct CDFeedTests {
     }
 
     @Test("Deleting feed cascades to articles")
+    @MainActor
     func cascadeDeleteArticles() throws {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -160,6 +165,7 @@ struct CDFeedTests {
     // MARK: - Computed Properties
 
     @Test("Unread count returns number of unread articles")
+    @MainActor
     func unreadCount() throws {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -199,6 +205,7 @@ struct CDFeedTests {
     }
 
     @Test("Unread count is zero with no articles")
+    @MainActor
     func unreadCountEmpty() {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -210,6 +217,7 @@ struct CDFeedTests {
     }
 
     @Test("hasError is true when lastError is set")
+    @MainActor
     func hasErrorWhenErrorExists() {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -222,6 +230,7 @@ struct CDFeedTests {
     }
 
     @Test("hasError is false when lastError is nil")
+    @MainActor
     func hasErrorWhenNoError() {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
@@ -233,6 +242,7 @@ struct CDFeedTests {
     }
 
     @Test("Unread count is zero when all articles are read")
+    @MainActor
     func unreadCountAllRead() throws {
         let context = CoreDataTestHelper.makeContext()
         let feed = CDFeed.create(
