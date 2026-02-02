@@ -10,7 +10,15 @@ import SwiftUI
 /// Keyboard shortcuts for the application menu.
 struct KeyboardCommands: Commands {
     var body: some Commands {
-        CommandGroup(replacing: .newItem) {}
+        CommandGroup(replacing: .newItem) {
+            Button("Add Feed") {
+                NotificationCenter.default.post(
+                    name: .addFeed,
+                    object: nil
+                )
+            }
+            .keyboardShortcut("n", modifiers: [.command])
+        }
 
         CommandMenu("Navigation") {
             Button("Mark All as Read") {
@@ -80,4 +88,5 @@ extension Notification.Name {
     static let markAllAsRead = Notification.Name(
         "markAllAsRead"
     )
+    static let addFeed = Notification.Name("addFeed")
 }

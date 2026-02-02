@@ -9,13 +9,21 @@ import SwiftUI
 
 @main
 struct RSSReaderApp: App {
-    @StateObject private var appState = AppState()
+    let persistence = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appState)
+                .environment(
+                    \.managedObjectContext,
+                    persistence.viewContext
+                )
+                .frame(
+                    minWidth: 1000,
+                    minHeight: 600
+                )
         }
+        .defaultSize(width: 1200, height: 800)
         .commands {
             KeyboardCommands()
         }

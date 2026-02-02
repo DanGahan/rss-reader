@@ -12,15 +12,6 @@ final class RSSReaderUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testAuthenticationViewDisplaysSignInButton() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        // Verify the sign in button exists
-        let signInButton = app.buttons["Sign in with Feedly"]
-        XCTAssertTrue(signInButton.waitForExistence(timeout: 5))
-    }
-
     func testAppTitleDisplays() throws {
         let app = XCUIApplication()
         app.launch()
