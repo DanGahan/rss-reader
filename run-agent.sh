@@ -1,143 +1,105 @@
 #!/bin/bash
 
 AGENT=$1
-TASK=$2
+shift
+TASK="$*"
 
 if [ -z "$AGENT" ] || [ -z "$TASK" ]; then
     echo "Usage: ./run-agent.sh <agent> <task>"
+    echo "  e.g. ./run-agent.sh qa \"check open MRs and reviews\""
     echo "Agents: architect, scrum, engineer, qa, devops"
     exit 1
 fi
 
-# Base safe commands (all agents)
-BASE_SAFE=(
-    "git status"
-    "git log"
-    "git diff"
-    "git show"
-    "git branch"
-    "ls"
-    "cat"
-    "grep"
-    "find"
-    "head"
-    "tail"
-)
-
-# Architect: Read-only + file creation
-ARCHITECT_SAFE=(
-    "${BASE_SAFE[@]}"
-    "mkdir"
-    "touch"
-    "echo"
-)
-
-# Scrum Master: Git operations + GitHub CLI
-SCRUM_SAFE=(
-    "${BASE_SAFE[@]}"
-    "gh issue create"
-    "gh issue edit"
-    "gh issue list"
-    "gh issue view"
-    "gh issue comment"
-    "gh label create"
-    "gh label edit"
-    "gh label list"
-)
-
-# Engineer: Full development workflow
-ENGINEER_SAFE=(
-    "${BASE_SAFE[@]}"
-    "git checkout -b"
-    "git add"
-    "git commit"
-    "git push origin"
-    "gh pr create"
-    "gh pr list"
-    "gh pr view"
-    "xcodebuild build"
-    "xcodebuild test"
-    "swift build"
-    "swift test"
-    "swift package"
-    "mkdir"
-    "touch"
-)
-
-# QA: Read + test operations
-QA_SAFE=(
-    "${BASE_SAFE[@]}"
-    "xcodebuild test"
-    "swift test"
-    "gh pr checkout"
-    "gh pr review"
-    "gh pr comment"
-    "gh pr list"
-)
-
-# DevOps: Pipeline and workflow operations
-DEVOPS_SAFE=(
-    "${BASE_SAFE[@]}"
-    "git checkout -b"
-    "git add"
-    "git commit"
-    "git push origin"
-    "gh workflow"
-    "gh run"
-    "gh secret"
-    "gh pr create"
-    "gh pr list"
-    "gh api"
-    "xcodebuild -showsdks"
-    "xcodebuild -version"
-    "brew install"
-    "brew list"
-    "mkdir"
-    "touch"
-    "echo"
-    "yamllint"
-)
-
-# Function to build allowlist
-build_allowlist() {
-    local commands=("$@")
-    local allowlist=""
-    for cmd in "${commands[@]}"; do
-        allowlist="$allowlist '$cmd'"
-    done
-    echo "$allowlist"
+# Build a comma-separated --allowedTools string from an array
+build_tools() {
+    local IFS=","
+    echo "$*"
 }
+
+# Base read-only tools (all agents)
+BASE_TOOLS=(
+    "Read"
+    "Glob"
+    "Grep"
+    "Bash(git status:*)"
+    "Bash(git log:*)"
+    "Bash(git diff:*)"
+    "Bash(git show:*)"
+    "Bash(git branch:*)"
+    "Bash(ls:*)"
+    "Bash(cat:*)"
+    "Bash(grep:*)"
+    "Bash(find:*)"
+    "Bash(head:*)"
+    "Bash(tail:*)"
+)
 
 case $AGENT in
   architect)
-    ALLOWLIST=$(build_allowlist "${ARCHITECT_SAFE[@]}")
-    eval claude $ALLOWLIST \
-          --system-prompt-file docs/agent-prompts/architect.md \
-          \"$TASK\"
+    TOOLS=(
+        "${BASE_TOOLS[@]}"
+        "Write"
+        "Edit"
+        "Bash(mkdir:*)"
+        "Bash(touch:*)"
+    )
+    PROMPT_FILE="docs/agent-prompts/architect.md"
     ;;
   scrum|scrum-master)
-    ALLOWLIST=$(build_allowlist "${SCRUM_SAFE[@]}")
-    eval claude $ALLOWLIST \
-          --system-prompt-file docs/agent-prompts/scrum-master.md \
-          \"$TASK\"
+    TOOLS=(
+        "${BASE_TOOLS[@]}"
+        "Bash(gh issue:*)"
+        "Bash(gh label:*)"
+    )
+    PROMPT_FILE="docs/agent-prompts/scrum-master.md"
     ;;
   engineer)
-    ALLOWLIST=$(build_allowlist "${ENGINEER_SAFE[@]}")
-    eval claude $ALLOWLIST \
-          --system-prompt-file docs/agent-prompts/engineer.md \
-          \"$TASK\"
+    TOOLS=(
+        "${BASE_TOOLS[@]}"
+        "Write"
+        "Edit"
+        "Bash(git checkout:*)"
+        "Bash(git add:*)"
+        "Bash(git commit:*)"
+        "Bash(git push:*)"
+        "Bash(gh pr create:*)"
+        "Bash(gh pr list:*)"
+        "Bash(gh pr view:*)"
+        "Bash(xcodebuild:*)"
+        "Bash(swift:*)"
+        "Bash(swiftlint:*)"
+        "Bash(mkdir:*)"
+    )
+    PROMPT_FILE="docs/agent-prompts/engineer.md"
     ;;
   qa)
-    ALLOWLIST=$(build_allowlist "${QA_SAFE[@]}")
-    eval claude $ALLOWLIST \
-          --system-prompt-file docs/agent-prompts/qa.md \
-          \"$TASK\"
+    TOOLS=(
+        "${BASE_TOOLS[@]}"
+        "Bash(gh pr:*)"
+        "Bash(gh run:*)"
+        "Bash(xcodebuild:*)"
+        "Bash(swift:*)"
+        "Bash(swiftlint:*)"
+    )
+    PROMPT_FILE="docs/agent-prompts/qa.md"
     ;;
   devops)
-    ALLOWLIST=$(build_allowlist "${DEVOPS_SAFE[@]}")
-    eval claude $ALLOWLIST \
-          --system-prompt-file docs/agent-prompts/devops.md \
-          \"$TASK\"
+    TOOLS=(
+        "${BASE_TOOLS[@]}"
+        "Write"
+        "Edit"
+        "Bash(git checkout:*)"
+        "Bash(git add:*)"
+        "Bash(git commit:*)"
+        "Bash(git push:*)"
+        "Bash(gh:*)"
+        "Bash(xcodebuild:*)"
+        "Bash(brew:*)"
+        "Bash(mkdir:*)"
+        "Bash(yamllint:*)"
+    )
+    PROMPT_FILE="docs/agent-prompts/devops.md"
     ;;
   *)
     echo "Unknown agent: $AGENT"
@@ -145,3 +107,10 @@ case $AGENT in
     exit 1
     ;;
 esac
+
+ALLOWLIST=$(build_tools "${TOOLS[@]}")
+
+claude -p \
+    --allowedTools "$ALLOWLIST" \
+    --system-prompt-file "$PROMPT_FILE" \
+    "$TASK"
