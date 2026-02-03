@@ -110,7 +110,7 @@ esac
 
 ALLOWLIST=$(build_tools "${TOOLS[@]}")
 
-claude -p \
+claude \
     --allowedTools "$ALLOWLIST" \
     --system-prompt-file "$PROMPT_FILE" \
     "$TASK"
