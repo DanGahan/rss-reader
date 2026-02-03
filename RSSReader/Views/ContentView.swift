@@ -99,6 +99,14 @@ struct ContentView: View {
         ) { _ in
             showingAddFeed = true
         }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .newFolder
+            )
+        ) { _ in
+            sidebarViewModel.folderNameInput = ""
+            sidebarViewModel.showNewFolderAlert = true
+        }
         .sheet(isPresented: $showingAddFeed) {
             AddFeedSheet()
         }
