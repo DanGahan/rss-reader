@@ -11,7 +11,6 @@ import Testing
 
 @Suite("OPMLParser Tests")
 struct OPMLParserTests {
-
     // MARK: - Document-Level Parsing
 
     @Test("Parses document title from head")
@@ -183,9 +182,7 @@ struct OPMLParserTests {
 
     @Test("Throws for malformed XML")
     func malformedXML() {
-        let data = "not valid xml <><>".data(
-            using: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
+        let data = Data("not valid xml <><>".utf8)
         let parser = OPMLParser(data: data)
         #expect(throws: RSSReaderError.self) {
             try parser.parse()

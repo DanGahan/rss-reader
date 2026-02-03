@@ -10,7 +10,6 @@ import Testing
 
 @Suite("RSSReaderError Tests")
 struct RSSReaderErrorTests {
-
     // MARK: - Error Descriptions
 
     @Test("invalidFeedURL has description")
@@ -142,14 +141,13 @@ struct RSSReaderErrorTests {
 
     @Test("Same cases are equal")
     func equality() {
-        #expect(
-            RSSReaderError.feedNotFound
-                == RSSReaderError.feedNotFound
-        )
-        #expect(
-            RSSReaderError.networkError("a")
-                == RSSReaderError.networkError("a")
-        )
+        let feedNotFound1 = RSSReaderError.feedNotFound
+        let feedNotFound2 = RSSReaderError.feedNotFound
+        #expect(feedNotFound1 == feedNotFound2)
+
+        let network1 = RSSReaderError.networkError("a")
+        let network2 = RSSReaderError.networkError("a")
+        #expect(network1 == network2)
     }
 
     @Test("Different cases are not equal")

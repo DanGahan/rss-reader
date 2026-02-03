@@ -139,46 +139,24 @@ struct ArticleCleanupServiceGeneralTests {
         let context = makeContext()
         let feed = makeFeed(context)
 
-        let settings = try CDAppSettings.current(
-            in: context
-        )
+        let settings = try CDAppSettings.current(in: context)
         settings.articleRetentionCount = 3
         settings.articleRetentionDays = 30
 
         // 2 old+read (deleted by age)
-        _ = makeArticle(
-            context,
-            feed: feed,
-            daysOld: 40
-        )
-        _ = makeArticle(
-            context,
-            feed: feed,
-            daysOld: 50
-        )
+        _ = makeArticle(context, feed: feed, daysOld: 40)
+        _ = makeArticle(context, feed: feed, daysOld: 50)
 
-        // 5 recent+read (2 deleted by count,
-        // since max is 3)
+        // 5 recent+read (2 deleted by count, since max is 3)
         for day in 0..<5 {
-            _ = makeArticle(
-                context,
-                feed: feed,
-                daysOld: day
-            )
+            _ = makeArticle(context, feed: feed, daysOld: day)
         }
 
         // 1 unread old (preserved)
-        _ = makeArticle(
-            context,
-            feed: feed,
-            daysOld: 60,
-            isRead: false
-        )
+        _ = makeArticle(context, feed: feed, daysOld: 60, isRead: false)
         try context.save()
 
-        let result = try sut.performCleanup(
-            in: context
-        )
+        let result = try sut.performCleanup(in: context)
 
         // Age deletes the 2 old read articles
         #expect(result.deletedByAge == 2)
@@ -186,9 +164,7 @@ struct ArticleCleanupServiceGeneralTests {
         #expect(result.deletedByCount == 2)
         #expect(result.totalDeleted == 4)
 
-        let remaining = try context.fetch(
-            CDArticle.fetchRequest()
-        )
+        let remaining = try context.fetch(CDArticle.fetchRequest())
         // 3 recent read + 1 unread = 4
         #expect(remaining.count == 4)
     }

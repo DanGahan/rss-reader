@@ -18,14 +18,14 @@ struct RetryPolicy: Sendable {
     let maxDelay: TimeInterval
 
     /// Default policy: up to 5 retries, 5 s base, 5 min cap.
-    static let `default` = RetryPolicy(
+    static let `default` = Self(
         maxRetries: 5,
         baseDelay: 5,
         maxDelay: 300
     )
 
     /// Aggressive policy for user-initiated retries.
-    static let immediate = RetryPolicy(
+    static let immediate = Self(
         maxRetries: 3,
         baseDelay: 1,
         maxDelay: 10

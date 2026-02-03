@@ -18,7 +18,6 @@ import Foundation
 /// Cleanup runs on a background context to avoid
 /// blocking the UI.
 struct ArticleCleanupService {
-
     /// Result of a cleanup operation.
     struct CleanupResult: Equatable {
         let deletedByAge: Int
@@ -91,7 +90,6 @@ struct ArticleCleanupService {
 // MARK: - Private Helpers
 
 private extension ArticleCleanupService {
-
     /// Deletes all read articles added before the
     /// cutoff date.
     func deleteByAge(

@@ -15,7 +15,6 @@ import Foundation
 /// Invalid articles (missing title AND link) are silently
 /// skipped so one bad entry does not break the whole feed.
 struct FeedParserService {
-
     /// Parses raw feed `Data` and returns a `ParsedFeed`.
     ///
     /// - Throws: `RSSReaderError.parsingFailed` if the feed

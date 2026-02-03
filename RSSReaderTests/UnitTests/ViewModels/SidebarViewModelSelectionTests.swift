@@ -11,7 +11,6 @@ import Testing
 
 @Suite("SidebarViewModel Selection Tests")
 struct SidebarViewModelSelectionTests {
-
     @Test("Selection is nil on init")
     @MainActor
     func initialSelectionIsNil() {

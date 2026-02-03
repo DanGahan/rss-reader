@@ -12,7 +12,6 @@ import Testing
 
 @Suite("AddFeedSheet Tests")
 struct AddFeedSheetTests {
-
     // MARK: - Helpers
 
     private func makeContext() -> NSManagedObjectContext {

@@ -12,7 +12,6 @@ import Testing
 
 @Suite("FeedErrorHandler Tests")
 struct FeedErrorHandlerTests {
-
     // MARK: - Helpers
 
     private func makeFeed(
