@@ -5,6 +5,7 @@
 //  Created on 2026-01-30.
 //
 
+import AppKit
 import CoreData
 import SwiftUI
 
@@ -23,6 +24,8 @@ struct ArticleDetailView: View {
 
     @FetchRequest private var articles:
         FetchedResults<CDArticle>
+
+    @State private var isHoveringTitle = false
 
     // MARK: - Init
 
@@ -131,7 +134,25 @@ struct ArticleDetailView: View {
             Text(article.title)
                 .font(.title)
                 .fontWeight(.bold)
-                .textSelection(.enabled)
+                .foregroundStyle(
+                    isHoveringTitle ? Color.accentColor : .primary
+                )
+                .underline(isHoveringTitle)
+                .onHover { hovering in
+                    isHoveringTitle = hovering
+                    if hovering {
+                        NSCursor.pointingHand.push()
+                    } else {
+                        NSCursor.pop()
+                    }
+                }
+                .onTapGesture {
+                    viewModel.openInSafariWithFeedback(
+                        urlString: article.link
+                    )
+                }
+                .accessibilityAddTraits(.isLink)
+                .accessibilityHint("Opens article in Safari")
 
             HStack(spacing: 12) {
                 if let author = article.author,
