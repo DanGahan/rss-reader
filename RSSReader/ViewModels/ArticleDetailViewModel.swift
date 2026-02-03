@@ -16,7 +16,6 @@ import Foundation
 /// content, date formatting, and Safari integration.
 @MainActor
 final class ArticleDetailViewModel: ObservableObject {
-
     /// Whether to show the "Opened in Safari" toast.
     @Published var showOpenedToast = false
 

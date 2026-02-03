@@ -24,7 +24,7 @@ struct OPMLOutline: Equatable {
     /// The website URL (optional for all outlines).
     let htmlURL: URL?
     /// Nested outlines (folders contain child feeds).
-    let children: [OPMLOutline]
+    let children: [Self]
 
     /// `true` when this outline represents a folder
     /// (has no feed URL and has children).

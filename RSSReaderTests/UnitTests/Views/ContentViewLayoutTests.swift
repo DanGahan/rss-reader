@@ -11,7 +11,6 @@ import Testing
 
 @Suite("ContentView Layout Tests")
 struct ContentViewLayoutTests {
-
     // MARK: - Notification Names
 
     @Test(".addFeed notification name has correct raw value")

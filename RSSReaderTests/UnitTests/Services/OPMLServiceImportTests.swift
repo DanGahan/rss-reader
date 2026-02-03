@@ -1,8 +1,8 @@
 //
-//  OPMLServiceTests.swift
+//  OPMLServiceImportTests.swift
 //  RSSReaderTests
 //
-//  Created on 2026-01-30.
+//  Created on 2026-02-03.
 //
 
 import CoreData
@@ -10,9 +10,8 @@ import Foundation
 import Testing
 @testable import RSSReader
 
-@Suite("OPMLService Tests")
-struct OPMLServiceTests {
-
+@Suite("OPMLService Import Tests")
+struct OPMLServiceImportTests {
     private let sut = OPMLService()
 
     // MARK: - Parse from Data
@@ -20,9 +19,7 @@ struct OPMLServiceTests {
     @Test("parseOPML returns document from valid data")
     @MainActor
     func parseValidData() throws {
-        let data = Self.sampleOPML.data(
-            using: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
+        let data = Data(Self.sampleOPML.utf8)
         let doc = try sut.parseOPML(data: data)
         #expect(doc.title == "Test Export")
         #expect(doc.outlines.count == 3)
@@ -31,9 +28,7 @@ struct OPMLServiceTests {
     @Test("parseOPML throws for invalid data")
     @MainActor
     func parseInvalidData() {
-        let data = "garbage".data(
-            using: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
+        let data = Data("garbage".utf8)
         #expect(throws: RSSReaderError.self) {
             try sut.parseOPML(data: data)
         }
@@ -220,153 +215,10 @@ struct OPMLServiceTests {
         #expect(result.feedsSkipped == 0)
     }
 
-    // MARK: - Export
-
-    @Test("exportOPML produces valid XML output")
-    @MainActor
-    func exportValidXML() throws {
-        let context = CoreDataTestHelper.makeContext()
-        let folder = CDFolder.create(
-            in: context, name: "Tech", sortOrder: 0
-        )
-        let feed = CDFeed.create(
-            in: context,
-            title: "Ars Technica",
-            feedURL: "https://feeds.arstechnica.com/feed"
-        )
-        feed.siteURL = "https://arstechnica.com"
-        feed.folder = folder
-        try context.save()
-
-        let data = try sut.exportOPML(from: context)
-        let xml = String(
-            data: data,
-            encoding: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
-        #expect(xml.contains("<opml version=\"2.0\">"))
-        #expect(xml.contains("Ars Technica"))
-        #expect(
-            xml.contains(
-                "https://feeds.arstechnica.com/feed"
-            )
-        )
-    }
-
-    @Test("exportOPML preserves folder hierarchy")
-    @MainActor
-    func exportFolderHierarchy() throws {
-        let context = CoreDataTestHelper.makeContext()
-        let folder = CDFolder.create(
-            in: context, name: "News", sortOrder: 0
-        )
-        let feed = CDFeed.create(
-            in: context,
-            title: "BBC",
-            feedURL: "https://bbc.co.uk/feed"
-        )
-        feed.folder = folder
-        try context.save()
-
-        let data = try sut.exportOPML(from: context)
-        let xml = String(
-            data: data,
-            encoding: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
-        #expect(xml.contains("title=\"News\""))
-        #expect(xml.contains("</outline>"))
-    }
-
-    @Test("exportOPML includes unfiled feeds")
-    @MainActor
-    func exportUnfiledFeeds() throws {
-        let context = CoreDataTestHelper.makeContext()
-        _ = CDFeed.create(
-            in: context,
-            title: "Standalone Blog",
-            feedURL: "https://blog.example.com/feed"
-        )
-        try context.save()
-
-        let data = try sut.exportOPML(from: context)
-        let xml = String(
-            data: data,
-            encoding: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
-        #expect(xml.contains("Standalone Blog"))
-    }
-
-    @Test("exportOPML handles empty database")
-    @MainActor
-    func exportEmptyDB() throws {
-        let context = CoreDataTestHelper.makeContext()
-        let data = try sut.exportOPML(from: context)
-        let xml = String(
-            data: data,
-            encoding: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
-        #expect(xml.contains("<opml"))
-        #expect(xml.contains("</body>"))
-    }
-
-    @Test("exportOPML escapes XML special characters")
-    @MainActor
-    func exportXMLEscaping() throws {
-        let context = CoreDataTestHelper.makeContext()
-        _ = CDFeed.create(
-            in: context,
-            title: "Tom & Jerry's <Blog>",
-            feedURL: "https://example.com/feed"
-        )
-        try context.save()
-
-        let data = try sut.exportOPML(from: context)
-        let xml = String(
-            data: data,
-            encoding: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
-        #expect(xml.contains("&amp;"))
-        #expect(xml.contains("&apos;"))
-        #expect(xml.contains("&lt;"))
-        #expect(xml.contains("&gt;"))
-        #expect(!xml.contains("Tom & Jerry"))
-    }
-
-    @Test("exportOPML roundtrips with import")
-    @MainActor
-    func exportImportRoundtrip() throws {
-        let context = CoreDataTestHelper.makeContext()
-        let folder = CDFolder.create(
-            in: context, name: "Tech", sortOrder: 0
-        )
-        let feed = CDFeed.create(
-            in: context,
-            title: "Test Feed",
-            feedURL: "https://test.example.com/feed"
-        )
-        feed.siteURL = "https://test.example.com"
-        feed.folder = folder
-        try context.save()
-
-        let exported = try sut.exportOPML(from: context)
-        let doc = try sut.parseOPML(data: exported)
-
-        #expect(doc.outlines.count >= 1)
-        let techFolder = doc.outlines.first {
-            $0.title == "Tech"
-        }
-        #expect(techFolder != nil)
-        #expect(
-            techFolder?.children.first?.title
-                == "Test Feed"
-        )
-    }
-
     // MARK: - Helpers
 
     private func parseTestDoc() throws -> OPMLDocument {
-        let data = Self.sampleOPML.data(
-            using: .utf8
-        )!  // swiftlint:disable:this force_unwrapping
+        let data = Data(Self.sampleOPML.utf8)
         return try sut.parseOPML(data: data)
     }
 
@@ -380,29 +232,13 @@ struct OPMLServiceTests {
     </head>
     <body>
         <outline text="Tech" title="Tech">
-            <outline type="rss" \
-    text="Ars Technica" \
-    title="Ars Technica" \
-    xmlUrl="https://feeds.arstechnica.com/feed" \
-    htmlUrl="https://arstechnica.com"/>
-            <outline type="rss" \
-    text="The Verge" \
-    title="The Verge" \
-    xmlUrl="https://theverge.com/rss/index.xml" \
-    htmlUrl="https://www.theverge.com"/>
+            <outline type="rss" text="Ars Technica" title="Ars Technica" xmlUrl="https://feeds.arstechnica.com/feed" htmlUrl="https://arstechnica.com"/>
+            <outline type="rss" text="The Verge" title="The Verge" xmlUrl="https://theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com"/>
         </outline>
         <outline text="News" title="News">
-            <outline type="rss" \
-    text="BBC News" \
-    title="BBC News" \
-    xmlUrl="https://feeds.bbci.co.uk/news/rss.xml" \
-    htmlUrl="https://www.bbc.co.uk/news"/>
+            <outline type="rss" text="BBC News" title="BBC News" xmlUrl="https://feeds.bbci.co.uk/news/rss.xml" htmlUrl="https://www.bbc.co.uk/news"/>
         </outline>
-        <outline type="rss" \
-    text="Unfiled Blog" \
-    title="Unfiled Blog" \
-    xmlUrl="https://unfiled.example.com/feed" \
-    htmlUrl="https://unfiled.example.com"/>
+        <outline type="rss" text="Unfiled Blog" title="Unfiled Blog" xmlUrl="https://unfiled.example.com/feed" htmlUrl="https://unfiled.example.com"/>
     </body>
     </opml>
     """

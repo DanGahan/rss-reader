@@ -1,4 +1,3 @@
-// swiftlint:disable file_length
 //
 //  AddFeedSheet.swift
 //  RSSReader
@@ -15,7 +14,6 @@ import SwiftUI
 /// title confirmation, allows folder selection, and creates
 /// the `CDFeed` + initial `CDArticle` records on save.
 struct AddFeedSheet: View {
-
     @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext)
     private var viewContext
@@ -233,4 +231,3 @@ struct AddFeedSheet: View {
         return count > 0
     }
 }
-// swiftlint:enable file_length
