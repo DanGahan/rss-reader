@@ -14,7 +14,6 @@
 
 		/* Views */
 		A1000010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* ContentView.swift */; };
-		A1000012 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000012 /* AuthenticationView.swift */; };
 		A1000130 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000130 /* ArticleListView.swift */; };
 		A1000131 /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000131 /* ArticleRowView.swift */; };
 		A1000132 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000132 /* ArticleDetailView.swift */; };
@@ -134,7 +133,6 @@
 
 		/* Views */
 		A2000010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A2000012 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		A2000130 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
 		A2000131 /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		A2000132 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -338,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				A2000010 /* ContentView.swift */,
-				A2000012 /* AuthenticationView.swift */,
 				A7000016 /* ArticleList */,
 				A7000017 /* ArticleDetail */,
 				A7000018 /* Sidebar */,
@@ -622,7 +619,6 @@
 				A1000002 /* AppState.swift in Sources */,
 				A1000003 /* KeyboardCommands.swift in Sources */,
 				A1000010 /* ContentView.swift in Sources */,
-				A1000012 /* AuthenticationView.swift in Sources */,
 				A1000130 /* ArticleListView.swift in Sources */,
 				A1000131 /* ArticleRowView.swift in Sources */,
 				A1000132 /* ArticleDetailView.swift in Sources */,
