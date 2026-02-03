@@ -15,7 +15,7 @@ struct SidebarView: View {
     @ObservedObject var viewModel: SidebarViewModel
 
     @Environment(\.managedObjectContext)
-    private var viewContext
+    private var context
 
     @FetchRequest(
         sortDescriptors: [
@@ -42,6 +42,61 @@ struct SidebarView: View {
         }
         .listStyle(.sidebar)
         .frame(minWidth: 200)
+        .alert(
+            "New Folder",
+            isPresented: $viewModel.showNewFolderAlert
+        ) {
+            TextField(
+                "Folder name",
+                text: $viewModel.folderNameInput
+            )
+            Button("Create") {
+                viewModel.createFolder(
+                    name: viewModel.folderNameInput,
+                    in: context
+                )
+            }
+            Button("Cancel", role: .cancel) {}
+        }
+        .alert(
+            "Rename Folder",
+            isPresented: $viewModel.showRenameFolderAlert
+        ) {
+            TextField(
+                "New name",
+                text: $viewModel.folderNameInput
+            )
+            Button("Rename") {
+                if let id = viewModel.folderToRename {
+                    viewModel.renameFolder(
+                        id: id,
+                        newName: viewModel.folderNameInput,
+                        in: context
+                    )
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        }
+        .confirmationDialog(
+            "Delete Folder?",
+            isPresented:
+                $viewModel.showDeleteConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Delete", role: .destructive) {
+                if let id = viewModel.folderToDelete {
+                    viewModel.deleteFolder(
+                        id: id, in: context
+                    )
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text(
+                "Feeds in this folder will be moved "
+                    + "to Unfiled."
+            )
+        }
     }
 
     // MARK: - Sections
@@ -60,7 +115,9 @@ struct SidebarView: View {
                 ) { feed in
                     FeedRowView(feed: feed)
                         .tag(
-                            SidebarSelection.feed(feed.id)
+                            SidebarSelection.feed(
+                                feed.id
+                            )
                         )
                         .contextMenu {
                             feedContextMenu(feed: feed)
@@ -70,6 +127,9 @@ struct SidebarView: View {
                 FolderRowView(folder: folder)
             }
             .tag(SidebarSelection.folder(folder.id))
+            .contextMenu {
+                folderContextMenu(folder: folder)
+            }
         }
     }
 
@@ -77,10 +137,14 @@ struct SidebarView: View {
     private var unfiledFeedsSection: some View {
         if !unfiledFeeds.isEmpty {
             Section("Unfiled") {
-                ForEach(unfiledFeeds, id: \.id) { feed in
+                ForEach(
+                    unfiledFeeds, id: \.id
+                ) { feed in
                     FeedRowView(feed: feed)
                         .tag(
-                            SidebarSelection.feed(feed.id)
+                            SidebarSelection.feed(
+                                feed.id
+                            )
                         )
                         .contextMenu {
                             feedContextMenu(feed: feed)
@@ -90,12 +154,50 @@ struct SidebarView: View {
         }
     }
 
-    // MARK: - Context Menu
+    // MARK: - Context Menus
+
+    @ViewBuilder
+    private func folderContextMenu(
+        folder: CDFolder
+    ) -> some View {
+        Button("Rename...") {
+            viewModel.folderToRename = folder.id
+            viewModel.folderNameInput = folder.name
+            viewModel.showRenameFolderAlert = true
+        }
+        Divider()
+        Button("Delete", role: .destructive) {
+            viewModel.folderToDelete = folder.id
+            viewModel.showDeleteConfirmation = true
+        }
+    }
 
     @ViewBuilder
     private func feedContextMenu(
         feed: CDFeed
     ) -> some View {
+        Menu("Move to Folder") {
+            ForEach(folders, id: \.id) { folder in
+                Button(folder.name) {
+                    viewModel.moveFeed(
+                        feedId: feed.id,
+                        toFolderId: folder.id,
+                        in: context
+                    )
+                }
+                .disabled(feed.folder?.id == folder.id)
+            }
+            Divider()
+            Button("Unfiled") {
+                viewModel.moveFeed(
+                    feedId: feed.id,
+                    toFolderId: nil,
+                    in: context
+                )
+            }
+            .disabled(feed.folder == nil)
+        }
+        Divider()
         Button(role: .destructive) {
             deleteFeed(feed)
         } label: {
@@ -109,7 +211,7 @@ struct SidebarView: View {
     // MARK: - Actions
 
     private func deleteFeed(_ feed: CDFeed) {
-        viewContext.delete(feed)
-        try? viewContext.save()
+        context.delete(feed)
+        try? context.save()
     }
 }
