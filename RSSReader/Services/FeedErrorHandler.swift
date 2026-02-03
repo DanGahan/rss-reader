@@ -17,7 +17,6 @@ import Foundation
 /// alert presentation.
 @MainActor
 final class FeedErrorHandler: ObservableObject {
-
     /// The most recent critical error that should be shown
     /// as an alert. Set to `nil` after the user dismisses.
     @Published var criticalError: RSSReaderError?
@@ -96,5 +95,20 @@ final class FeedErrorHandler: ObservableObject {
     /// Returns the current attempt count for a feed.
     func currentAttempt(for feed: CDFeed) -> Int {
         retryAttempts[feed.id] ?? 0
+    }
+
+    // MARK: - UUID-based Methods
+
+    /// Returns the backoff delay for a feed UUID's next retry
+    /// and increments the attempt counter.
+    func nextRetryDelay(for feedId: UUID) -> TimeInterval {
+        let attempt = retryAttempts[feedId] ?? 0
+        retryAttempts[feedId] = attempt + 1
+        return retryPolicy.delay(for: attempt)
+    }
+
+    /// Resets the retry counter for a feed UUID.
+    func resetRetryCount(for feedId: UUID) {
+        retryAttempts[feedId] = nil
     }
 }

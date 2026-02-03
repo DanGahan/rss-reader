@@ -5,6 +5,7 @@
 //  Created on 2026-01-28.
 //
 
+import AppKit
 import Combine
 import SwiftUI
 import UniformTypeIdentifiers
@@ -72,6 +73,24 @@ struct ContentView: View {
                     )
                 }
             }
+
+            ToolbarItem(placement: .automatic) {
+                if let lastRefresh =
+                    refreshService.lastRefreshDate {
+                    Text(
+                        lastRefresh,
+                        format: .relative(
+                            presentation: .named
+                        )
+                    )
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                } else {
+                    Text("Never refreshed")
+                        .font(.caption)
+                        .foregroundStyle(.tertiary)
+                }
+            }
         }
         .onReceive(
             NotificationCenter.default.publisher(
@@ -95,6 +114,22 @@ struct ContentView: View {
             )
         ) { _ in
             exportOPML()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: NSApplication
+                    .didResignActiveNotification
+            )
+        ) { _ in
+            refreshService.pauseAutoRefresh()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: NSApplication
+                    .didBecomeActiveNotification
+            )
+        ) { _ in
+            refreshService.resumeAutoRefresh()
         }
     }
 

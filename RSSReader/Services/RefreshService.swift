@@ -1,4 +1,3 @@
-// swiftlint:disable file_length
 //
 //  RefreshService.swift
 //  RSSReader
@@ -17,7 +16,6 @@ import Foundation
 /// and automatic periodic refresh via `startAutoRefresh()`.
 @MainActor
 final class RefreshService: ObservableObject {
-
     /// Whether a refresh cycle is currently in progress.
     @Published var isRefreshing = false
 
@@ -29,6 +27,7 @@ final class RefreshService: ObservableObject {
     private let persistence: PersistenceController
     private let parser: FeedParserService
     private let urlSession: URLSession
+    private let errorHandler: FeedErrorHandler
 
     // MARK: - Auto-Refresh
 
@@ -38,16 +37,27 @@ final class RefreshService: ObservableObject {
     /// Maximum number of concurrent feed fetches.
     private let maxConcurrency = 5
 
+    /// Remaining time when auto-refresh was paused.
+    private var remainingInterval: TimeInterval?
+
+    /// The configured auto-refresh interval.
+    private var currentInterval: TimeInterval = 600
+
+    /// Tracks the next allowed refresh time per feed UUID.
+    private var feedBackoffUntil: [UUID: Date] = [:]
+
     // MARK: - Init
 
     init(
         persistence: PersistenceController = .shared,
         parser: FeedParserService = FeedParserService(),
-        urlSession: URLSession = .shared
+        urlSession: URLSession = .shared,
+        errorHandler: FeedErrorHandler? = nil
     ) {
         self.persistence = persistence
         self.parser = parser
         self.urlSession = urlSession
+        self.errorHandler = errorHandler ?? FeedErrorHandler()
 
         NotificationCenter.default
             .publisher(for: .refresh)
@@ -71,16 +81,16 @@ final class RefreshService: ObservableObject {
 
         let context = persistence.newBackgroundContext()
 
-        let feedObjectIDs: [NSManagedObjectID] =
+        let feedData: [(NSManagedObjectID, UUID)] =
             await context.perform {
                 let request = CDFeed.fetchRequest()
                 let feeds = (
                     try? context.fetch(request)
                 ) ?? []
-                return feeds.map(\.objectID)
+                return feeds.map { ($0.objectID, $0.id) }
             }
 
-        guard !feedObjectIDs.isEmpty else {
+        guard !feedData.isEmpty else {
             lastRefreshDate = Date()
             return
         }
@@ -89,20 +99,27 @@ final class RefreshService: ObservableObject {
             var running = 0
             var index = 0
 
-            while index < feedObjectIDs.count {
+            while index < feedData.count {
                 if running >= maxConcurrency {
                     await group.next()
                     running -= 1
                 }
 
-                let objectID = feedObjectIDs[index]
+                let (objectID, feedId) = feedData[index]
                 index += 1
+
+                // Skip feeds in backoff period
+                if isInBackoff(feedId: feedId) {
+                    continue
+                }
+
                 running += 1
 
                 group.addTask { [weak self] in
                     guard let self else { return }
                     await self.refreshFeed(
-                        objectID: objectID
+                        objectID: objectID,
+                        feedId: feedId
                     )
                 }
             }
@@ -113,8 +130,10 @@ final class RefreshService: ObservableObject {
 
     // MARK: - Single Feed Refresh
 
+    // swiftlint:disable:next function_body_length cyclomatic_complexity
     private func refreshFeed(
-        objectID: NSManagedObjectID
+        objectID: NSManagedObjectID,
+        feedId: UUID
     ) async {
         let context = persistence.newBackgroundContext()
         let session = urlSession
@@ -131,21 +150,22 @@ final class RefreshService: ObservableObject {
         guard let feedURLString = feedURL,
               let url = URL(string: feedURLString)
         else {
+            let rssError = RSSReaderError.invalidFeedURL
             await context.perform {
                 guard let feed = try? context
                     .existingObject(
                         with: objectID
                     ) as? CDFeed
                 else { return }
-                feed.lastError =
-                    RSSReaderError.invalidFeedURL
-                        .errorDescription
+                feed.lastError = rssError.errorDescription
                 ErrorLogger.log(
-                    RSSReaderError.invalidFeedURL,
+                    rssError,
                     context: "Feed: \(feed.title)"
                 )
                 try? context.save()
             }
+            let delay = errorHandler.nextRetryDelay(for: feedId)
+            setBackoff(feedId: feedId, delay: delay)
             return
         }
 
@@ -174,6 +194,8 @@ final class RefreshService: ObservableObject {
                 )
                 try? context.save()
             }
+            let delay = errorHandler.nextRetryDelay(for: feedId)
+            setBackoff(feedId: feedId, delay: delay)
             return
         }
 
@@ -181,8 +203,7 @@ final class RefreshService: ObservableObject {
         if let httpResponse = response
             as? HTTPURLResponse,
             httpResponse.statusCode < 200
-                || httpResponse.statusCode >= 300
-        {
+                || httpResponse.statusCode >= 300 {
             let rssError = RSSReaderError.networkError(
                 "HTTP \(httpResponse.statusCode)"
             )
@@ -199,6 +220,8 @@ final class RefreshService: ObservableObject {
                 )
                 try? context.save()
             }
+            let delay = errorHandler.nextRetryDelay(for: feedId)
+            setBackoff(feedId: feedId, delay: delay)
             return
         }
 
@@ -223,6 +246,8 @@ final class RefreshService: ObservableObject {
                 )
                 try? context.save()
             }
+            let delay = errorHandler.nextRetryDelay(for: feedId)
+            setBackoff(feedId: feedId, delay: delay)
             return
         }
 
@@ -235,8 +260,7 @@ final class RefreshService: ObservableObject {
             // Dedup by existing article IDs.
             let existingIDs: Set<String>
             if let articles = feed.articles
-                as? Set<CDArticle>
-            {
+                as? Set<CDArticle> {
                 existingIDs = Set(articles.map(\.id))
             } else {
                 existingIDs = []
@@ -266,6 +290,10 @@ final class RefreshService: ObservableObject {
             feed.lastError = nil
             try? context.save()
         }
+
+        // Clear backoff and reset retry count on success
+        errorHandler.resetRetryCount(for: feedId)
+        clearBackoff(feedId: feedId)
     }
 
     // MARK: - Auto-Refresh
@@ -276,6 +304,7 @@ final class RefreshService: ObservableObject {
     ///   Defaults to 600 (10 minutes).
     func startAutoRefresh(interval: TimeInterval = 600) {
         stopAutoRefresh()
+        currentInterval = interval
         autoRefreshTask = Task { [weak self] in
             while !Task.isCancelled {
                 try? await Task.sleep(
@@ -294,5 +323,40 @@ final class RefreshService: ObservableObject {
         autoRefreshTask?.cancel()
         autoRefreshTask = nil
     }
+
+    /// Pauses auto-refresh, preserving the state for resume.
+    func pauseAutoRefresh() {
+        guard autoRefreshTask != nil else { return }
+        remainingInterval = currentInterval
+        autoRefreshTask?.cancel()
+        autoRefreshTask = nil
+    }
+
+    /// Resumes auto-refresh if it was paused.
+    func resumeAutoRefresh() {
+        guard remainingInterval != nil else { return }
+        startAutoRefresh(interval: currentInterval)
+        remainingInterval = nil
+    }
+
+    // MARK: - Backoff Helpers
+
+    /// Returns true if the feed is currently in backoff period.
+    private func isInBackoff(feedId: UUID) -> Bool {
+        guard let until = feedBackoffUntil[feedId] else {
+            return false
+        }
+        return Date() < until
+    }
+
+    /// Clears backoff for a feed after successful refresh.
+    private func clearBackoff(feedId: UUID) {
+        feedBackoffUntil[feedId] = nil
+    }
+
+    /// Sets backoff for a feed based on delay from error handler.
+    private func setBackoff(feedId: UUID, delay: TimeInterval) {
+        feedBackoffUntil[feedId] = Date()
+            .addingTimeInterval(delay)
+    }
 }
-// swiftlint:enable file_length
