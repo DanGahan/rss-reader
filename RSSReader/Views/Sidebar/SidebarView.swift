@@ -125,6 +125,11 @@ struct SidebarView: View {
                 }
             } label: {
                 FolderRowView(folder: folder)
+                    .onTapGesture {
+                        viewModel.selection = .folder(
+                            folder.id
+                        )
+                    }
             }
             .tag(SidebarSelection.folder(folder.id))
             .contextMenu {
