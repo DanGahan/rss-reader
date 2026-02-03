@@ -1,116 +1,56 @@
 #!/bin/bash
 
+# Default values
+MODE="claude"
+AGENT=""
+TASK=""
+
+# Parse flags (e.g., ./run-agent.sh -m gemini qa "task")
+while getopts "m:" opt; do
+  case $opt in
+    m) MODE="$OPTARG" ;; # Fixed: Use OPTARG for getopts
+    *) echo "Invalid option"; exit 1 ;;
+  esac
+done
+shift $((OPTIND -1))
+
 AGENT=$1
 shift
 TASK="$*"
 
-if [ -z "$AGENT" ] || [ -z "$TASK" ]; then
-    echo "Usage: ./run-agent.sh <agent> <task>"
-    echo "  e.g. ./run-agent.sh qa \"check open MRs and reviews\""
-    echo "Agents: architect, scrum, engineer, qa, devops"
+if [ -z "$AGENT" ]; then
+    echo "Usage: ./run-agent.sh [-m claude|gemini] <agent> [initial task]"
+    echo "  Agents: architect, scrum, engineer, qa, devops"
     exit 1
 fi
 
-# Build a comma-separated --allowedTools string from an array
-build_tools() {
-    local IFS=","
-    echo "$*"
-}
-
-# Base read-only tools (all agents)
-BASE_TOOLS=(
-    "Read"
-    "Glob"
-    "Grep"
-    "Bash(git status:*)"
-    "Bash(git log:*)"
-    "Bash(git diff:*)"
-    "Bash(git show:*)"
-    "Bash(git branch:*)"
-    "Bash(ls:*)"
-    "Bash(cat:*)"
-    "Bash(grep:*)"
-    "Bash(find:*)"
-    "Bash(head:*)"
-    "Bash(tail:*)"
-)
-
+# Map Agent to Prompt File
 case $AGENT in
-  architect)
-    TOOLS=(
-        "${BASE_TOOLS[@]}"
-        "Write"
-        "Edit"
-        "Bash(mkdir:*)"
-        "Bash(touch:*)"
-    )
-    PROMPT_FILE="docs/agent-prompts/architect.md"
-    ;;
-  scrum|scrum-master)
-    TOOLS=(
-        "${BASE_TOOLS[@]}"
-        "Bash(gh issue:*)"
-        "Bash(gh label:*)"
-    )
-    PROMPT_FILE="docs/agent-prompts/scrum-master.md"
-    ;;
-  engineer)
-    TOOLS=(
-        "${BASE_TOOLS[@]}"
-        "Write"
-        "Edit"
-        "Bash(git checkout:*)"
-        "Bash(git add:*)"
-        "Bash(git commit:*)"
-        "Bash(git push:*)"
-        "Bash(gh pr create:*)"
-        "Bash(gh pr list:*)"
-        "Bash(gh pr view:*)"
-        "Bash(xcodebuild:*)"
-        "Bash(swift:*)"
-        "Bash(swiftlint:*)"
-        "Bash(mkdir:*)"
-    )
-    PROMPT_FILE="docs/agent-prompts/engineer.md"
-    ;;
-  qa)
-    TOOLS=(
-        "${BASE_TOOLS[@]}"
-        "Bash(gh pr:*)"
-        "Bash(gh run:*)"
-        "Bash(xcodebuild:*)"
-        "Bash(swift:*)"
-        "Bash(swiftlint:*)"
-    )
-    PROMPT_FILE="docs/agent-prompts/qa.md"
-    ;;
-  devops)
-    TOOLS=(
-        "${BASE_TOOLS[@]}"
-        "Write"
-        "Edit"
-        "Bash(git checkout:*)"
-        "Bash(git add:*)"
-        "Bash(git commit:*)"
-        "Bash(git push:*)"
-        "Bash(gh:*)"
-        "Bash(xcodebuild:*)"
-        "Bash(brew:*)"
-        "Bash(mkdir:*)"
-        "Bash(yamllint:*)"
-    )
-    PROMPT_FILE="docs/agent-prompts/devops.md"
-    ;;
-  *)
-    echo "Unknown agent: $AGENT"
-    echo "Available agents: architect, scrum, engineer, qa, devops"
-    exit 1
-    ;;
+  architect) PROMPT_FILE="docs/agent-prompts/architect.md" ;;
+  scrum)     PROMPT_FILE="docs/agent-prompts/scrum-master.md" ;;
+  engineer)  PROMPT_FILE="docs/agent-prompts/engineer.md" ;;
+  qa)        PROMPT_FILE="docs/agent-prompts/qa.md" ;;
+  devops)    PROMPT_FILE="docs/agent-prompts/devops.md" ;;
+  *) echo "Unknown agent: $AGENT"; exit 1 ;;
 esac
 
-ALLOWLIST=$(build_tools "${TOOLS[@]}")
+# Check for prompt file
+if [ ! -f "$PROMPT_FILE" ]; then
+    echo "Error: Prompt file not found at $PROMPT_FILE"
+    exit 1
+fi
 
-claude \
-    --allowedTools "$ALLOWLIST" \
-    --system-prompt-file "$PROMPT_FILE" \
-    "$TASK"
+if [ "$MODE" == "gemini" ]; then
+    echo "--- Starting Interactive Gemini Session ($AGENT) ---"
+    
+    # 1. Use GEMINI_SYSTEM_MD to lock in the agent's persona
+    # 2. Use -i to pass the initial task and STAY in the shell
+    # 3. Use --yolo so it doesn't prompt for permission on basic git/ls commands
+    GEMINI_SYSTEM_MD="$PROMPT_FILE" gemini --yolo -i "$TASK"
+
+else
+    echo "--- Starting Interactive Claude Session ($AGENT) ---"
+    # Claude Code is interactive by default. 
+    # We pass the prompt file and the initial task.
+    claude --system-prompt-file "$PROMPT_FILE" "$TASK"
+fi
