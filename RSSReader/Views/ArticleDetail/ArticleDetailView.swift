@@ -5,6 +5,7 @@
 //  Created on 2026-01-30.
 //
 
+import AppKit
 import CoreData
 import SwiftUI
 
@@ -23,6 +24,8 @@ struct ArticleDetailView: View {
 
     @FetchRequest private var articles:
         FetchedResults<CDArticle>
+
+    @State private var isHoveringTitle = false
 
     // MARK: - Init
 
@@ -128,37 +131,66 @@ struct ArticleDetailView: View {
         _ article: CDArticle
     ) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(article.title)
-                .font(.title)
-                .fontWeight(.bold)
-                .textSelection(.enabled)
+            clickableTitle(article)
+            metadataLabels(article)
+        }
+    }
 
-            HStack(spacing: 12) {
-                if let author = article.author,
-                   !author.isEmpty {
-                    Label(author, systemImage: "person")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+    private func clickableTitle(
+        _ article: CDArticle
+    ) -> some View {
+        Text(article.title)
+            .font(.title)
+            .fontWeight(.bold)
+            .foregroundStyle(
+                isHoveringTitle ? Color.accentColor : .primary
+            )
+            .underline(isHoveringTitle)
+            .onHover { hovering in
+                isHoveringTitle = hovering
+                if hovering {
+                    NSCursor.pointingHand.push()
+                } else {
+                    NSCursor.pop()
                 }
+            }
+            .onTapGesture {
+                viewModel.openInSafariWithFeedback(
+                    urlString: article.link
+                )
+            }
+            .accessibilityAddTraits(.isLink)
+            .accessibilityHint("Opens article in Safari")
+    }
 
+    private func metadataLabels(
+        _ article: CDArticle
+    ) -> some View {
+        HStack(spacing: 12) {
+            if let author = article.author,
+               !author.isEmpty {
+                Label(author, systemImage: "person")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            Label(
+                viewModel.formattedDate(
+                    article.published
+                ),
+                systemImage: "calendar"
+            )
+            .font(.subheadline)
+            .foregroundStyle(.secondary)
+
+            if let feedTitle = article.feed?.title {
                 Label(
-                    viewModel.formattedDate(
-                        article.published
-                    ),
-                    systemImage: "calendar"
+                    feedTitle,
+                    systemImage:
+                        "dot.radiowaves.up.forward"
                 )
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
-
-                if let feedTitle = article.feed?.title {
-                    Label(
-                        feedTitle,
-                        systemImage:
-                            "dot.radiowaves.up.forward"
-                    )
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                }
             }
         }
     }
