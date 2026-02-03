@@ -119,6 +119,11 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        .onTapGesture {
+                            viewModel.selection = .feed(
+                                feed.id
+                            )
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
@@ -151,6 +156,11 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        .onTapGesture {
+                            viewModel.selection = .feed(
+                                feed.id
+                            )
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
