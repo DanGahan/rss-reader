@@ -15,7 +15,6 @@ import Foundation
 /// Supports the standard OPML 1.0/2.0 format used by
 /// Feedly, Inoreader, NetNewsWire, and other readers.
 final class OPMLParser: NSObject {
-
     private let data: Data
 
     // Parsing state
@@ -82,7 +81,6 @@ private extension OPMLParser {
 // MARK: - XMLParserDelegate
 
 extension OPMLParser: XMLParserDelegate {
-
     func parser(
         _ parser: XMLParser,
         didStartElement element: String,
@@ -145,7 +143,6 @@ extension OPMLParser: XMLParserDelegate {
 // MARK: - Outline Processing
 
 private extension OPMLParser {
-
     func handleOutlineStart(
         _ attributes: [String: String]
     ) {

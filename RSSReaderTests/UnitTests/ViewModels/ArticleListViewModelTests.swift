@@ -12,7 +12,6 @@ import Testing
 
 @Suite("ArticleListViewModel Tests")
 struct ArticleListViewModelTests {
-
     private let sampleIds = ["a1", "a2", "a3", "a4", "a5"]
 
     // MARK: - Initial State

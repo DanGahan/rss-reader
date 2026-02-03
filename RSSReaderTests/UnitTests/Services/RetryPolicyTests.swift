@@ -10,7 +10,6 @@ import Testing
 
 @Suite("RetryPolicy Tests")
 struct RetryPolicyTests {
-
     // MARK: - Should Retry
 
     @Test("Allows retry within max retries")

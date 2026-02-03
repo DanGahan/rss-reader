@@ -17,7 +17,6 @@ import Foundation
 /// ViewModel stays testable without a managed-object context.
 @MainActor
 final class ArticleListViewModel: ObservableObject {
-
     /// The currently selected article's ID.
     @Published var selectedArticleId: String?
 

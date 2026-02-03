@@ -13,7 +13,6 @@ import Foundation
 /// Creates Core Data folder and feed entities while
 /// skipping duplicates and preserving hierarchy.
 struct OPMLService {
-
     /// Result of an OPML import operation.
     struct ImportResult: Equatable {
         let foldersCreated: Int
@@ -139,7 +138,6 @@ struct OPMLService {
 // MARK: - Private Helpers
 
 private extension OPMLService {
-
     struct ImportCounter {
         var folderCount = 0
         var feedsCreated = 0

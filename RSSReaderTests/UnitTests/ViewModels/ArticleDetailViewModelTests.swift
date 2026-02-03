@@ -12,7 +12,6 @@ import Testing
 
 @Suite("ArticleDetailViewModel Tests")
 struct ArticleDetailViewModelTests {
-
     // MARK: - Mark as Read
 
     @Test("markAsRead sets isRead to true")
