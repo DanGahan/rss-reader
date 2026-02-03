@@ -145,18 +145,28 @@ struct ContentView: View {
             ) ?? .xml
         ]
 
-        guard panel.runModal() == .OK,
-              let url = panel.url
-        else { return }
+        // Capture context for use in completion handler
+        let exportContext = context
 
-        do {
-            let service = OPMLService()
-            let data = try service.exportOPML(
-                from: context
-            )
-            try data.write(to: url)
-        } catch {
-            NSAlert(error: error).runModal()
+        // Use async begin() instead of blocking runModal()
+        // to avoid EXEC_BREAKPOINT crashes from SwiftUI
+        // notification handler context
+        panel.begin { response in
+            guard response == .OK,
+                  let url = panel.url
+            else { return }
+
+            do {
+                let service = OPMLService()
+                let data = try service.exportOPML(
+                    from: exportContext
+                )
+                try data.write(to: url)
+            } catch {
+                DispatchQueue.main.async {
+                    NSAlert(error: error).runModal()
+                }
+            }
         }
     }
 }

@@ -81,15 +81,25 @@
 		/* Unit Tests - ViewModels */
 		A1000150 /* ArticleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000150 /* ArticleListViewModelTests.swift */; };
 		A1000151 /* ArticleDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000151 /* ArticleDetailViewModelTests.swift */; };
-		A1000152 /* SidebarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000152 /* SidebarViewModelTests.swift */; };
+		A1000152 /* SidebarViewModelCRUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000152 /* SidebarViewModelCRUDTests.swift */; };
 		A1000153 /* ViewModelTestsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000153 /* ViewModelTestsPlaceholder.swift */; };
+		A10001C0 /* SidebarViewModelFolderExpansionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C0 /* SidebarViewModelFolderExpansionTests.swift */; };
+		A10001C1 /* SidebarViewModelSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C1 /* SidebarViewModelSelectionTests.swift */; };
 
 		/* Unit Tests - Services */
-		A1000160 /* OPMLServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000160 /* OPMLServiceTests.swift */; };
+		A1000160 /* OPMLServiceExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000160 /* OPMLServiceExportTests.swift */; };
 		A1000161 /* OPMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000161 /* OPMLParserTests.swift */; };
-		A1000162 /* ArticleCleanupServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000162 /* ArticleCleanupServiceTests.swift */; };
+		A1000162 /* ArticleCleanupServiceAgeBasedDeletionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000162 /* ArticleCleanupServiceAgeBasedDeletionTests.swift */; };
 		A1000163 /* FeedErrorHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000163 /* FeedErrorHandlerTests.swift */; };
-		A1000164 /* FeedParserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000164 /* FeedParserServiceTests.swift */; };
+		A1000164 /* FeedParserServiceAtomParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000164 /* FeedParserServiceAtomParsingTests.swift */; };
+		A10001D0 /* OPMLServiceImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D0 /* OPMLServiceImportTests.swift */; };
+		A10001D1 /* ArticleCleanupServiceCountBasedDeletionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D1 /* ArticleCleanupServiceCountBasedDeletionTests.swift */; };
+		A10001D2 /* ArticleCleanupServiceSchedulingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D2 /* ArticleCleanupServiceSchedulingTests.swift */; };
+		A10001D3 /* ArticleCleanupServiceGeneralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D3 /* ArticleCleanupServiceGeneralTests.swift */; };
+		A10001D4 /* FeedParserServiceErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D4 /* FeedParserServiceErrorHandlingTests.swift */; };
+		A10001D5 /* FeedParserServiceJSONParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D5 /* FeedParserServiceJSONParsingTests.swift */; };
+		A10001D6 /* FeedParserServiceRSSParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D6 /* FeedParserServiceRSSParsingTests.swift */; };
+		A10001D7 /* ContentViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D7 /* ContentViewLayoutTests.swift */; };
 		A1000165 /* FeedlyAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000165 /* FeedlyAPIServiceTests.swift */; };
 		A1000166 /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000166 /* KeychainServiceTests.swift */; };
 		A1000167 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000167 /* MockURLProtocol.swift */; };
@@ -196,13 +206,23 @@
 		A2000144 /* CDAppSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDAppSettingsTests.swift; sourceTree = "<group>"; };
 		A2000150 /* ArticleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModelTests.swift; sourceTree = "<group>"; };
 		A2000151 /* ArticleDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModelTests.swift; sourceTree = "<group>"; };
-		A2000152 /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
+		A2000152 /* SidebarViewModelCRUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelCRUDTests.swift; sourceTree = "<group>"; };
 		A2000153 /* ViewModelTestsPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTestsPlaceholder.swift; sourceTree = "<group>"; };
-		A2000160 /* OPMLServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLServiceTests.swift; sourceTree = "<group>"; };
+		A20001C0 /* SidebarViewModelFolderExpansionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelFolderExpansionTests.swift; sourceTree = "<group>"; };
+		A20001C1 /* SidebarViewModelSelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelSelectionTests.swift; sourceTree = "<group>"; };
+		A2000160 /* OPMLServiceExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLServiceExportTests.swift; sourceTree = "<group>"; };
 		A2000161 /* OPMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLParserTests.swift; sourceTree = "<group>"; };
-		A2000162 /* ArticleCleanupServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupServiceTests.swift; sourceTree = "<group>"; };
+		A2000162 /* ArticleCleanupServiceAgeBasedDeletionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupServiceAgeBasedDeletionTests.swift; sourceTree = "<group>"; };
 		A2000163 /* FeedErrorHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorHandlerTests.swift; sourceTree = "<group>"; };
-		A2000164 /* FeedParserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceTests.swift; sourceTree = "<group>"; };
+		A2000164 /* FeedParserServiceAtomParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceAtomParsingTests.swift; sourceTree = "<group>"; };
+		A20001D0 /* OPMLServiceImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLServiceImportTests.swift; sourceTree = "<group>"; };
+		A20001D1 /* ArticleCleanupServiceCountBasedDeletionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupServiceCountBasedDeletionTests.swift; sourceTree = "<group>"; };
+		A20001D2 /* ArticleCleanupServiceSchedulingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupServiceSchedulingTests.swift; sourceTree = "<group>"; };
+		A20001D3 /* ArticleCleanupServiceGeneralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCleanupServiceGeneralTests.swift; sourceTree = "<group>"; };
+		A20001D4 /* FeedParserServiceErrorHandlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceErrorHandlingTests.swift; sourceTree = "<group>"; };
+		A20001D5 /* FeedParserServiceJSONParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceJSONParsingTests.swift; sourceTree = "<group>"; };
+		A20001D6 /* FeedParserServiceRSSParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceRSSParsingTests.swift; sourceTree = "<group>"; };
+		A20001D7 /* ContentViewLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewLayoutTests.swift; sourceTree = "<group>"; };
 		A2000165 /* FeedlyAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyAPIServiceTests.swift; sourceTree = "<group>"; };
 		A2000166 /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
 		A2000167 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -448,7 +468,9 @@
 			children = (
 				A2000150 /* ArticleListViewModelTests.swift */,
 				A2000151 /* ArticleDetailViewModelTests.swift */,
-				A2000152 /* SidebarViewModelTests.swift */,
+				A2000152 /* SidebarViewModelCRUDTests.swift */,
+				A20001C0 /* SidebarViewModelFolderExpansionTests.swift */,
+				A20001C1 /* SidebarViewModelSelectionTests.swift */,
 				A2000153 /* ViewModelTestsPlaceholder.swift */,
 			);
 			path = ViewModels;
@@ -457,11 +479,18 @@
 		A7000024 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A2000160 /* OPMLServiceTests.swift */,
+				A2000160 /* OPMLServiceExportTests.swift */,
+				A20001D0 /* OPMLServiceImportTests.swift */,
 				A2000161 /* OPMLParserTests.swift */,
-				A2000162 /* ArticleCleanupServiceTests.swift */,
+				A2000162 /* ArticleCleanupServiceAgeBasedDeletionTests.swift */,
+				A20001D1 /* ArticleCleanupServiceCountBasedDeletionTests.swift */,
+				A20001D2 /* ArticleCleanupServiceSchedulingTests.swift */,
+				A20001D3 /* ArticleCleanupServiceGeneralTests.swift */,
 				A2000163 /* FeedErrorHandlerTests.swift */,
-				A2000164 /* FeedParserServiceTests.swift */,
+				A2000164 /* FeedParserServiceAtomParsingTests.swift */,
+				A20001D4 /* FeedParserServiceErrorHandlingTests.swift */,
+				A20001D5 /* FeedParserServiceJSONParsingTests.swift */,
+				A20001D6 /* FeedParserServiceRSSParsingTests.swift */,
 				A2000165 /* FeedlyAPIServiceTests.swift */,
 				A2000166 /* KeychainServiceTests.swift */,
 				A2000167 /* MockURLProtocol.swift */,
@@ -477,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				A2000180 /* AddFeedSheetTests.swift */,
+				A20001D7 /* ContentViewLayoutTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -676,13 +706,23 @@
 				A1000144 /* CDAppSettingsTests.swift in Sources */,
 				A1000150 /* ArticleListViewModelTests.swift in Sources */,
 				A1000151 /* ArticleDetailViewModelTests.swift in Sources */,
-				A1000152 /* SidebarViewModelTests.swift in Sources */,
+				A1000152 /* SidebarViewModelCRUDTests.swift in Sources */,
+				A10001C0 /* SidebarViewModelFolderExpansionTests.swift in Sources */,
+				A10001C1 /* SidebarViewModelSelectionTests.swift in Sources */,
 				A1000153 /* ViewModelTestsPlaceholder.swift in Sources */,
-				A1000160 /* OPMLServiceTests.swift in Sources */,
+				A1000160 /* OPMLServiceExportTests.swift in Sources */,
+				A10001D0 /* OPMLServiceImportTests.swift in Sources */,
 				A1000161 /* OPMLParserTests.swift in Sources */,
-				A1000162 /* ArticleCleanupServiceTests.swift in Sources */,
+				A1000162 /* ArticleCleanupServiceAgeBasedDeletionTests.swift in Sources */,
+				A10001D1 /* ArticleCleanupServiceCountBasedDeletionTests.swift in Sources */,
+				A10001D2 /* ArticleCleanupServiceSchedulingTests.swift in Sources */,
+				A10001D3 /* ArticleCleanupServiceGeneralTests.swift in Sources */,
 				A1000163 /* FeedErrorHandlerTests.swift in Sources */,
-				A1000164 /* FeedParserServiceTests.swift in Sources */,
+				A1000164 /* FeedParserServiceAtomParsingTests.swift in Sources */,
+				A10001D4 /* FeedParserServiceErrorHandlingTests.swift in Sources */,
+				A10001D5 /* FeedParserServiceJSONParsingTests.swift in Sources */,
+				A10001D6 /* FeedParserServiceRSSParsingTests.swift in Sources */,
+				A10001D7 /* ContentViewLayoutTests.swift in Sources */,
 				A1000165 /* FeedlyAPIServiceTests.swift in Sources */,
 				A1000166 /* KeychainServiceTests.swift in Sources */,
 				A1000167 /* MockURLProtocol.swift in Sources */,
