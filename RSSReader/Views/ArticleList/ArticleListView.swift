@@ -73,6 +73,38 @@ struct ArticleListView: View {
                 in: context
             )
         }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .nextArticle
+            )
+        ) { _ in
+            let ids = articles.map(\.id)
+            viewModel.selectNext(from: ids)
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .previousArticle
+            )
+        ) { _ in
+            let ids = articles.map(\.id)
+            viewModel.selectPrevious(from: ids)
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .nextUnread
+            )
+        ) { _ in
+            let ids = articles.map(\.id)
+            let unreadIds = Set(
+                articles
+                    .filter { !$0.isRead }
+                    .map(\.id)
+            )
+            viewModel.selectNextUnread(
+                from: ids,
+                unreadIds: unreadIds
+            )
+        }
     }
 
     // MARK: - Subviews
