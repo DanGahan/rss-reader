@@ -91,7 +91,82 @@ struct SidebarViewModelSelectionTests {
         #expect(vm.selectedFeedId == feedId)
     }
 
+    // MARK: - All Articles Selection
+
+    @Test("selectAll sets selection to all case")
+    @MainActor
+    func selectAll() {
+        let vm = SidebarViewModel()
+        vm.selectAll()
+        #expect(vm.selection == .all)
+    }
+
+    @Test("isAllSelected returns true when all selected")
+    @MainActor
+    func isAllSelectedWhenAllSelected() {
+        let vm = SidebarViewModel()
+        vm.selectAll()
+        #expect(vm.isAllSelected == true)
+    }
+
+    @Test("isAllSelected returns false when folder selected")
+    @MainActor
+    func isAllSelectedWhenFolderSelected() {
+        let vm = SidebarViewModel()
+        vm.selectFolder(UUID())
+        #expect(vm.isAllSelected == false)
+    }
+
+    @Test("isAllSelected returns false when feed selected")
+    @MainActor
+    func isAllSelectedWhenFeedSelected() {
+        let vm = SidebarViewModel()
+        vm.selectFeed(UUID())
+        #expect(vm.isAllSelected == false)
+    }
+
+    @Test("isAllSelected returns false when nothing selected")
+    @MainActor
+    func isAllSelectedWhenNothingSelected() {
+        let vm = SidebarViewModel()
+        #expect(vm.isAllSelected == false)
+    }
+
+    @Test("Selecting folder replaces all selection")
+    @MainActor
+    func folderReplacesAllSelection() {
+        let vm = SidebarViewModel()
+        let folderId = UUID()
+        vm.selectAll()
+        vm.selectFolder(folderId)
+        #expect(vm.isAllSelected == false)
+        #expect(vm.selectedFolderId == folderId)
+    }
+
+    @Test("selectedFolderId is nil when all selected")
+    @MainActor
+    func selectedFolderIdWhenAllSelected() {
+        let vm = SidebarViewModel()
+        vm.selectAll()
+        #expect(vm.selectedFolderId == nil)
+    }
+
+    @Test("selectedFeedId is nil when all selected")
+    @MainActor
+    func selectedFeedIdWhenAllSelected() {
+        let vm = SidebarViewModel()
+        vm.selectAll()
+        #expect(vm.selectedFeedId == nil)
+    }
+
     // MARK: - SidebarSelection Equality
+
+    @Test("SidebarSelection all equality")
+    func allEquality() {
+        let lhs = SidebarSelection.all
+        let rhs = SidebarSelection.all
+        #expect(lhs == rhs)
+    }
 
     @Test("SidebarSelection folder equality")
     func folderEquality() {
@@ -116,5 +191,17 @@ struct SidebarViewModelSelectionTests {
             SidebarSelection.folder(id)
                 != SidebarSelection.feed(id)
         )
+    }
+
+    @Test("SidebarSelection all != folder")
+    func allNotEqualToFolder() {
+        let id = UUID()
+        #expect(SidebarSelection.all != SidebarSelection.folder(id))
+    }
+
+    @Test("SidebarSelection all != feed")
+    func allNotEqualToFeed() {
+        let id = UUID()
+        #expect(SidebarSelection.all != SidebarSelection.feed(id))
     }
 }

@@ -196,6 +196,9 @@ struct ArticleListView: View {
         var predicates: [NSPredicate] = []
 
         switch selection {
+        case .all:
+            // No filter for "All Articles" - show everything
+            break
         case .feed(let id):
             predicates.append(
                 NSPredicate(
@@ -216,6 +219,12 @@ struct ArticleListView: View {
             predicates.append(
                 NSPredicate(format: "isRead == NO")
             )
+        }
+
+        // Return nil for "all with no unread filter" to fetch
+        // everything, otherwise combine predicates
+        if predicates.isEmpty {
+            return nil
         }
 
         return NSCompoundPredicate(
