@@ -21,6 +21,7 @@
 		A1000134 /* FeedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000134 /* FeedRowView.swift */; };
 		A1000135 /* FolderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000135 /* FolderRowView.swift */; };
 		A1000136 /* AddFeedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000136 /* AddFeedSheet.swift */; };
+		A1000137 /* AllArticlesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000137 /* AllArticlesRowView.swift */; };
 
 		/* Models */
 		A1000020 /* FeedlyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020 /* FeedlyUser.swift */; };
@@ -150,6 +151,7 @@
 		A2000134 /* FeedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRowView.swift; sourceTree = "<group>"; };
 		A2000135 /* FolderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowView.swift; sourceTree = "<group>"; };
 		A2000136 /* AddFeedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedSheet.swift; sourceTree = "<group>"; };
+		A2000137 /* AllArticlesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesRowView.swift; sourceTree = "<group>"; };
 
 		/* Models */
 		A2000020 /* FeedlyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedlyUser.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				A2000134 /* FeedRowView.swift */,
 				A2000135 /* FolderRowView.swift */,
 				A2000136 /* AddFeedSheet.swift */,
+				A2000137 /* AllArticlesRowView.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				A1000134 /* FeedRowView.swift in Sources */,
 				A1000135 /* FolderRowView.swift in Sources */,
 				A1000136 /* AddFeedSheet.swift in Sources */,
+				A1000137 /* AllArticlesRowView.swift in Sources */,
 				A1000020 /* FeedlyUser.swift in Sources */,
 				A1000021 /* AppError.swift in Sources */,
 				A1000022 /* AuthenticationToken.swift in Sources */,
