@@ -212,5 +212,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
-        .environment(\.managedObjectContext, PersistenceController.preview.viewContext)
+        .environment(\.managedObjectContext, PersistenceController.inMemory().viewContext)
 }
