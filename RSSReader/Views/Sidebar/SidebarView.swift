@@ -37,6 +37,7 @@ struct SidebarView: View {
 
     var body: some View {
         List(selection: $viewModel.selection) {
+            allArticlesRow
             foldersSection
             unfiledFeedsSection
         }
@@ -100,6 +101,15 @@ struct SidebarView: View {
     }
 
     // MARK: - Sections
+
+    @ViewBuilder
+    private var allArticlesRow: some View {
+        AllArticlesRowView()
+            .tag(SidebarSelection.all)
+            .onTapGesture {
+                viewModel.selection = .all
+            }
+    }
 
     @ViewBuilder
     private var foldersSection: some View {
