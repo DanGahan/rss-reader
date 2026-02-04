@@ -11,6 +11,7 @@ import SwiftUI
 
 /// Represents a selectable item in the sidebar.
 enum SidebarSelection: Hashable {
+    case all
     case folder(UUID)
     case feed(UUID)
 }
@@ -41,6 +42,12 @@ final class SidebarViewModel: ObservableObject {
 
     // MARK: - Computed Selection Helpers
 
+    /// Returns true if "All Articles" is currently selected.
+    var isAllSelected: Bool {
+        if case .all = selection { return true }
+        return false
+    }
+
     /// Returns the selected folder's UUID, or nil if a feed
     /// (or nothing) is selected.
     var selectedFolderId: UUID? {
@@ -56,6 +63,10 @@ final class SidebarViewModel: ObservableObject {
     }
 
     // MARK: - Selection Actions
+
+    func selectAll() {
+        selection = .all
+    }
 
     func selectFolder(_ id: UUID) {
         selection = .folder(id)
