@@ -17,6 +17,8 @@ struct SidebarView: View {
     @Environment(\.managedObjectContext)
     private var context
 
+    @FocusState private var folderNameFieldFocused: Bool
+
     @FetchRequest(
         sortDescriptors: [
             SortDescriptor(\CDFolder.sortOrder),
@@ -51,6 +53,7 @@ struct SidebarView: View {
                 "Folder name",
                 text: $viewModel.folderNameInput
             )
+            .focused($folderNameFieldFocused)
             Button("Create") {
                 viewModel.createFolder(
                     name: viewModel.folderNameInput,
@@ -58,6 +61,11 @@ struct SidebarView: View {
                 )
             }
             Button("Cancel", role: .cancel) {}
+        }
+        .onChange(of: viewModel.showNewFolderAlert) { _, isShowing in
+            if isShowing {
+                folderNameFieldFocused = true
+            }
         }
         .alert(
             "Rename Folder",
@@ -67,6 +75,7 @@ struct SidebarView: View {
                 "New name",
                 text: $viewModel.folderNameInput
             )
+            .focused($folderNameFieldFocused)
             Button("Rename") {
                 if let id = viewModel.folderToRename {
                     viewModel.renameFolder(
@@ -77,6 +86,11 @@ struct SidebarView: View {
                 }
             }
             Button("Cancel", role: .cancel) {}
+        }
+        .onChange(of: viewModel.showRenameFolderAlert) { _, isShowing in
+            if isShowing {
+                folderNameFieldFocused = true
+            }
         }
         .confirmationDialog(
             "Delete Folder?",
