@@ -13,6 +13,13 @@ struct ArticleRowView: View {
     @ObservedObject var article: CDArticle
     let isSelected: Bool
 
+    /// Formatter for displaying published date/time.
+    private static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a"
+        return formatter
+    }()
+
     var body: some View {
         HStack(spacing: 8) {
             unreadIndicator
@@ -57,8 +64,9 @@ struct ArticleRowView: View {
                 }
                 Spacer()
                 Text(
-                    article.published,
-                    style: .relative
+                    Self.dateFormatter.string(
+                        from: article.published
+                    )
                 )
                 .font(.caption)
                 .foregroundStyle(
