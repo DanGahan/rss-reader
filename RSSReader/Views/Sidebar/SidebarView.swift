@@ -64,7 +64,10 @@ struct SidebarView: View {
         }
         .onChange(of: viewModel.showNewFolderAlert) { _, isShowing in
             if isShowing {
-                folderNameFieldFocused = true
+                // Delay focus to allow alert to fully appear
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    folderNameFieldFocused = true
+                }
             }
         }
         .alert(
@@ -89,7 +92,10 @@ struct SidebarView: View {
         }
         .onChange(of: viewModel.showRenameFolderAlert) { _, isShowing in
             if isShowing {
-                folderNameFieldFocused = true
+                // Delay focus to allow alert to fully appear
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    folderNameFieldFocused = true
+                }
             }
         }
         .confirmationDialog(
