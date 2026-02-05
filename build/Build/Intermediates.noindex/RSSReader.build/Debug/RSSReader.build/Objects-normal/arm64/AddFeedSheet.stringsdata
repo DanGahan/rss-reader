@@ -1,0 +1,56 @@
+{
+  "source": "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/AddFeedSheet.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Add Feed",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "Feed URL (https://...)",
+        "location": {
+          "startingColumn": 13,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Folder",
+        "location": {
+          "startingColumn": 13,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "None",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 116
+        }
+      }
+    ]
+  },
+  "version": 1
+}

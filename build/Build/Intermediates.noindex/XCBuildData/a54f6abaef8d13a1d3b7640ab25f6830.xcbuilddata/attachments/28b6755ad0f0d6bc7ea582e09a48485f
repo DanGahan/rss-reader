@@ -1,0 +1,949 @@
+{
+  "" : {
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedKit-primary.dia",
+    "emit-module-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedKit-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedKit-primary-emit-module.dia",
+    "pch" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedKit-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedKit-primary.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Dates/DateSpec.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DateSpec~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Dates/ISO8601DateFormatter.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ISO8601DateFormatter~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Dates/RFC3339DateFormatter.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC3339DateFormatter~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Dates/RFC822DateFormatter.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RFC822DateFormatter~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Extensions/Array + Equatable.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Array + Equatable~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Extensions/Date + codingStrategy.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Date + codingStrategy~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Extensions/String + toBool.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toBool~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Extensions/String + toDate.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDate~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Extensions/String + toDuration.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/String + toDuration~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Extensions/URL + replacingScheme.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/URL + replacingScheme~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeed + mapAttributes.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapAttributes~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeed + mapCharacters.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed + mapCharacters~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedAuthor.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedAuthor~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedContributor.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedContributor~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntry.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntry~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntryAuthor.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryAuthor~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntryCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntryContent.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContent~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntryContributor.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryContributor~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntryLink.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntryLink~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntrySource.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySource~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedEntrySummary.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedEntrySummary~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedGenerator.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedLink.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedSubtitle.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomPath.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedAttachment.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedAuthor.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedHub.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedItem.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Content/ContentNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Dublin Core/DublinCoreNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCommunity.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaContent.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCopyright.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCredit.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaDescription.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaEmbed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaGroup.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaHash.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaLicence.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaLocation.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaParam.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaPeerLink.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPeerLink~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaPlayer.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPlayer~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaPrice.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaPrice~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaRating.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRating~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaRestriction.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRestriction~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaRights.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaRights~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaScene.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaScene~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaStarRating.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStarRating~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaStatistics.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatistics~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaStatus.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaStatus~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaSubTitle.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaSubTitle~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaTag.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTag~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaText.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaText~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaThumbnail.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaThumbnail~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaTitle.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaTitle~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Syndication/SyndicationNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationNamespace~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Syndication/SyndicationUpdatePeriod.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/SyndicationUpdatePeriod~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/iTunes/iTunesCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/iTunes/iTunesImage.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesImage~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/iTunes/iTunesNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesNamespace~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/iTunes/iTunesOwner.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesOwner~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/iTunes/iTunesSubCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/iTunesSubCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RDFPath.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RDFPath~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeed + mapAttributes.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapAttributes~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeed + mapCharacters.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed + mapCharacters~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedCloud.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedCloud~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedImage.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedImage~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedItem.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItem~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedItemCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemCategory~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedItemEnclosure.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemEnclosure~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedItemGUID.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemGUID~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedItemSource.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedItemSource~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedSkipDay.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipDay~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedSkipHour.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedSkipHour~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSFeedTextInput.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSFeedTextInput~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/RSS/RSSPath.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/RSSPath~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/Feed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/Feed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/FeedDataType.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedDataType~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/FeedParser.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParser~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/FeedParserProtocol.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/FeedParserProtocol~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/JSONFeedParser.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedParser~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/ParserError.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ParserError~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/XMLFeedParser.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedParser~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Parser/XMLFeedType.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.dia",
+    "index-unit-output-path" : "/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/XMLFeedType~partial.swiftmodule"
+  }
+}

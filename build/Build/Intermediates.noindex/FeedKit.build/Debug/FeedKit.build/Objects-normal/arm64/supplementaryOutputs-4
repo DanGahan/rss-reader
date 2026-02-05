@@ -1,0 +1,86 @@
+{
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCommunity.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCommunity.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaContent.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaContent.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCopyright.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCopyright.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCredit.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCredit.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaDescription.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaDescription.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaEmbed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaEmbed.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaGroup.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaGroup.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaHash.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaHash.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaLicence.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLicence.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaLocation.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaLocation.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaNamespace.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaParam.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaParam.swiftdeps"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/APIResponses.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Article.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/AuthenticationToken.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Category.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Feed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Subscription.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.swiftdeps"
+  }
+}

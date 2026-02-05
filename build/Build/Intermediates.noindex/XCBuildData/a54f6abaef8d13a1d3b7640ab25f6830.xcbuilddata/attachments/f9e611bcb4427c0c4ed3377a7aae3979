@@ -1,0 +1,509 @@
+{
+  "" : {
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReader-primary.dia",
+    "emit-module-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReader-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReader-primary-emit-module.dia",
+    "pch" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReader-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReader-primary.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/App/AppState.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppState~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/App/KeyboardCommands.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeyboardCommands~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/App/RSSReaderApp.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderApp~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/APIResponses.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/APIResponses~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/AppError.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AppError~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Article.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Article~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/AuthenticationToken.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AuthenticationToken~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/CDAppSettings.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDAppSettings~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/CDArticle.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDArticle~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/CDFeed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFeed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/CDFolder.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CDFolder~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Category.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Category~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/CoreDataModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/CoreDataModel~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Feed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Feed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/FeedlyUser.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyUser~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/OPMLDocument.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLDocument~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/ParsedFeed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ParsedFeed~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/RSSReaderError.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RSSReaderError~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Models/Subscription.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/Subscription~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/ArticleCleanupService.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleCleanupService~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/ErrorLogger.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ErrorLogger~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/FeedErrorHandler.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedErrorHandler~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/FeedParserService.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedParserService~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/FeedlyAPIService.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedlyAPIService~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/KeychainService.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/KeychainService~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/OPMLParser.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLParser~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/OPMLService.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/OPMLService~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/PersistenceController.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/PersistenceController~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/RateLimiter.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RateLimiter~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/RefreshService.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RefreshService~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/RetryPolicy.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/RetryPolicy~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Services/ServiceProtocols.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ServiceProtocols~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Utilities/StringExtensions.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/ViewModels/ArticleDetailViewModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailViewModel~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/ViewModels/ArticleListViewModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListViewModel~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/ViewModels/ImportOPMLViewModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/ViewModels/SidebarViewModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/ArticleDetail/ArticleDetailView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleDetailView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/ArticleList/ArticleListView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleListView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/ArticleList/ArticleRowView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ArticleRowView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/ContentView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Import/ImportOPMLWizard.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/AddFeedSheet.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AddFeedSheet~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/AllArticlesRowView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/AllArticlesRowView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/FeedRowView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FeedRowView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/FolderNameSheet.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/FolderRowView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderRowView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/SidebarView.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarView~partial.swiftmodule"
+  },
+  "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

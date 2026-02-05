@@ -1,0 +1,16 @@
+{
+  "source": "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/FolderRowView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 45
+        }
+      }
+    ]
+  },
+  "version": 1
+}

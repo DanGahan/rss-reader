@@ -1,0 +1,40 @@
+{
+  "source": "/Users/dan/Documents/Code/RSS/RSSReader/Views/ArticleDetail/ArticleDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Opened in Safari",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "Opens article in Safari",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "No content available.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 213
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select an article to read",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 232
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,44 @@
+{
+  "/Users/dan/Documents/Code/RSS/RSSReader/Utilities/StringExtensions.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/StringExtensions.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/ViewModels/ImportOPMLViewModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLViewModel.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/ViewModels/SidebarViewModel.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/SidebarViewModel.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Import/ImportOPMLWizard.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/ImportOPMLWizard.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/FolderNameSheet.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/FolderNameSheet.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/RSSReader.build/Debug/RSSReader.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps"
+  }
+}

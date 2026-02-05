@@ -1,0 +1,64 @@
+{
+  "source": "/Users/dan/Documents/Code/RSS/RSSReader/Views/ArticleList/ArticleListView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Select a feed or folder",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Never refreshed",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 198
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Update: %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Show unread articles only",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 245
+        }
+      },
+      {
+        "comment": "",
+        "key": "Refresh all feeds",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 251
+        }
+      },
+      {
+        "comment": "",
+        "key": "No unread articles",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 286
+        }
+      },
+      {
+        "comment": "",
+        "key": "No articles",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 286
+        }
+      }
+    ]
+  },
+  "version": 1
+}

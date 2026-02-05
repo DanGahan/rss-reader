@@ -1,0 +1,86 @@
+{
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedGenerator.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedGenerator.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedLink.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedLink.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomFeedSubtitle.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomFeedSubtitle.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Atom/AtomPath.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/AtomPath.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeed.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeed.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedAttachment.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAttachment.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedAuthor.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedAuthor.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedHub.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedHub.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/JSON/JSONFeedItem.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/JSONFeedItem.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Content/ContentNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/ContentNamespace.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Dublin Core/DublinCoreNamespace.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/DublinCoreNamespace.swiftdeps"
+  },
+  "/Users/dan/Documents/Code/RSS/build/SourcePackages/checkouts/FeedKit/Sources/FeedKit/Models/Namespaces/Media/MediaCategory.swift" : {
+    "const-values" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.swiftconstvalues",
+    "dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.d",
+    "diagnostics" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.dia",
+    "object" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.o",
+    "swift-dependencies" : "/Users/dan/Documents/Code/RSS/build/Build/Intermediates.noindex/FeedKit.build/Debug/FeedKit.build/Objects-normal/arm64/MediaCategory.swiftdeps"
+  }
+}

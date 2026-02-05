@@ -1,0 +1,80 @@
+{
+  "source": "/Users/dan/Documents/Code/RSS/RSSReader/Views/Sidebar/SidebarView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Delete Folder?",
+        "location": {
+          "startingColumn": 13,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unfiled",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 250
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Move to Folder",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 324
+        }
+      },
+      {
+        "comment": "",
+        "key": "Rename...",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 308
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 314
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unfiled",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 336
+        }
+      },
+      {
+        "comment": "",
+        "key": "Remove Feed",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 350
+        }
+      }
+    ]
+  },
+  "version": 1
+}
