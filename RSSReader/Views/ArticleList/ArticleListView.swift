@@ -12,15 +12,10 @@ import SwiftUI
 /// selected sidebar item. Uses `@FetchRequest` with a dynamic predicate
 /// built from the sidebar selection and the unread-only filter toggle.
 struct ArticleListView: View {
-    @ObservedObject var sidebarViewModel: SidebarViewModel
+    let sidebarSelection: SidebarSelection?
     @ObservedObject var viewModel: ArticleListViewModel
     @ObservedObject var refreshService: RefreshService
     @Environment(\.managedObjectContext) private var context
-
-    /// Convenience accessor for the current sidebar selection.
-    private var sidebarSelection: SidebarSelection? {
-        sidebarViewModel.selection
-    }
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],
@@ -49,13 +44,26 @@ struct ArticleListView: View {
         }
         .frame(minWidth: 300)
         .ignoresSafeArea(.all, edges: .top)
-        .id(sidebarViewModel.selection)
         .onAppear { updatePredicate() }
-        .onChange(of: sidebarViewModel.selection) { _, _ in
+        .onChange(of: sidebarSelection) { _, _ in
             viewModel.clearSelection()
             updatePredicate()
         }
         .onChange(of: viewModel.showUnreadOnly) { _, _ in updatePredicate() }
+        .onChange(of: viewModel.selectedArticleId) { _, _ in
+            // When an article is selected, it's marked as read. If the unread
+            // filter is on, we need to refresh the predicate to hide it.
+            if viewModel.showUnreadOnly {
+                updatePredicate()
+            }
+        }
+        .onChange(of: viewModel.selectedArticleId) { _, _ in
+            // When an article is selected, it's marked as read. If the unread
+            // filter is on, we need to refresh the predicate to hide it.
+            if viewModel.showUnreadOnly {
+                updatePredicate()
+            }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .markAllAsRead)) { _ in
             viewModel.markAllAsRead(Array(articles), in: context)
         }

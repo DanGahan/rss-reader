@@ -30,7 +30,8 @@ struct ContentView: View {
             SidebarView(viewModel: sidebarViewModel)
         } content: {
             ArticleListView(
-                sidebarViewModel: sidebarViewModel,
+                sidebarSelection:
+                    sidebarViewModel.selection,
                 viewModel: listViewModel,
                 refreshService: refreshService
             )
@@ -97,18 +98,6 @@ struct ContentView: View {
             )
         ) { _ in
             refreshService.resumeAutoRefresh()
-        }
-        .onKeyPress("n") {
-            NotificationCenter.default.post(name: .nextUnread, object: nil)
-            return .handled
-        }
-        .onKeyPress("j") {
-            NotificationCenter.default.post(name: .nextArticle, object: nil)
-            return .handled
-        }
-        .onKeyPress("k") {
-            NotificationCenter.default.post(name: .previousArticle, object: nil)
-            return .handled
         }
     }
 
