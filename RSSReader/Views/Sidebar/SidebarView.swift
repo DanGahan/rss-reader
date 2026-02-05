@@ -43,10 +43,6 @@ struct SidebarView: View {
         }
         .listStyle(.sidebar)
         .frame(minWidth: 200)
-        .safeAreaInset(edge: .top, spacing: 0) {
-            // Space for window traffic lights
-            Color.clear.frame(height: 38)
-        }
         .alert(
             "New Folder",
             isPresented: $viewModel.showNewFolderAlert

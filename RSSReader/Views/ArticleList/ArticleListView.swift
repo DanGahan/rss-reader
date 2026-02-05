@@ -43,6 +43,7 @@ struct ArticleListView: View {
             }
         }
         .frame(minWidth: 300)
+        .contentMargins(.top, 0, for: .scrollContent)
         .onAppear { updatePredicate() }
         .onChange(of: sidebarSelection) { _, _ in
             viewModel.clearSelection()
