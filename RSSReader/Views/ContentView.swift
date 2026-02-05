@@ -20,6 +20,7 @@ struct ContentView: View {
         RefreshService()
 
     @State private var showingAddFeed = false
+    @State private var showingImportOPML = false
 
     @Environment(\.managedObjectContext)
     private var context
@@ -58,6 +59,16 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showingAddFeed) {
             AddFeedSheet()
+        }
+        .sheet(isPresented: $showingImportOPML) {
+            ImportOPMLWizard()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .importOPML
+            )
+        ) { _ in
+            showingImportOPML = true
         }
         .onAppear {
             refreshService.startAutoRefresh()

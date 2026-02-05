@@ -32,6 +32,17 @@ struct KeyboardCommands: Commands {
         }
 
         CommandGroup(after: .importExport) {
+            Button("Import Subscriptions...") {
+                NotificationCenter.default.post(
+                    name: .importOPML,
+                    object: nil
+                )
+            }
+            .keyboardShortcut(
+                "i",
+                modifiers: [.command, .shift]
+            )
+
             Button("Export Subscriptions...") {
                 NotificationCenter.default.post(
                     name: .exportOPML,
@@ -121,6 +132,9 @@ extension Notification.Name {
     static let addFeed = Notification.Name("addFeed")
     static let exportOPML = Notification.Name(
         "exportOPML"
+    )
+    static let importOPML = Notification.Name(
+        "importOPML"
     )
     static let newFolder = Notification.Name(
         "newFolder"
