@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FE84A2A91578025301D2 /* FolderNameSheet.swift */; };
 		37037A842F33ECD600245B95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37037A832F33ECD600245B95 /* SettingsView.swift */; };
 		A1000001 /* RSSReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* RSSReaderApp.swift */; };
 		A1000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* AppState.swift */; };
@@ -91,6 +92,8 @@
 		A1000170C /* FeedParserServiceJSONParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000170C /* FeedParserServiceJSONParsingTests.swift */; };
 		A1000180 /* AddFeedSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000180 /* AddFeedSheetTests.swift */; };
 		A1000181 /* ContentViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000181 /* ContentViewLayoutTests.swift */; };
+		BA6AC78B436740B553E58F60 /* ImportOPMLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */; };
+		F70ECE0C1940A7B9106B1811 /* ImportOPMLWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA525B0747B598B613FDFCB3 /* ImportOPMLWizard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,8 @@
 
 /* Begin PBXFileReference section */
 		37037A832F33ECD600245B95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
+		4756FE84A2A91578025301D2 /* FolderNameSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FolderNameSheet.swift; sourceTree = "<group>"; };
+		71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLViewModel.swift; sourceTree = "<group>"; };
 		A2000001 /* RSSReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderApp.swift; sourceTree = "<group>"; };
 		A2000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A2000003 /* KeyboardCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCommands.swift; sourceTree = "<group>"; };
@@ -198,6 +203,7 @@
 		A2100001 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2100002 /* RSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2100003 /* RSSReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA525B0747B598B613FDFCB3 /* ImportOPMLWizard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLWizard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +324,7 @@
 				A7000016 /* ArticleList */,
 				A7000017 /* ArticleDetail */,
 				A7000018 /* Sidebar */,
+				E630C76A5A4611B8ED932E54 /* Import */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +336,7 @@
 				A2000120 /* ArticleListViewModel.swift */,
 				A2000121 /* ArticleDetailViewModel.swift */,
 				A2000122 /* SidebarViewModel.swift */,
+				71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -386,6 +394,7 @@
 				A2000135 /* FolderRowView.swift */,
 				A2000136 /* AddFeedSheet.swift */,
 				A2000137 /* AllArticlesRowView.swift */,
+				4756FE84A2A91578025301D2 /* FolderNameSheet.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -469,6 +478,15 @@
 				A2000181 /* ContentViewLayoutTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E630C76A5A4611B8ED932E54 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				AA525B0747B598B613FDFCB3 /* ImportOPMLWizard.swift */,
+			);
+			name = Import;
+			path = Import;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -652,6 +670,9 @@
 				A1000122 /* SidebarViewModel.swift in Sources */,
 				A1000060 /* StringExtensions.swift in Sources */,
 				A1000080 /* RSSReader.xcdatamodeld in Sources */,
+				F70ECE0C1940A7B9106B1811 /* ImportOPMLWizard.swift in Sources */,
+				BA6AC78B436740B553E58F60 /* ImportOPMLViewModel.swift in Sources */,
+				36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

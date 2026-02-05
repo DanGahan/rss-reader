@@ -51,40 +51,40 @@ struct SidebarView: View {
         }
         .listStyle(.sidebar)
         .frame(minWidth: 200)
-        .alert(
-            "New Folder",
-            isPresented: $viewModel.showNewFolderAlert
-        ) {
-            TextField(
-                "Folder name",
-                text: $viewModel.folderNameInput
-            )
-            Button("Create") {
-                viewModel.createFolder(
-                    name: viewModel.folderNameInput,
-                    in: context
-                )
-            }
-            Button("Cancel", role: .cancel) {}
-        }
-        .alert(
-            "Rename Folder",
-            isPresented: $viewModel.showRenameFolderAlert
-        ) {
-            TextField(
-                "New name",
-                text: $viewModel.folderNameInput
-            )
-            Button("Rename") {
-                if let id = viewModel.folderToRename {
-                    viewModel.renameFolder(
-                        id: id,
-                        newName: viewModel.folderNameInput,
+        .sheet(isPresented: $viewModel.showNewFolderAlert) {
+            FolderNameSheet(
+                mode: .create,
+                folderName: $viewModel.folderNameInput,
+                onSave: {
+                    viewModel.createFolder(
+                        name: viewModel.folderNameInput,
                         in: context
                     )
+                    viewModel.showNewFolderAlert = false
+                },
+                onCancel: {
+                    viewModel.showNewFolderAlert = false
                 }
-            }
-            Button("Cancel", role: .cancel) {}
+            )
+        }
+        .sheet(isPresented: $viewModel.showRenameFolderAlert) {
+            FolderNameSheet(
+                mode: .rename,
+                folderName: $viewModel.folderNameInput,
+                onSave: {
+                    if let id = viewModel.folderToRename {
+                        viewModel.renameFolder(
+                            id: id,
+                            newName: viewModel.folderNameInput,
+                            in: context
+                        )
+                    }
+                    viewModel.showRenameFolderAlert = false
+                },
+                onCancel: {
+                    viewModel.showRenameFolderAlert = false
+                }
+            )
         }
         .confirmationDialog(
             "Delete Folder?",
@@ -156,15 +156,73 @@ struct SidebarView: View {
                             folder.id
                         )
                     }
-                    .onDrop(of: [UTType.feedDrag], isTargeted: nil) { providers in
-                        handleDrop(providers: providers, toFolderId: folder.id)
+                    .contextMenu {
+                        folderContextMenu(folder: folder)
+                    }
+                    .onDrop(
+                        of: [.utf8PlainText],
+                        isTargeted: nil
+                    ) { providers in
+                        handleFolderDrop(
+                            providers: providers,
+                            targetFolderId: folder.id
+                        )
                     }
             }
             .tag(SidebarSelection.folder(folder.id))
-            .contextMenu {
-                folderContextMenu(folder: folder)
+        }
+    }
+
+    // MARK: - Drop Handling
+
+    private func handleFolderDrop(
+        providers: [NSItemProvider],
+        targetFolderId: UUID
+    ) -> Bool {
+        guard let provider = providers.first else {
+            return false
+        }
+
+        provider.loadObject(ofClass: NSString.self) { string, _ in
+            guard let payload = string as? String else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                if payload.hasPrefix("folder:") {
+                    // Folder reorder
+                    let uuidString = String(
+                        payload.dropFirst("folder:".count)
+                    )
+                    guard let folderId = UUID(
+                        uuidString: uuidString
+                    ) else { return }
+
+                    // Don't drop on self
+                    guard folderId != targetFolderId else {
+                        return
+                    }
+
+                    viewModel.reorderFolder(
+                        id: folderId,
+                        beforeFolderId: targetFolderId,
+                        in: context
+                    )
+                } else {
+                    // Feed drop (existing behavior)
+                    guard let feedId = UUID(
+                        uuidString: payload
+                    ) else { return }
+
+                    viewModel.moveFeed(
+                        feedId: feedId,
+                        toFolderId: targetFolderId,
+                        in: context
+                    )
+                }
             }
         }
+        return true
     }
 
     @ViewBuilder

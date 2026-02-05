@@ -204,6 +204,51 @@ final class SidebarViewModel: ObservableObject {
         try? context.save()
     }
 
+    /// Reorders a folder by moving it before or after
+    /// another folder.
+    func reorderFolder(
+        id: UUID,
+        beforeFolderId targetId: UUID?,
+        in context: NSManagedObjectContext
+    ) {
+        // Fetch all folders sorted by current order
+        let request = CDFolder.fetchRequest()
+        request.sortDescriptors = [
+            NSSortDescriptor(
+                key: "sortOrder", ascending: true
+            ),
+            NSSortDescriptor(
+                key: "name", ascending: true
+            )
+        ]
+        guard var folders = try? context.fetch(request),
+              let sourceIndex = folders.firstIndex(
+                  where: { $0.id == id }
+              )
+        else { return }
+
+        // Remove from current position
+        let folder = folders.remove(at: sourceIndex)
+
+        // Find target position
+        if let targetId,
+           let targetIndex = folders.firstIndex(
+               where: { $0.id == targetId }
+           ) {
+            folders.insert(folder, at: targetIndex)
+        } else {
+            // Move to end if no target
+            folders.append(folder)
+        }
+
+        // Update sort orders
+        for (index, folder) in folders.enumerated() {
+            folder.sortOrder = Int32(index)
+        }
+
+        try? context.save()
+    }
+
     // MARK: - Private Helpers
 
     private func nextSortOrder(
