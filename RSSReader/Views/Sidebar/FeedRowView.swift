@@ -7,6 +7,7 @@
 
 import CoreData
 import SwiftUI
+import UniformTypeIdentifiers
 
 /// A single feed row showing an RSS icon, title, unread
 /// badge, and optional error overlay.
@@ -46,6 +47,9 @@ struct FeedRowView: View {
             }
         }
         .help(feed.lastError ?? feed.feedURL)
+        .onDrag {
+            NSItemProvider(object: feed.id.uuidString as NSString)
+        }
     }
 
     // MARK: - Subviews

@@ -124,14 +124,15 @@ struct ContentView: View {
                   let url = panel.url
             else { return }
 
-            do {
-                let service = OPMLService()
-                let data = try service.exportOPML(
-                    from: exportContext
-                )
-                try data.write(to: url)
-            } catch {
-                DispatchQueue.main.async {
+            // CoreData context must be accessed on main thread
+            DispatchQueue.main.async {
+                do {
+                    let service = OPMLService()
+                    let data = try service.exportOPML(
+                        from: exportContext
+                    )
+                    try data.write(to: url)
+                } catch {
                     NSAlert(error: error).runModal()
                 }
             }
