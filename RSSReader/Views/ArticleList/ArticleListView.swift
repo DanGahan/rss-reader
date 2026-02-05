@@ -49,6 +49,7 @@ struct ArticleListView: View {
         }
         .frame(minWidth: 300)
         .ignoresSafeArea(.all, edges: .top)
+        .id(sidebarViewModel.selection)
         .onAppear { updatePredicate() }
         .onChange(of: sidebarViewModel.selection) { _, _ in
             viewModel.clearSelection()
