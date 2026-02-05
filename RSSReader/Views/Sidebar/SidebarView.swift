@@ -7,6 +7,7 @@
 
 import CoreData
 import SwiftUI
+import UniformTypeIdentifiers
 
 /// Sidebar displaying folders (with expandable feeds) and
 /// an unfiled feeds section. Drives selection state via
@@ -148,9 +149,70 @@ struct SidebarView: View {
                     .contextMenu {
                         folderContextMenu(folder: folder)
                     }
+                    .onDrop(
+                        of: [.utf8PlainText],
+                        isTargeted: nil
+                    ) { providers in
+                        handleFolderDrop(
+                            providers: providers,
+                            targetFolderId: folder.id
+                        )
+                    }
             }
             .tag(SidebarSelection.folder(folder.id))
         }
+    }
+
+    // MARK: - Drop Handling
+
+    private func handleFolderDrop(
+        providers: [NSItemProvider],
+        targetFolderId: UUID
+    ) -> Bool {
+        guard let provider = providers.first else {
+            return false
+        }
+
+        provider.loadObject(ofClass: NSString.self) { string, _ in
+            guard let payload = string as? String else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                if payload.hasPrefix("folder:") {
+                    // Folder reorder
+                    let uuidString = String(
+                        payload.dropFirst("folder:".count)
+                    )
+                    guard let folderId = UUID(
+                        uuidString: uuidString
+                    ) else { return }
+
+                    // Don't drop on self
+                    guard folderId != targetFolderId else {
+                        return
+                    }
+
+                    viewModel.reorderFolder(
+                        id: folderId,
+                        beforeFolderId: targetFolderId,
+                        in: context
+                    )
+                } else {
+                    // Feed drop (existing behavior)
+                    guard let feedId = UUID(
+                        uuidString: payload
+                    ) else { return }
+
+                    viewModel.moveFeed(
+                        feedId: feedId,
+                        toFolderId: targetFolderId,
+                        in: context
+                    )
+                }
+            }
+        }
+        return true
     }
 
     @ViewBuilder

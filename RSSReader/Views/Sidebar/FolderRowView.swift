@@ -7,6 +7,7 @@
 
 import CoreData
 import SwiftUI
+import UniformTypeIdentifiers
 
 /// A folder label showing a folder icon, name, and
 /// aggregate unread badge.
@@ -46,6 +47,11 @@ struct FolderRowView: View {
                     .fontWeight(.medium)
                     .foregroundStyle(.primary)
             }
+        }
+        .onDrag {
+            NSItemProvider(
+                object: "folder:\(folder.id.uuidString)" as NSString
+            )
         }
     }
 }
