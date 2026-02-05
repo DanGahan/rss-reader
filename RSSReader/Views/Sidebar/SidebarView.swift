@@ -137,31 +137,34 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        .contentShape(Rectangle())
                         // DisclosureGroup content doesn't properly
-                        // propagate selection to List(selection:),
-                        // so we need manual tap handling here.
-                        // Use simultaneousGesture to avoid conflicts
-                        // with .onDrag in FeedRowView.
-                        .simultaneousGesture(TapGesture().onEnded {
+                        // propagate selection to List(selection:).
+                        .onTapGesture {
                             viewModel.selection = .feed(
                                 feed.id
                             )
-                        })
+                        }
+                        .onDrag {
+                            FeedRowView(feed: feed).dragProvider
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
                 }
             } label: {
                 FolderRowView(folder: folder)
+                    .contentShape(Rectangle())
                     // DisclosureGroup labels need manual tap handling
                     // to select without toggling expansion.
-                    // Use simultaneousGesture to avoid conflicts
-                    // with .onDrag in FolderRowView.
-                    .simultaneousGesture(TapGesture().onEnded {
+                    .onTapGesture {
                         viewModel.selection = .folder(
                             folder.id
                         )
-                    })
+                    }
+                    .onDrag {
+                        FolderRowView(folder: folder).dragProvider
+                    }
                     .contextMenu {
                         folderContextMenu(folder: folder)
                     }
