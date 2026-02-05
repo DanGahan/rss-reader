@@ -9,18 +9,15 @@ import CoreData
 import SwiftUI
 
 /// Displays a scrollable, filterable list of articles for the currently
-/// selected sidebar item. Uses `@FetchRequest` with a dynamic predicate
-/// built from the sidebar selection and the unread-only filter toggle.
+/// selected sidebar item. Uses `@FetchRequest` with a predicate
+/// built from the sidebar selection.
 struct ArticleListView: View {
     let sidebarSelection: SidebarSelection?
     @ObservedObject var viewModel: ArticleListViewModel
     @ObservedObject var refreshService: RefreshService
     @Environment(\.managedObjectContext) private var context
 
-    @FetchRequest(
-        sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],
-        animation: .default
-    ) private var articles: FetchedResults<CDArticle>
+    @FetchRequest private var articles: FetchedResults<CDArticle>
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\CDFolder.name)],
@@ -31,6 +28,50 @@ struct ArticleListView: View {
         sortDescriptors: [SortDescriptor(\CDFeed.title)],
         animation: .default
     ) private var feeds: FetchedResults<CDFeed>
+
+    init(
+        sidebarSelection: SidebarSelection?,
+        viewModel: ArticleListViewModel,
+        refreshService: RefreshService
+    ) {
+        self.sidebarSelection = sidebarSelection
+        self.viewModel = viewModel
+        self.refreshService = refreshService
+
+        // Build predicate based on selection
+        let predicate = Self.buildPredicate(
+            for: sidebarSelection,
+            showUnreadOnly: viewModel.showUnreadOnly
+        )
+        _articles = FetchRequest(
+            sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],
+            predicate: predicate,
+            animation: .default
+        )
+    }
+
+    /// Static predicate builder for use in init
+    private static func buildPredicate(
+        for selection: SidebarSelection?,
+        showUnreadOnly: Bool
+    ) -> NSPredicate? {
+        guard let selection = selection else {
+            return NSPredicate(value: false)
+        }
+        var predicates: [NSPredicate] = []
+        switch selection {
+        case .all: break
+        case .feed(let id):
+            predicates.append(NSPredicate(format: "feed.id == %@", id as CVarArg))
+        case .folder(let id):
+            predicates.append(NSPredicate(format: "feed.folder.id == %@", id as CVarArg))
+        }
+        if showUnreadOnly {
+            predicates.append(NSPredicate(format: "isRead == NO"))
+        }
+        if predicates.isEmpty { return nil }
+        return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+    }
 
     var body: some View {
         Group {
@@ -44,25 +85,8 @@ struct ArticleListView: View {
         }
         .frame(minWidth: 300)
         .ignoresSafeArea(.all, edges: .top)
-        .onAppear { updatePredicate() }
-        .onChange(of: sidebarSelection) { _, _ in
-            viewModel.clearSelection()
+        .onChange(of: viewModel.showUnreadOnly) { _, _ in
             updatePredicate()
-        }
-        .onChange(of: viewModel.showUnreadOnly) { _, _ in updatePredicate() }
-        .onChange(of: viewModel.selectedArticleId) { _, _ in
-            // When an article is selected, it's marked as read. If the unread
-            // filter is on, we need to refresh the predicate to hide it.
-            if viewModel.showUnreadOnly {
-                updatePredicate()
-            }
-        }
-        .onChange(of: viewModel.selectedArticleId) { _, _ in
-            // When an article is selected, it's marked as read. If the unread
-            // filter is on, we need to refresh the predicate to hide it.
-            if viewModel.showUnreadOnly {
-                updatePredicate()
-            }
         }
         .onReceive(NotificationCenter.default.publisher(for: .markAllAsRead)) { _ in
             viewModel.markAllAsRead(Array(articles), in: context)
@@ -215,23 +239,12 @@ struct ArticleListView: View {
 
     // MARK: - Predicate
 
-    private func updatePredicate() { articles.nsPredicate = buildPredicate() }
-
-    private func buildPredicate() -> NSPredicate? {
-        guard let selection = sidebarSelection else { return NSPredicate(value: false) }
-        var predicates: [NSPredicate] = []
-        switch selection {
-        case .all: break
-        case .feed(let id):
-            predicates.append(NSPredicate(format: "feed.id == %@", id as CVarArg))
-        case .folder(let id):
-            predicates.append(NSPredicate(format: "feed.folder.id == %@", id as CVarArg))
-        }
-        if viewModel.showUnreadOnly {
-            predicates.append(NSPredicate(format: "isRead == NO"))
-        }
-        if predicates.isEmpty { return nil }
-        return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+    /// Updates the fetch request predicate for unread filter toggle.
+    private func updatePredicate() {
+        articles.nsPredicate = Self.buildPredicate(
+            for: sidebarSelection,
+            showUnreadOnly: viewModel.showUnreadOnly
+        )
     }
 }
 
