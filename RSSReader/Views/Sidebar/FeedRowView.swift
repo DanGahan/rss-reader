@@ -53,6 +53,7 @@ struct FeedRowView: View {
     private var feedIcon: some View {
         ZStack(alignment: .bottomTrailing) {
             Image(systemName: "dot.radiowaves.up.forward")
+                .font(.system(size: 16))
                 .foregroundStyle(.primary)
 
             if feed.hasError {

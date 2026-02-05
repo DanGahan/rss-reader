@@ -139,7 +139,7 @@ struct ArticleDetailView: View {
     private func clickableTitle(
         _ article: CDArticle
     ) -> some View {
-        Text(article.title)
+        Text(article.title.decodingHTMLEntities())
             .font(.title)
             .fontWeight(.bold)
             .foregroundStyle(

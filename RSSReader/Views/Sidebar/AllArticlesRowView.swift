@@ -26,6 +26,7 @@ struct AllArticlesRowView: View {
                     .foregroundStyle(.primary)
             } icon: {
                 Image(systemName: "newspaper")
+                    .font(.system(size: 16))
                     .foregroundStyle(.primary)
             }
             Spacer()

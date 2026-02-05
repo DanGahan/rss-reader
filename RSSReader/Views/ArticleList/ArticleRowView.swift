@@ -41,7 +41,7 @@ struct ArticleRowView: View {
 
     private var articleContent: some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text(article.title)
+            Text(article.title.decodingHTMLEntities())
                 .fontWeight(
                     article.isRead ? .regular : .semibold
                 )

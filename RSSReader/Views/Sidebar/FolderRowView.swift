@@ -36,6 +36,7 @@ struct FolderRowView: View {
                     .foregroundStyle(.primary)
             } icon: {
                 Image(systemName: "folder")
+                    .font(.system(size: 16))
                     .foregroundStyle(.primary)
             }
             Spacer()

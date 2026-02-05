@@ -76,22 +76,17 @@ struct ArticleListView: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.primary)
                     .lineLimit(1)
-                HStack(spacing: 8) {
-                    Text(unreadCountText)
+                Text(unreadCountText)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                if let lastRefresh = refreshService.lastRefreshDate {
+                    Text("Last Update: \(lastUpdateText(for: lastRefresh))")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
-                    Text("•")
+                } else {
+                    Text("Never refreshed")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
-                    if let lastRefresh = refreshService.lastRefreshDate {
-                        Text("Last Update: \(lastUpdateText(for: lastRefresh))")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    } else {
-                        Text("Never refreshed")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
                 }
             }
             Spacer()
