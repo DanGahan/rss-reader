@@ -68,10 +68,15 @@ struct ArticleDetailView: View {
             maxHeight: .infinity
         )
         .ignoresSafeArea(.all, edges: .top)
-        .onChange(of: articleId) { _, newId in
-            if let newId, let art = articles.first,
-               art.id == newId {
-                viewModel.markAsRead(art, in: context)
+        .onChange(of: articleId) { oldId, newId in
+            if let oldId {
+                let fetchRequest: NSFetchRequest<CDArticle> = CDArticle.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: "id == %@", oldId as CVarArg)
+                fetchRequest.fetchLimit = 1
+
+                if let articleToMarkAsRead = try? context.fetch(fetchRequest).first {
+                    viewModel.markAsRead(articleToMarkAsRead, in: context)
+                }
             }
         }
         .onReceive(
@@ -120,10 +125,7 @@ struct ArticleDetailView: View {
                 bodyText(article)
             }
             .padding(24)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
-        }
-        .onAppear {
-            viewModel.markAsRead(article, in: context)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }
 

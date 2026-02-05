@@ -50,6 +50,20 @@ struct ArticleListView: View {
             updatePredicate()
         }
         .onChange(of: viewModel.showUnreadOnly) { _, _ in updatePredicate() }
+        .onChange(of: viewModel.selectedArticleId) { _, _ in
+            // When an article is selected, it's marked as read. If the unread
+            // filter is on, we need to refresh the predicate to hide it.
+            if viewModel.showUnreadOnly {
+                updatePredicate()
+            }
+        }
+        .onChange(of: viewModel.selectedArticleId) { _, _ in
+            // When an article is selected, it's marked as read. If the unread
+            // filter is on, we need to refresh the predicate to hide it.
+            if viewModel.showUnreadOnly {
+                updatePredicate()
+            }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .markAllAsRead)) { _ in
             viewModel.markAllAsRead(Array(articles), in: context)
         }
