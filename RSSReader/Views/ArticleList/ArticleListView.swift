@@ -31,28 +31,33 @@ struct ArticleListView: View {
         animation: .default
     ) private var articles: FetchedResults<CDArticle>
 
+    @FetchRequest(
+        sortDescriptors: [SortDescriptor(\CDFolder.name)],
+        animation: .default
+    ) private var folders: FetchedResults<CDFolder>
+
+    @FetchRequest(
+        sortDescriptors: [SortDescriptor(\CDFeed.title)],
+        animation: .default
+    ) private var feeds: FetchedResults<CDFeed>
+
     var body: some View {
         Group {
             if sidebarSelection == nil {
                 noSelectionView
             } else if articles.isEmpty {
-                emptyStateView
+                VStack(spacing: 0) {
+                    headerView
+                    emptyStateView
+                }
             } else {
-                articleList
+                VStack(spacing: 0) {
+                    headerView
+                    articleList
+                }
             }
         }
         .frame(minWidth: 300)
-        .toolbar {
-            ToolbarItem(placement: .automatic) {
-                Toggle(isOn: $viewModel.showUnreadOnly) {
-                    Label(
-                        "Unread Only",
-                        systemImage: "line.3.horizontal.decrease.circle"
-                    )
-                }
-                .help("Show unread articles only")
-            }
-        }
         .onAppear {
             updatePredicate()
         }
@@ -104,6 +109,93 @@ struct ArticleListView: View {
                 from: ids,
                 unreadIds: unreadIds
             )
+        }
+    }
+
+    // MARK: - Header
+
+    /// Dynamic header showing selection title and unread count.
+    private var headerView: some View {
+        HStack(alignment: .top) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(headerTitle)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                Text(unreadCountText)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            Spacer()
+            headerControls
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+    }
+
+    /// Title based on current sidebar selection.
+    private var headerTitle: String {
+        guard let selection = sidebarSelection else {
+            return "Articles"
+        }
+
+        switch selection {
+        case .all:
+            return "All Articles"
+        case .folder(let id):
+            if let folder = folders.first(
+                where: { $0.id == id }
+            ) {
+                return folder.name
+            }
+            return "Folder"
+        case .feed(let id):
+            if let feed = feeds.first(where: { $0.id == id }) {
+                if let folderName = feed.folder?.name {
+                    return "\(folderName) - \(feed.title)"
+                }
+                return feed.title
+            }
+            return "Feed"
+        }
+    }
+
+    /// Unread count subtitle text.
+    private var unreadCountText: String {
+        let count = articles.filter { !$0.isRead }.count
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        let formatted = formatter.string(
+            from: NSNumber(value: count)
+        ) ?? "\(count)"
+        return "\(formatted) unread article\(count == 1 ? "" : "s")"
+    }
+
+    /// Controls for refresh and unread filter.
+    private var headerControls: some View {
+        HStack(spacing: 8) {
+            Toggle(isOn: $viewModel.showUnreadOnly) {
+                Label(
+                    "Unread Only",
+                    systemImage: viewModel.showUnreadOnly
+                        ? "line.3.horizontal.decrease.circle.fill"
+                        : "line.3.horizontal.decrease.circle"
+                )
+                .labelStyle(.iconOnly)
+            }
+            .toggleStyle(.button)
+            .help("Show unread articles only")
+
+            Button {
+                NotificationCenter.default.post(
+                    name: .refresh,
+                    object: nil
+                )
+            } label: {
+                Label("Refresh", systemImage: "arrow.clockwise")
+                    .labelStyle(.iconOnly)
+            }
+            .help("Refresh all feeds")
         }
     }
 
