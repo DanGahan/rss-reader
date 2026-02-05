@@ -75,15 +75,37 @@ struct ArticleListView: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.primary)
                     .lineLimit(1)
-                Text(unreadCountText)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 8) {
+                    Text(unreadCountText)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    if let lastRefresh = refreshService.lastRefreshDate {
+                        Text("• Last Update: \(lastUpdateText(for: lastRefresh))")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                }
             }
             Spacer()
             capsuleControls
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
+    }
+
+    private func lastUpdateText(for date: Date) -> String {
+        let interval = Date().timeIntervalSince(date)
+        if interval < 60 { return "Just now" }
+        if interval < 3600 {
+            let mins = Int(interval / 60)
+            return "\(mins) minute\(mins == 1 ? "" : "s") ago"
+        }
+        if interval < 86400 {
+            let hrs = Int(interval / 3600)
+            return "\(hrs) hour\(hrs == 1 ? "" : "s") ago"
+        }
+        let days = Int(interval / 86400)
+        return "\(days) day\(days == 1 ? "" : "s") ago"
     }
 
     private var headerTitle: String {
@@ -107,32 +129,32 @@ struct ArticleListView: View {
         return "\(formatted) unread article\(count == 1 ? "" : "s")"
     }
 
+    /// Light gray background RGB(247,247,247)
+    private static let capsuleBackground = Color(
+        red: 247 / 255, green: 247 / 255, blue: 247 / 255
+    )
+
     /// Capsule control grouping unread filter and refresh buttons.
     private var capsuleControls: some View {
-        HStack(spacing: 4) {
-            Toggle(isOn: $viewModel.showUnreadOnly) {
-                Image(systemName: viewModel.showUnreadOnly
+        HStack(spacing: 2) {
+            MailStyleButton(
+                isOn: $viewModel.showUnreadOnly,
+                systemImage: viewModel.showUnreadOnly
                     ? "line.3.horizontal.decrease.circle.fill"
-                    : "line.3.horizontal.decrease.circle")
-            }
-            .toggleStyle(.button)
-            .buttonStyle(.borderless)
+                    : "line.3.horizontal.decrease.circle"
+            )
             .help("Show unread articles only")
 
-            Divider().frame(height: 16)
-
-            Button {
-                NotificationCenter.default.post(name: .refresh, object: nil)
-            } label: {
-                Image(systemName: "arrow.clockwise")
-            }
-            .buttonStyle(.borderless)
+            MailStyleButton(
+                action: { NotificationCenter.default.post(name: .refresh, object: nil) },
+                systemImage: "arrow.clockwise"
+            )
             .help("Refresh all feeds")
             .disabled(refreshService.isRefreshing)
         }
-        .padding(.horizontal, 8)
+        .padding(.horizontal, 6)
         .padding(.vertical, 4)
-        .background(.quaternary, in: Capsule())
+        .background(Self.capsuleBackground, in: Capsule())
     }
 
     // MARK: - Subviews
@@ -195,5 +217,61 @@ struct ArticleListView: View {
         }
         if predicates.isEmpty { return nil }
         return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+    }
+}
+
+// MARK: - Mail Style Button
+
+/// A button styled like Apple Mail toolbar buttons with hover highlight.
+struct MailStyleButton: View {
+    /// Highlight circle color RGB(234,234,234)
+    private static let highlightColor = Color(
+        red: 234 / 255, green: 234 / 255, blue: 234 / 255
+    )
+
+    @State private var isHovering = false
+
+    // For toggle-style usage
+    @Binding var isOn: Bool
+    let systemImage: String
+    private let isToggle: Bool
+    private let action: (() -> Void)?
+
+    /// Creates a toggle-style button.
+    init(isOn: Binding<Bool>, systemImage: String) {
+        _isOn = isOn
+        self.systemImage = systemImage
+        self.isToggle = true
+        self.action = nil
+    }
+
+    /// Creates an action button.
+    init(action: @escaping () -> Void, systemImage: String) {
+        _isOn = .constant(false)
+        self.systemImage = systemImage
+        self.isToggle = false
+        self.action = action
+    }
+
+    var body: some View {
+        Button {
+            if isToggle {
+                isOn.toggle()
+            } else {
+                action?()
+            }
+        } label: {
+            Image(systemName: systemImage)
+                .font(.system(size: 16, weight: .medium))
+                .frame(width: 28, height: 28)
+                .background(
+                    Circle()
+                        .fill(isHovering ? Self.highlightColor : .clear)
+                )
+        }
+        .buttonStyle(.plain)
+        .onHover { hovering in
+            isHovering = hovering
+        }
     }
 }
