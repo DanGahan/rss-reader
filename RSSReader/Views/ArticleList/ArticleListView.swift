@@ -23,11 +23,6 @@ struct ArticleListView: View {
     }
 
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],
-        animation: .default
-    ) private var articles: FetchedResults<CDArticle>
-
-    @FetchRequest(
         sortDescriptors: [SortDescriptor(\CDFolder.name)],
         animation: .default
     ) private var folders: FetchedResults<CDFolder>
@@ -41,25 +36,129 @@ struct ArticleListView: View {
         Group {
             if sidebarSelection == nil {
                 noSelectionView
-            } else if articles.isEmpty {
-                VStack(spacing: 0) { headerView; emptyStateView }
             } else {
-                VStack(spacing: 0) { headerView; articleList }
+                // Use a child view with .id() to force recreation
+                // when selection changes, ensuring FetchRequest
+                // reinitializes with correct predicate.
+                FilteredArticleListContent(
+                    selection: sidebarSelection!,
+                    showUnreadOnly: viewModel.showUnreadOnly,
+                    viewModel: viewModel,
+                    refreshService: refreshService,
+                    headerTitle: headerTitle,
+                    folders: Array(folders),
+                    feeds: Array(feeds)
+                )
+                .id(FilterKey(
+                    selection: sidebarSelection!,
+                    showUnreadOnly: viewModel.showUnreadOnly
+                ))
             }
         }
         .frame(minWidth: 300)
         .ignoresSafeArea(.all, edges: .top)
-        .onAppear { updatePredicate() }
         .onChange(of: sidebarViewModel.selection) { _, _ in
             viewModel.clearSelection()
-            updatePredicate()
         }
-        .onChange(of: viewModel.showUnreadOnly) { _, _ in updatePredicate() }
-        .onChange(of: viewModel.selectedArticleId) { _, _ in
-            // When an article is selected, it's marked as read. If the unread
-            // filter is on, we need to refresh the predicate to hide it.
-            if viewModel.showUnreadOnly {
-                updatePredicate()
+    }
+
+    // MARK: - Subviews
+
+    private var noSelectionView: some View {
+        VStack(spacing: 8) {
+            Image(systemName: "sidebar.left").font(.largeTitle).foregroundStyle(.secondary)
+            Text("Select a feed or folder").foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private var headerTitle: String {
+        guard let selection = sidebarSelection else { return "Articles" }
+        switch selection {
+        case .all: return "All Articles"
+        case .folder(let id):
+            return folders.first { $0.id == id }?.name ?? "Folder"
+        case .feed(let id):
+            guard let feed = feeds.first(where: { $0.id == id }) else { return "Feed" }
+            if let folderName = feed.folder?.name { return "\(folderName) - \(feed.title)" }
+            return feed.title
+        }
+    }
+}
+
+// MARK: - Filter Key
+
+/// Hashable key for identifying unique filter combinations.
+private struct FilterKey: Hashable {
+    let selection: SidebarSelection
+    let showUnreadOnly: Bool
+}
+
+// MARK: - Filtered Article List Content
+
+/// Inner view that initializes @FetchRequest with the correct predicate.
+/// Using .id() on this view forces SwiftUI to recreate it when filters change.
+private struct FilteredArticleListContent: View {
+    let selection: SidebarSelection
+    let showUnreadOnly: Bool
+    @ObservedObject var viewModel: ArticleListViewModel
+    @ObservedObject var refreshService: RefreshService
+    let headerTitle: String
+    let folders: [CDFolder]
+    let feeds: [CDFeed]
+
+    @Environment(\.managedObjectContext) private var context
+    @FetchRequest private var articles: FetchedResults<CDArticle>
+
+    init(
+        selection: SidebarSelection,
+        showUnreadOnly: Bool,
+        viewModel: ArticleListViewModel,
+        refreshService: RefreshService,
+        headerTitle: String,
+        folders: [CDFolder],
+        feeds: [CDFeed]
+    ) {
+        self.selection = selection
+        self.showUnreadOnly = showUnreadOnly
+        self.viewModel = viewModel
+        self.refreshService = refreshService
+        self.headerTitle = headerTitle
+        self.folders = folders
+        self.feeds = feeds
+
+        // Build predicate based on selection
+        var predicates: [NSPredicate] = []
+        switch selection {
+        case .all:
+            break
+        case .feed(let id):
+            predicates.append(NSPredicate(format: "feed.id == %@", id as CVarArg))
+        case .folder(let id):
+            predicates.append(NSPredicate(format: "feed.folder.id == %@", id as CVarArg))
+        }
+        if showUnreadOnly {
+            predicates.append(NSPredicate(format: "isRead == NO"))
+        }
+
+        let predicate: NSPredicate? = predicates.isEmpty
+            ? nil
+            : NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+
+        _articles = FetchRequest(
+            sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],
+            predicate: predicate,
+            animation: .default
+        )
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            headerView
+            if articles.isEmpty {
+                emptyStateView
+            } else {
+                articleList
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: .markAllAsRead)) { _ in
@@ -123,19 +222,6 @@ struct ArticleListView: View {
         return "\(days) day\(days == 1 ? "" : "s") ago"
     }
 
-    private var headerTitle: String {
-        guard let selection = sidebarSelection else { return "Articles" }
-        switch selection {
-        case .all: return "All Articles"
-        case .folder(let id):
-            return folders.first { $0.id == id }?.name ?? "Folder"
-        case .feed(let id):
-            guard let feed = feeds.first(where: { $0.id == id }) else { return "Feed" }
-            if let folderName = feed.folder?.name { return "\(folderName) - \(feed.title)" }
-            return feed.title
-        }
-    }
-
     private var unreadCountText: String {
         let count = articles.filter { !$0.isRead }.count
         let formatter = NumberFormatter()
@@ -194,42 +280,13 @@ struct ArticleListView: View {
         }
     }
 
-    private var noSelectionView: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "sidebar.left").font(.largeTitle).foregroundStyle(.secondary)
-            Text("Select a feed or folder").foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-
     private var emptyStateView: some View {
         VStack(spacing: 8) {
             Image(systemName: "tray").font(.largeTitle).foregroundStyle(.secondary)
-            Text(viewModel.showUnreadOnly ? "No unread articles" : "No articles")
+            Text(showUnreadOnly ? "No unread articles" : "No articles")
                 .foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-
-    // MARK: - Predicate
-
-    private func updatePredicate() { articles.nsPredicate = buildPredicate() }
-
-    private func buildPredicate() -> NSPredicate? {
-        guard let selection = sidebarSelection else { return NSPredicate(value: false) }
-        var predicates: [NSPredicate] = []
-        switch selection {
-        case .all: break
-        case .feed(let id):
-            predicates.append(NSPredicate(format: "feed.id == %@", id as CVarArg))
-        case .folder(let id):
-            predicates.append(NSPredicate(format: "feed.folder.id == %@", id as CVarArg))
-        }
-        if viewModel.showUnreadOnly {
-            predicates.append(NSPredicate(format: "isRead == NO"))
-        }
-        if predicates.isEmpty { return nil }
-        return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
     }
 }
 
