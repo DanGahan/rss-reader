@@ -67,7 +67,7 @@ struct ArticleDetailView: View {
             maxWidth: .infinity,
             maxHeight: .infinity
         )
-        .contentMargins(.top, 0, for: .scrollContent)
+        .ignoresSafeArea(.all, edges: .top)
         .onChange(of: articleId) { _, newId in
             if let newId, let art = articles.first,
                art.id == newId {

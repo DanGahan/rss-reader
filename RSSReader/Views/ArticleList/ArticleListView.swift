@@ -43,7 +43,7 @@ struct ArticleListView: View {
             }
         }
         .frame(minWidth: 300)
-        .contentMargins(.top, 0, for: .scrollContent)
+        .ignoresSafeArea(.all, edges: .top)
         .onAppear { updatePredicate() }
         .onChange(of: sidebarSelection) { _, _ in
             viewModel.clearSelection()
