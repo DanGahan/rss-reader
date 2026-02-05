@@ -47,9 +47,6 @@ struct FeedRowView: View {
             }
         }
         .help(feed.lastError ?? feed.feedURL)
-        .onDrag {
-            NSItemProvider(object: feed.id.uuidString as NSString)
-        }
     }
 
     // MARK: - Subviews

@@ -21,6 +21,7 @@ struct ContentView: View {
 
     @State private var showingAddFeed = false
     @State private var showingImportOPML = false
+    @State private var keyMonitor: Any?
 
     @Environment(\.managedObjectContext)
     private var context
@@ -35,6 +36,7 @@ struct ContentView: View {
                 viewModel: listViewModel,
                 refreshService: refreshService
             )
+            .id(sidebarViewModel.selection)
         } detail: {
             ArticleDetailView(
                 articleId:
@@ -72,9 +74,11 @@ struct ContentView: View {
         }
         .onAppear {
             refreshService.startAutoRefresh()
+            setupKeyMonitor()
         }
         .onDisappear {
             refreshService.stopAutoRefresh()
+            removeKeyMonitor()
         }
         .onReceive(
             NotificationCenter.default.publisher(
@@ -98,6 +102,51 @@ struct ContentView: View {
             )
         ) { _ in
             refreshService.resumeAutoRefresh()
+        }
+    }
+
+    // MARK: - Keyboard Shortcuts
+
+    private func setupKeyMonitor() {
+        keyMonitor = NSEvent.addLocalMonitorForEvents(
+            matching: .keyDown
+        ) { event in
+            // Only handle single key presses without modifiers
+            guard event.modifierFlags
+                .intersection(.deviceIndependentFlagsMask)
+                .subtracting(.capsLock)
+                .isEmpty
+            else { return event }
+
+            switch event.charactersIgnoringModifiers {
+            case "n":
+                NotificationCenter.default.post(
+                    name: .nextArticle,
+                    object: nil
+                )
+                return nil  // Consume the event
+            case "j":
+                NotificationCenter.default.post(
+                    name: .nextArticle,
+                    object: nil
+                )
+                return nil
+            case "k":
+                NotificationCenter.default.post(
+                    name: .previousArticle,
+                    object: nil
+                )
+                return nil
+            default:
+                return event  // Pass through
+            }
+        }
+    }
+
+    private func removeKeyMonitor() {
+        if let monitor = keyMonitor {
+            NSEvent.removeMonitor(monitor)
+            keyMonitor = nil
         }
     }
 

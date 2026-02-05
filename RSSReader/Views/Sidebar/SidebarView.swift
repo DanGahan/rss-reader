@@ -137,12 +137,44 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        .contentShape(Rectangle())
+                        // highPriorityGesture ensures tap fires
+                        // immediately without waiting for drag
+                        // gesture recognition to fail.
+                        .highPriorityGesture(
+                            TapGesture().onEnded {
+                                viewModel.selection = .feed(
+                                    feed.id
+                                )
+                            }
+                        )
+                        .onDrag {
+                            NSItemProvider(
+                                object: feed.id.uuidString as NSString
+                            )
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
                 }
             } label: {
                 FolderRowView(folder: folder)
+                    .contentShape(Rectangle())
+                    // highPriorityGesture ensures tap fires
+                    // immediately without waiting for drag
+                    // gesture recognition to fail.
+                    .highPriorityGesture(
+                        TapGesture().onEnded {
+                            viewModel.selection = .folder(
+                                folder.id
+                            )
+                        }
+                    )
+                    .onDrag {
+                        NSItemProvider(
+                            object: "folder:\(folder.id.uuidString)" as NSString
+                        )
+                    }
                     .contextMenu {
                         folderContextMenu(folder: folder)
                     }
@@ -225,6 +257,19 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        .contentShape(Rectangle())
+                        .highPriorityGesture(
+                            TapGesture().onEnded {
+                                viewModel.selection = .feed(
+                                    feed.id
+                                )
+                            }
+                        )
+                        .onDrag {
+                            NSItemProvider(
+                                object: feed.id.uuidString as NSString
+                            )
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }

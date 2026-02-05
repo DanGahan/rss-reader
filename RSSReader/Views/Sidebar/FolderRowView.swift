@@ -48,10 +48,5 @@ struct FolderRowView: View {
                     .foregroundStyle(.primary)
             }
         }
-        .onDrag {
-            NSItemProvider(
-                object: "folder:\(folder.id.uuidString)" as NSString
-            )
-        }
     }
 }
