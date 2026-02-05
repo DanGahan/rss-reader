@@ -118,7 +118,10 @@ struct ArticleDetailView: View {
                 Divider()
                 bodyText(article)
             }
-            .padding(24)
+            .padding(.horizontal, 24)
+            .padding(.top, 12)
+            .padding(.bottom, 24)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .onAppear {
             viewModel.markAsRead(article, in: context)

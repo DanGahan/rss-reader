@@ -264,6 +264,7 @@ struct MailStyleButton: View {
         } label: {
             Image(systemName: systemImage)
                 .font(.system(size: 16, weight: .medium))
+                .foregroundStyle(isToggle && isOn ? Color.accentColor : .primary)
                 .frame(width: 28, height: 28)
                 .background(
                     Circle()
