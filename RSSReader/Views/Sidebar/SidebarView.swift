@@ -146,7 +146,9 @@ struct SidebarView: View {
                             )
                         }
                         .onDrag {
-                            FeedRowView(feed: feed).dragProvider
+                            NSItemProvider(
+                                object: feed.id.uuidString as NSString
+                            )
                         }
                         .contextMenu {
                             feedContextMenu(feed: feed)
@@ -163,7 +165,9 @@ struct SidebarView: View {
                         )
                     }
                     .onDrag {
-                        FolderRowView(folder: folder).dragProvider
+                        NSItemProvider(
+                            object: "folder:\(folder.id.uuidString)" as NSString
+                        )
                     }
                     .contextMenu {
                         folderContextMenu(folder: folder)
@@ -247,6 +251,11 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        .onDrag {
+                            NSItemProvider(
+                                object: feed.id.uuidString as NSString
+                            )
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }

@@ -49,12 +49,4 @@ struct FolderRowView: View {
             }
         }
     }
-
-    /// The drag item provider for this folder row.
-    /// Used by parent views to enable drag-and-drop.
-    var dragProvider: NSItemProvider {
-        NSItemProvider(
-            object: "folder:\(folder.id.uuidString)" as NSString
-        )
-    }
 }

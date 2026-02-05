@@ -49,12 +49,6 @@ struct FeedRowView: View {
         .help(feed.lastError ?? feed.feedURL)
     }
 
-    /// The drag item provider for this feed row.
-    /// Used by parent views to enable drag-and-drop.
-    var dragProvider: NSItemProvider {
-        NSItemProvider(object: feed.id.uuidString as NSString)
-    }
-
     // MARK: - Subviews
 
     private var feedIcon: some View {
