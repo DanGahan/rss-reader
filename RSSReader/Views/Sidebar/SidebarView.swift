@@ -7,6 +7,11 @@
 
 import CoreData
 import SwiftUI
+import UniformTypeIdentifiers
+
+extension UTType {
+    static let feed = UTType(exportedAs: "com.dangahan.rss-reader.feed")
+}
 
 /// Sidebar displaying folders (with expandable feeds) and
 /// an unfiled feeds section. Drives selection state via
@@ -109,6 +114,9 @@ struct SidebarView: View {
             .onTapGesture {
                 viewModel.selection = .all
             }
+            .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+                handleDrop(providers: providers, toFolderId: nil)
+            }
     }
 
     @ViewBuilder
@@ -145,6 +153,9 @@ struct SidebarView: View {
                             folder.id
                         )
                     }
+                    .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+                        handleDrop(providers: providers, toFolderId: folder.id)
+                    }
             }
             .tag(SidebarSelection.folder(folder.id))
             .contextMenu {
@@ -176,7 +187,28 @@ struct SidebarView: View {
                         }
                 }
             }
+            .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+                handleDrop(providers: providers, toFolderId: nil)
+            }
         }
+    }
+
+    // MARK: - Drop Handling
+
+    private func handleDrop(providers: [NSItemProvider], toFolderId folderId: UUID?) -> Bool {
+        guard let provider = providers.first else { return false }
+        provider.loadObject(ofClass: NSString.self) { (string, error) in
+            if let error = error {
+                print("Error loading dragged object: \(error.localizedDescription)")
+                return
+            }
+            guard let uuidString = string as? String,
+                  let feedId = UUID(uuidString: uuidString) else { return }
+            DispatchQueue.main.async {
+                viewModel.moveFeed(feedId: feedId, toFolderId: folderId, in: context)
+            }
+        }
+        return true
     }
 
     // MARK: - Context Menus
