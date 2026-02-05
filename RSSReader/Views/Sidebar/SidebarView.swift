@@ -145,11 +145,11 @@ struct SidebarView: View {
                             folder.id
                         )
                     }
+                    .contextMenu {
+                        folderContextMenu(folder: folder)
+                    }
             }
             .tag(SidebarSelection.folder(folder.id))
-            .contextMenu {
-                folderContextMenu(folder: folder)
-            }
         }
     }
 
