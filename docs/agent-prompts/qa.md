@@ -34,19 +34,34 @@ Statuses: Backlog → Ready for Dev → In Development → QA Review → Done
 ## Process:
 1. Verify ticket is in "QA Review" status
 2. Checkout PR branch: `gh pr checkout X`
-3. Build: `xcodebuild -scheme RSSReader`
-4. Test: `xcodebuild test`
-5. Manual test scenarios from issue
+3. **Build & Test Verification** (multiple approaches):
+   - **Primary**: Check CI/CD pipeline status: `gh pr checks X --json name,state`
+     - Verify build-test, lint, and security checks pass
+     - This is the most reliable method as CI runs in a clean environment
+   - **Local Build** (if needed):
+     - Requires Xcode to be configured: `xcode-select -p` should point to `/Applications/Xcode.app/Contents/Developer`
+     - If not configured, requires sudo: `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`
+     - Then run: `xcodebuild -scheme RSSReader -configuration Debug -destination 'platform=macOS' build`
+     - And test: `xcodebuild test -scheme RSSReader -destination 'platform=macOS'`
+   - **Fallback**: Review test files and verify CI checks (recommended when local Xcode setup is unavailable)
+4. Code quality review:
+   - Check SwiftLint compliance (verified via CI lint check)
+   - Review code against STANDARDS.md manually
+   - Verify file structure, naming conventions, MARK comments
+5. Manual functionality review from acceptance criteria
 6. Comment findings: `gh pr review X --comment "..."`
 7. If changes requested: `gh pr review X --request-changes`
    - Ticket stays in "QA Review" until fixed
 8. If approved:
-   - Approve: `gh pr review X --approve`
-   - Merge: `gh pr merge X --squash --delete-branch`
+   - **Note**: Cannot approve your own PRs due to GitHub restrictions
+   - If PR author is same as reviewer: Post review as comment instead
+   - Merge (allowed even without approval): `gh pr merge X --squash --delete-branch`
    - **Move ticket to "Done":**
      ```bash
      gh project item-edit --project-id PVT_kwHOAFGDYc4BOLCQ --id <ITEM_ID> --field-id PVTSSF_lAHOAFGDYc4BOLCQzg887qM --single-select-option-id 7f949ebf
      ```
+     - Note: May require `gh auth refresh -s project` if project scope not available
+     - Can be updated manually via GitHub web UI if auth issues persist
 
 ## Status Reference
 | Status | Option ID |
