@@ -17,6 +17,7 @@ struct ArticleListView: View {
     let sidebarSelection: SidebarSelection?
 
     @ObservedObject var viewModel: ArticleListViewModel
+    @ObservedObject var refreshService: RefreshService
 
     @Environment(\.managedObjectContext)
     private var context
@@ -173,7 +174,8 @@ struct ArticleListView: View {
 
     /// Controls for refresh and unread filter.
     private var headerControls: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 12) {
+            lastUpdateLabel
             Toggle(isOn: $viewModel.showUnreadOnly) {
                 Label(
                     "Unread Only",
@@ -196,6 +198,41 @@ struct ArticleListView: View {
                     .labelStyle(.iconOnly)
             }
             .help("Refresh all feeds")
+            .disabled(refreshService.isRefreshing)
+        }
+    }
+
+    /// Last update label showing time since last refresh.
+    private var lastUpdateLabel: some View {
+        Group {
+            if let lastRefresh = refreshService.lastRefreshDate {
+                Text("Last Update: \(lastUpdateText(for: lastRefresh))")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("Never refreshed")
+                    .font(.caption)
+                    .foregroundStyle(.tertiary)
+            }
+        }
+    }
+
+    /// Formats the time since last update.
+    private func lastUpdateText(for date: Date) -> String {
+        let now = Date()
+        let interval = now.timeIntervalSince(date)
+
+        if interval < 60 {
+            return "Just now"
+        } else if interval < 3600 {
+            let minutes = Int(interval / 60)
+            return "\(minutes) minute\(minutes == 1 ? "" : "s") ago"
+        } else if interval < 86400 {
+            let hours = Int(interval / 3600)
+            return "\(hours) hour\(hours == 1 ? "" : "s") ago"
+        } else {
+            let days = Int(interval / 86400)
+            return "\(days) day\(days == 1 ? "" : "s") ago"
         }
     }
 
