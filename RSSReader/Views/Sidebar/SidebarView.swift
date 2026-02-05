@@ -140,11 +140,13 @@ struct SidebarView: View {
                         // DisclosureGroup content doesn't properly
                         // propagate selection to List(selection:),
                         // so we need manual tap handling here.
-                        .onTapGesture {
+                        // Use simultaneousGesture to avoid conflicts
+                        // with .onDrag in FeedRowView.
+                        .simultaneousGesture(TapGesture().onEnded {
                             viewModel.selection = .feed(
                                 feed.id
                             )
-                        }
+                        })
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
@@ -153,11 +155,13 @@ struct SidebarView: View {
                 FolderRowView(folder: folder)
                     // DisclosureGroup labels need manual tap handling
                     // to select without toggling expansion.
-                    .onTapGesture {
+                    // Use simultaneousGesture to avoid conflicts
+                    // with .onDrag in FolderRowView.
+                    .simultaneousGesture(TapGesture().onEnded {
                         viewModel.selection = .folder(
                             folder.id
                         )
-                    }
+                    })
                     .contextMenu {
                         folderContextMenu(folder: folder)
                     }
