@@ -12,14 +12,29 @@ import SwiftUI
 struct FolderRowView: View {
     @ObservedObject var folder: CDFolder
 
+    /// Liquid Glass UI teal color RGB(17,170,170)
+    private static let badgeTeal = Color(
+        red: 17 / 255,
+        green: 170 / 255,
+        blue: 170 / 255
+    )
+
     var body: some View {
-        Label {
-            Text(folder.name)
-                .lineLimit(1)
-        } icon: {
-            Image(systemName: "folder")
-                .foregroundStyle(.secondary)
+        HStack {
+            Label {
+                Text(folder.name)
+                    .lineLimit(1)
+            } icon: {
+                Image(systemName: "folder")
+                    .foregroundStyle(.secondary)
+            }
+            Spacer()
+            if folder.unreadCount > 0 {
+                Text("\(folder.unreadCount)")
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundStyle(Self.badgeTeal)
+            }
         }
-        .badge(folder.unreadCount)
     }
 }

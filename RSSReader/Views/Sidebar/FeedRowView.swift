@@ -12,14 +12,37 @@ import SwiftUI
 struct FeedRowView: View {
     @ObservedObject var feed: CDFeed
 
+    /// Liquid Glass UI gray color RGB(136,136,136)
+    private static let textGray = Color(
+        red: 136 / 255,
+        green: 136 / 255,
+        blue: 136 / 255
+    )
+
+    /// Liquid Glass UI teal color RGB(17,170,170)
+    private static let badgeTeal = Color(
+        red: 17 / 255,
+        green: 170 / 255,
+        blue: 170 / 255
+    )
+
     var body: some View {
-        Label {
-            Text(feed.title)
-                .lineLimit(1)
-        } icon: {
-            feedIcon
+        HStack {
+            Label {
+                Text(feed.title)
+                    .lineLimit(1)
+                    .foregroundStyle(Self.textGray)
+            } icon: {
+                feedIcon
+            }
+            Spacer()
+            if feed.unreadCount > 0 {
+                Text("\(feed.unreadCount)")
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundStyle(Self.badgeTeal)
+            }
         }
-        .badge(feed.unreadCount)
         .help(feed.lastError ?? feed.feedURL)
     }
 
