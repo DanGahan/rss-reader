@@ -72,7 +72,7 @@ struct KeyboardCommands: Commands {
             Button("Next Unread") {
                 NotificationCenter.default.post(name: .nextUnread, object: nil)
             }
-            .keyboardShortcut("n", modifiers: [.option])
+            .keyboardShortcut("n", modifiers: [])
 
             Button("Previous Article") {
                 NotificationCenter.default.post(name: .previousArticle, object: nil)
