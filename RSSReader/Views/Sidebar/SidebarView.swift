@@ -138,13 +138,16 @@ struct SidebarView: View {
                             )
                         )
                         .contentShape(Rectangle())
-                        // DisclosureGroup content doesn't properly
-                        // propagate selection to List(selection:).
-                        .onTapGesture {
-                            viewModel.selection = .feed(
-                                feed.id
-                            )
-                        }
+                        // highPriorityGesture ensures tap fires
+                        // immediately without waiting for drag
+                        // gesture recognition to fail.
+                        .highPriorityGesture(
+                            TapGesture().onEnded {
+                                viewModel.selection = .feed(
+                                    feed.id
+                                )
+                            }
+                        )
                         .onDrag {
                             NSItemProvider(
                                 object: feed.id.uuidString as NSString
@@ -157,13 +160,16 @@ struct SidebarView: View {
             } label: {
                 FolderRowView(folder: folder)
                     .contentShape(Rectangle())
-                    // DisclosureGroup labels need manual tap handling
-                    // to select without toggling expansion.
-                    .onTapGesture {
-                        viewModel.selection = .folder(
-                            folder.id
-                        )
-                    }
+                    // highPriorityGesture ensures tap fires
+                    // immediately without waiting for drag
+                    // gesture recognition to fail.
+                    .highPriorityGesture(
+                        TapGesture().onEnded {
+                            viewModel.selection = .folder(
+                                folder.id
+                            )
+                        }
+                    )
                     .onDrag {
                         NSItemProvider(
                             object: "folder:\(folder.id.uuidString)" as NSString
@@ -250,6 +256,14 @@ struct SidebarView: View {
                             SidebarSelection.feed(
                                 feed.id
                             )
+                        )
+                        .contentShape(Rectangle())
+                        .highPriorityGesture(
+                            TapGesture().onEnded {
+                                viewModel.selection = .feed(
+                                    feed.id
+                                )
+                            }
                         )
                         .onDrag {
                             NSItemProvider(
