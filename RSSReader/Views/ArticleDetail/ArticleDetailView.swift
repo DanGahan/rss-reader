@@ -113,14 +113,13 @@ struct ArticleDetailView: View {
         _ article: CDArticle
     ) -> some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 0) {
                 metadataHeader(article)
+                    .padding(.bottom, 16)
                 Divider()
                 bodyText(article)
             }
-            .padding(.horizontal, 24)
-            .padding(.top, 12)
-            .padding(.bottom, 24)
+            .padding(24)
             .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .onAppear {
