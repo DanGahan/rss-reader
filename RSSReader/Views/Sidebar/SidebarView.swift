@@ -258,7 +258,7 @@ struct SidebarView: View {
 
     private func handleDrop(providers: [NSItemProvider], toFolderId folderId: UUID?) -> Bool {
         guard let provider = providers.first else { return false }
-        provider.loadObject(ofClass: NSString.self) { (string, error) in
+        provider.loadObject(ofClass: NSString.self) { string, error in
             if let error = error {
                 print("Error loading dragged object: \(error.localizedDescription)")
                 return

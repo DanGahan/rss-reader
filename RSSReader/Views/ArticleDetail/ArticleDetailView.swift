@@ -68,7 +68,7 @@ struct ArticleDetailView: View {
             maxHeight: .infinity
         )
         .ignoresSafeArea(.all, edges: .top)
-        .onChange(of: articleId) { oldId, newId in
+        .onChange(of: articleId) { oldId, _ in
             if let oldId {
                 let fetchRequest: NSFetchRequest<CDArticle> = CDArticle.fetchRequest()
                 fetchRequest.predicate = NSPredicate(format: "id == %@", oldId as CVarArg)
