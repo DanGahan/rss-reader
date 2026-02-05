@@ -68,13 +68,19 @@ struct ArticleListView: View {
     // MARK: - Header
 
     private var headerView: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(headerTitle).font(.title2).fontWeight(.bold).lineLimit(1)
-                Text(unreadCountText).font(.subheadline).foregroundStyle(.secondary)
+        HStack(alignment: .center) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(headerTitle)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.primary)
+                    .lineLimit(1)
+                Text(unreadCountText)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
             Spacer()
-            headerControls
+            capsuleControls
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
@@ -101,51 +107,32 @@ struct ArticleListView: View {
         return "\(formatted) unread article\(count == 1 ? "" : "s")"
     }
 
-    private var headerControls: some View {
-        HStack(spacing: 12) {
-            lastUpdateLabel
+    /// Capsule control grouping unread filter and refresh buttons.
+    private var capsuleControls: some View {
+        HStack(spacing: 4) {
             Toggle(isOn: $viewModel.showUnreadOnly) {
-                Label("Unread Only", systemImage: viewModel.showUnreadOnly
+                Image(systemName: viewModel.showUnreadOnly
                     ? "line.3.horizontal.decrease.circle.fill"
                     : "line.3.horizontal.decrease.circle")
-                    .labelStyle(.iconOnly)
             }
             .toggleStyle(.button)
+            .buttonStyle(.borderless)
             .help("Show unread articles only")
+
+            Divider().frame(height: 16)
+
             Button {
                 NotificationCenter.default.post(name: .refresh, object: nil)
             } label: {
-                Label("Refresh", systemImage: "arrow.clockwise").labelStyle(.iconOnly)
+                Image(systemName: "arrow.clockwise")
             }
+            .buttonStyle(.borderless)
             .help("Refresh all feeds")
             .disabled(refreshService.isRefreshing)
         }
-    }
-
-    private var lastUpdateLabel: some View {
-        Group {
-            if let lastRefresh = refreshService.lastRefreshDate {
-                Text("Last Update: \(lastUpdateText(for: lastRefresh))")
-                    .font(.caption).foregroundStyle(.secondary)
-            } else {
-                Text("Never refreshed").font(.caption).foregroundStyle(.tertiary)
-            }
-        }
-    }
-
-    private func lastUpdateText(for date: Date) -> String {
-        let interval = Date().timeIntervalSince(date)
-        if interval < 60 { return "Just now" }
-        if interval < 3600 {
-            let mins = Int(interval / 60)
-            return "\(mins) minute\(mins == 1 ? "" : "s") ago"
-        }
-        if interval < 86400 {
-            let hrs = Int(interval / 3600)
-            return "\(hrs) hour\(hrs == 1 ? "" : "s") ago"
-        }
-        let days = Int(interval / 86400)
-        return "\(days) day\(days == 1 ? "" : "s") ago"
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(.quaternary, in: Capsule())
     }
 
     // MARK: - Subviews

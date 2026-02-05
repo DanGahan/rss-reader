@@ -11,45 +11,29 @@ import SwiftUI
 /// A row for "All Articles" showing a newspaper icon and
 /// total unread count across all feeds.
 struct AllArticlesRowView: View {
+    /// Fetch unread articles directly for accurate real-time count.
     @FetchRequest(
         sortDescriptors: [],
+        predicate: NSPredicate(format: "isRead == NO"),
         animation: .default
-    ) private var feeds: FetchedResults<CDFeed>
-
-    /// Total unread count across all feeds.
-    private var totalUnreadCount: Int {
-        feeds.reduce(0) { $0 + $1.unreadCount }
-    }
-
-    /// Liquid Glass UI gray color RGB(136,136,136)
-    private static let iconGray = Color(
-        red: 136 / 255,
-        green: 136 / 255,
-        blue: 136 / 255
-    )
-
-    /// Liquid Glass UI teal color RGB(17,170,170)
-    private static let badgeTeal = Color(
-        red: 17 / 255,
-        green: 170 / 255,
-        blue: 170 / 255
-    )
+    ) private var unreadArticles: FetchedResults<CDArticle>
 
     var body: some View {
         HStack {
             Label {
                 Text("All Articles")
                     .lineLimit(1)
+                    .foregroundStyle(.primary)
             } icon: {
                 Image(systemName: "newspaper")
-                    .foregroundStyle(Self.iconGray)
+                    .foregroundStyle(.primary)
             }
             Spacer()
-            if totalUnreadCount > 0 {
-                Text("\(totalUnreadCount)")
+            if !unreadArticles.isEmpty {
+                Text("\(unreadArticles.count)")
                     .font(.caption)
                     .fontWeight(.medium)
-                    .foregroundStyle(Self.badgeTeal)
+                    .foregroundStyle(.primary)
             }
         }
     }

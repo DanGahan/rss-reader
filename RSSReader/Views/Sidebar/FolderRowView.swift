@@ -5,6 +5,7 @@
 //  Created on 2026-01-29.
 //
 
+import CoreData
 import SwiftUI
 
 /// A folder label showing a folder icon, name, and
@@ -12,28 +13,37 @@ import SwiftUI
 struct FolderRowView: View {
     @ObservedObject var folder: CDFolder
 
-    /// Liquid Glass UI teal color RGB(17,170,170)
-    private static let badgeTeal = Color(
-        red: 17 / 255,
-        green: 170 / 255,
-        blue: 170 / 255
-    )
+    /// Fetch unread articles for this folder for real-time count.
+    @FetchRequest private var unreadArticles: FetchedResults<CDArticle>
+
+    init(folder: CDFolder) {
+        self.folder = folder
+        _unreadArticles = FetchRequest(
+            sortDescriptors: [],
+            predicate: NSPredicate(
+                format: "feed.folder.id == %@ AND isRead == NO",
+                folder.id as CVarArg
+            ),
+            animation: .default
+        )
+    }
 
     var body: some View {
         HStack {
             Label {
                 Text(folder.name)
                     .lineLimit(1)
+                    .foregroundStyle(.primary)
             } icon: {
                 Image(systemName: "folder")
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.primary)
             }
             Spacer()
-            if folder.unreadCount > 0 {
-                Text("\(folder.unreadCount)")
+            if !unreadArticles.isEmpty {
+                Text("\(unreadArticles.count)")
                     .font(.caption)
                     .fontWeight(.medium)
-                    .foregroundStyle(Self.badgeTeal)
+                    .foregroundStyle(.primary)
             }
         }
     }
