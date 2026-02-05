@@ -10,7 +10,10 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static let feed = UTType(exportedAs: "com.dangahan.rss-reader.feed")
+    /// Type identifier for dragging feeds within the app.
+    /// Uses utf8PlainText since NSString-based NSItemProvider
+    /// registers with this type by default.
+    static let feedDrag = UTType.utf8PlainText
 }
 
 /// Sidebar displaying folders (with expandable feeds) and
@@ -114,7 +117,7 @@ struct SidebarView: View {
             .onTapGesture {
                 viewModel.selection = .all
             }
-            .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+            .onDrop(of: [UTType.feedDrag], isTargeted: nil) { providers in
                 handleDrop(providers: providers, toFolderId: nil)
             }
     }
@@ -153,7 +156,7 @@ struct SidebarView: View {
                             folder.id
                         )
                     }
-                    .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+                    .onDrop(of: [UTType.feedDrag], isTargeted: nil) { providers in
                         handleDrop(providers: providers, toFolderId: folder.id)
                     }
             }
@@ -187,7 +190,7 @@ struct SidebarView: View {
                         }
                 }
             }
-            .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+            .onDrop(of: [UTType.feedDrag], isTargeted: nil) { providers in
                 handleDrop(providers: providers, toFolderId: nil)
             }
         }

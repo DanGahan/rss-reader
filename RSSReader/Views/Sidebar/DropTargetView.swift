@@ -14,7 +14,7 @@ struct DropTargetView: View {
     var body: some View {
         Rectangle()
             .fill(Color.clear)
-            .onDrop(of: [UTType.feed], isTargeted: nil) { providers in
+            .onDrop(of: [UTType.utf8PlainText], isTargeted: nil) { providers in
                 onDrop(providers)
             }
     }
