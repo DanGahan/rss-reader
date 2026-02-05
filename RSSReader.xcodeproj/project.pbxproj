@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FE84A2A91578025301D2 /* FolderNameSheet.swift */; };
+		AAAAAA01DEADBEEF00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAA02DEADBEEF00000001 /* Assets.xcassets */; };
 		37037A842F33ECD600245B95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37037A832F33ECD600245B95 /* SettingsView.swift */; };
 		A1000001 /* RSSReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* RSSReaderApp.swift */; };
 		A1000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* AppState.swift */; };
@@ -115,6 +116,7 @@
 
 /* Begin PBXFileReference section */
 		37037A832F33ECD600245B95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
+		AAAAAA02DEADBEEF00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4756FE84A2A91578025301D2 /* FolderNameSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FolderNameSheet.swift; sourceTree = "<group>"; };
 		71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLViewModel.swift; sourceTree = "<group>"; };
 		A2000001 /* RSSReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderApp.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				A7000014 /* Services */,
 				A7000015 /* Utilities */,
 				A2000080 /* RSSReader.xcdatamodeld */,
+				AAAAAA02DEADBEEF00000001 /* Assets.xcassets */,
 			);
 			path = RSSReader;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAAAA01DEADBEEF00000001 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
