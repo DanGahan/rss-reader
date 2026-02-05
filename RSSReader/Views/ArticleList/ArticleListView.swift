@@ -12,10 +12,15 @@ import SwiftUI
 /// selected sidebar item. Uses `@FetchRequest` with a dynamic predicate
 /// built from the sidebar selection and the unread-only filter toggle.
 struct ArticleListView: View {
-    let sidebarSelection: SidebarSelection?
+    @ObservedObject var sidebarViewModel: SidebarViewModel
     @ObservedObject var viewModel: ArticleListViewModel
     @ObservedObject var refreshService: RefreshService
     @Environment(\.managedObjectContext) private var context
+
+    /// Convenience accessor for the current sidebar selection.
+    private var sidebarSelection: SidebarSelection? {
+        sidebarViewModel.selection
+    }
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],

@@ -30,8 +30,7 @@ struct ContentView: View {
             SidebarView(viewModel: sidebarViewModel)
         } content: {
             ArticleListView(
-                sidebarSelection:
-                    sidebarViewModel.selection,
+                sidebarViewModel: sidebarViewModel,
                 viewModel: listViewModel,
                 refreshService: refreshService
             )
