@@ -17,8 +17,6 @@ struct SidebarView: View {
     @Environment(\.managedObjectContext)
     private var context
 
-    @FocusState private var folderNameFieldFocused: Bool
-
     @FetchRequest(
         sortDescriptors: [
             SortDescriptor(\CDFolder.sortOrder),
@@ -45,58 +43,40 @@ struct SidebarView: View {
         }
         .listStyle(.sidebar)
         .frame(minWidth: 200)
-        .alert(
-            "New Folder",
-            isPresented: $viewModel.showNewFolderAlert
-        ) {
-            TextField(
-                "Folder name",
-                text: $viewModel.folderNameInput
-            )
-            .focused($folderNameFieldFocused)
-            Button("Create") {
-                viewModel.createFolder(
-                    name: viewModel.folderNameInput,
-                    in: context
-                )
-            }
-            Button("Cancel", role: .cancel) {}
-        }
-        .onChange(of: viewModel.showNewFolderAlert) { _, isShowing in
-            if isShowing {
-                // Delay focus to allow alert to fully appear
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    folderNameFieldFocused = true
-                }
-            }
-        }
-        .alert(
-            "Rename Folder",
-            isPresented: $viewModel.showRenameFolderAlert
-        ) {
-            TextField(
-                "New name",
-                text: $viewModel.folderNameInput
-            )
-            .focused($folderNameFieldFocused)
-            Button("Rename") {
-                if let id = viewModel.folderToRename {
-                    viewModel.renameFolder(
-                        id: id,
-                        newName: viewModel.folderNameInput,
+        .sheet(isPresented: $viewModel.showNewFolderAlert) {
+            FolderNameSheet(
+                mode: .create,
+                folderName: $viewModel.folderNameInput,
+                onSave: {
+                    viewModel.createFolder(
+                        name: viewModel.folderNameInput,
                         in: context
                     )
+                    viewModel.showNewFolderAlert = false
+                },
+                onCancel: {
+                    viewModel.showNewFolderAlert = false
                 }
-            }
-            Button("Cancel", role: .cancel) {}
+            )
         }
-        .onChange(of: viewModel.showRenameFolderAlert) { _, isShowing in
-            if isShowing {
-                // Delay focus to allow alert to fully appear
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    folderNameFieldFocused = true
+        .sheet(isPresented: $viewModel.showRenameFolderAlert) {
+            FolderNameSheet(
+                mode: .rename,
+                folderName: $viewModel.folderNameInput,
+                onSave: {
+                    if let id = viewModel.folderToRename {
+                        viewModel.renameFolder(
+                            id: id,
+                            newName: viewModel.folderNameInput,
+                            in: context
+                        )
+                    }
+                    viewModel.showRenameFolderAlert = false
+                },
+                onCancel: {
+                    viewModel.showRenameFolderAlert = false
                 }
-            }
+            )
         }
         .confirmationDialog(
             "Delete Folder?",

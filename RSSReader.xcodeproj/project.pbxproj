@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FE84A2A91578025301D2 /* FolderNameSheet.swift */; };
 		37037A842F33ECD600245B95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37037A832F33ECD600245B95 /* SettingsView.swift */; };
 		A1000001 /* RSSReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* RSSReaderApp.swift */; };
 		A1000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* AppState.swift */; };
@@ -114,6 +115,7 @@
 
 /* Begin PBXFileReference section */
 		37037A832F33ECD600245B95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
+		4756FE84A2A91578025301D2 /* FolderNameSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FolderNameSheet.swift; sourceTree = "<group>"; };
 		71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLViewModel.swift; sourceTree = "<group>"; };
 		A2000001 /* RSSReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderApp.swift; sourceTree = "<group>"; };
 		A2000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				A2000135 /* FolderRowView.swift */,
 				A2000136 /* AddFeedSheet.swift */,
 				A2000137 /* AllArticlesRowView.swift */,
+				4756FE84A2A91578025301D2 /* FolderNameSheet.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				A1000080 /* RSSReader.xcdatamodeld in Sources */,
 				F70ECE0C1940A7B9106B1811 /* ImportOPMLWizard.swift in Sources */,
 				BA6AC78B436740B553E58F60 /* ImportOPMLViewModel.swift in Sources */,
+				36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
