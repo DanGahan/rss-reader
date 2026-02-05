@@ -114,9 +114,6 @@ struct SidebarView: View {
     private var allArticlesRow: some View {
         AllArticlesRowView()
             .tag(SidebarSelection.all)
-            .onTapGesture {
-                viewModel.selection = .all
-            }
             .onDrop(of: [UTType.feedDrag], isTargeted: nil) { providers in
                 handleDrop(providers: providers, toFolderId: nil)
             }
@@ -140,22 +137,12 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
-                        .onTapGesture {
-                            viewModel.selection = .feed(
-                                feed.id
-                            )
-                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
                 }
             } label: {
                 FolderRowView(folder: folder)
-                    .onTapGesture {
-                        viewModel.selection = .folder(
-                            folder.id
-                        )
-                    }
                     .contextMenu {
                         folderContextMenu(folder: folder)
                     }
@@ -238,11 +225,6 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
-                        .onTapGesture {
-                            viewModel.selection = .feed(
-                                feed.id
-                            )
-                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
