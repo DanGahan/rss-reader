@@ -10,8 +10,9 @@ import CoreData
 import SwiftUI
 
 /// Reading pane displaying the selected article's title,
-/// metadata, plain-text content, and a Safari action button.
+/// metadata, and plain-text content.
 ///
+/// Clicking the article title opens it in Safari.
 /// Automatically marks the article as read when displayed.
 struct ArticleDetailView: View {
     let articleId: String?
@@ -66,10 +67,16 @@ struct ArticleDetailView: View {
             maxWidth: .infinity,
             maxHeight: .infinity
         )
-        .onChange(of: articleId) { _, newId in
-            if let newId, let art = articles.first,
-               art.id == newId {
-                viewModel.markAsRead(art, in: context)
+        .ignoresSafeArea(.all, edges: .top)
+        .onChange(of: articleId) { oldId, newId in
+            if let oldId {
+                let fetchRequest: NSFetchRequest<CDArticle> = CDArticle.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: "id == %@", oldId as CVarArg)
+                fetchRequest.fetchLimit = 1
+
+                if let articleToMarkAsRead = try? context.fetch(fetchRequest).first {
+                    viewModel.markAsRead(articleToMarkAsRead, in: context)
+                }
             }
         }
         .onReceive(
@@ -111,17 +118,14 @@ struct ArticleDetailView: View {
         _ article: CDArticle
     ) -> some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 0) {
                 metadataHeader(article)
+                    .padding(.bottom, 16)
                 Divider()
                 bodyText(article)
-                Spacer(minLength: 24)
-                actionsBar(article)
             }
             .padding(24)
-        }
-        .onAppear {
-            viewModel.markAsRead(article, in: context)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }
 
@@ -139,7 +143,7 @@ struct ArticleDetailView: View {
     private func clickableTitle(
         _ article: CDArticle
     ) -> some View {
-        Text(article.title)
+        Text(article.title.decodingHTMLEntities())
             .font(.title)
             .fontWeight(.bold)
             .foregroundStyle(
@@ -215,27 +219,6 @@ struct ArticleDetailView: View {
                     .lineSpacing(6)
                     .textSelection(.enabled)
             }
-        }
-    }
-
-    // MARK: - Actions Bar
-
-    private func actionsBar(
-        _ article: CDArticle
-    ) -> some View {
-        HStack {
-            Button {
-                viewModel.openInSafariWithFeedback(
-                    urlString: article.link
-                )
-            } label: {
-                Label(
-                    "Open in Safari",
-                    systemImage: "safari"
-                )
-            }
-            .buttonStyle(.borderedProminent)
-            Spacer()
         }
     }
 

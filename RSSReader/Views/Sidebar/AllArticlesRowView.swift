@@ -11,24 +11,31 @@ import SwiftUI
 /// A row for "All Articles" showing a newspaper icon and
 /// total unread count across all feeds.
 struct AllArticlesRowView: View {
+    /// Fetch unread articles directly for accurate real-time count.
     @FetchRequest(
         sortDescriptors: [],
+        predicate: NSPredicate(format: "isRead == NO"),
         animation: .default
-    ) private var feeds: FetchedResults<CDFeed>
-
-    /// Total unread count across all feeds.
-    private var totalUnreadCount: Int {
-        feeds.reduce(0) { $0 + $1.unreadCount }
-    }
+    ) private var unreadArticles: FetchedResults<CDArticle>
 
     var body: some View {
-        Label {
-            Text("All Articles")
-                .lineLimit(1)
-        } icon: {
-            Image(systemName: "newspaper")
-                .foregroundStyle(.blue)
+        HStack {
+            Label {
+                Text("All Articles")
+                    .lineLimit(1)
+                    .foregroundStyle(.primary)
+            } icon: {
+                Image(systemName: "newspaper")
+                    .font(.system(size: 16))
+                    .foregroundStyle(.primary)
+            }
+            Spacer()
+            if !unreadArticles.isEmpty {
+                Text("\(unreadArticles.count)")
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.primary)
+            }
         }
-        .badge(totalUnreadCount)
     }
 }

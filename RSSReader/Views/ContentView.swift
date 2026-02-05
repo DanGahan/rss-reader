@@ -31,7 +31,8 @@ struct ContentView: View {
             ArticleListView(
                 sidebarSelection:
                     sidebarViewModel.selection,
-                viewModel: listViewModel
+                viewModel: listViewModel,
+                refreshService: refreshService
             )
         } detail: {
             ArticleDetailView(
@@ -40,58 +41,6 @@ struct ContentView: View {
             )
         }
         .navigationSplitViewStyle(.balanced)
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button {
-                    NotificationCenter.default.post(
-                        name: .refresh,
-                        object: nil
-                    )
-                } label: {
-                    Label(
-                        "Refresh",
-                        systemImage: "arrow.clockwise"
-                    )
-                }
-                .keyboardShortcut(
-                    "r",
-                    modifiers: [.command]
-                )
-                .disabled(refreshService.isRefreshing)
-            }
-
-            ToolbarItem(placement: .primaryAction) {
-                Button {
-                    NotificationCenter.default.post(
-                        name: .addFeed,
-                        object: nil
-                    )
-                } label: {
-                    Label(
-                        "Add Feed",
-                        systemImage: "plus"
-                    )
-                }
-            }
-
-            ToolbarItem(placement: .automatic) {
-                if let lastRefresh =
-                    refreshService.lastRefreshDate {
-                    Text(
-                        lastRefresh,
-                        format: .relative(
-                            presentation: .named
-                        )
-                    )
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                } else {
-                    Text("Never refreshed")
-                        .font(.caption)
-                        .foregroundStyle(.tertiary)
-                }
-            }
-        }
         .onReceive(
             NotificationCenter.default.publisher(
                 for: .addFeed

@@ -12,12 +12,12 @@ final class RSSReaderUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testAppTitleDisplays() throws {
+    func testAppLaunchesWithSidebar() throws {
         let app = XCUIApplication()
         app.launch()
 
-        // Verify the app title is displayed
-        let title = app.staticTexts["RSS Reader"]
-        XCTAssertTrue(title.waitForExistence(timeout: 5))
+        // Verify the All Articles row is displayed in the sidebar
+        let allArticles = app.staticTexts["All Articles"]
+        XCTAssertTrue(allArticles.waitForExistence(timeout: 5))
     }
 }
