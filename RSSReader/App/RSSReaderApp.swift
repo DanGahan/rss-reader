@@ -27,5 +27,13 @@ struct RSSReaderApp: App {
         .commands {
             KeyboardCommands()
         }
+
+        Settings {
+            SettingsView()
+                .environment(
+                    \.managedObjectContext,
+                    persistence.viewContext
+                )
+        }
     }
 }
