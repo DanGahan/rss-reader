@@ -10,8 +10,9 @@ import CoreData
 import SwiftUI
 
 /// Reading pane displaying the selected article's title,
-/// metadata, plain-text content, and a Safari action button.
+/// metadata, and plain-text content.
 ///
+/// Clicking the article title opens it in Safari.
 /// Automatically marks the article as read when displayed.
 struct ArticleDetailView: View {
     let articleId: String?
@@ -115,8 +116,6 @@ struct ArticleDetailView: View {
                 metadataHeader(article)
                 Divider()
                 bodyText(article)
-                Spacer(minLength: 24)
-                actionsBar(article)
             }
             .padding(24)
         }
@@ -215,27 +214,6 @@ struct ArticleDetailView: View {
                     .lineSpacing(6)
                     .textSelection(.enabled)
             }
-        }
-    }
-
-    // MARK: - Actions Bar
-
-    private func actionsBar(
-        _ article: CDArticle
-    ) -> some View {
-        HStack {
-            Button {
-                viewModel.openInSafariWithFeedback(
-                    urlString: article.link
-                )
-            } label: {
-                Label(
-                    "Open in Safari",
-                    systemImage: "safari"
-                )
-            }
-            .buttonStyle(.borderedProminent)
-            Spacer()
         }
     }
 
