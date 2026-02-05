@@ -79,8 +79,15 @@ struct ArticleListView: View {
                     Text(unreadCountText)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
+                    Text("•")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                     if let lastRefresh = refreshService.lastRefreshDate {
-                        Text("• Last Update: \(lastUpdateText(for: lastRefresh))")
+                        Text("Last Update: \(lastUpdateText(for: lastRefresh))")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Text("Never refreshed")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
@@ -139,9 +146,7 @@ struct ArticleListView: View {
         HStack(spacing: 2) {
             MailStyleButton(
                 isOn: $viewModel.showUnreadOnly,
-                systemImage: viewModel.showUnreadOnly
-                    ? "line.3.horizontal.decrease.circle.fill"
-                    : "line.3.horizontal.decrease.circle"
+                systemImage: "line.3.horizontal.decrease"
             )
             .help("Show unread articles only")
 

@@ -24,6 +24,7 @@ struct RSSReaderApp: App {
                 )
         }
         .defaultSize(width: 1200, height: 800)
+        .windowToolbarStyle(.unifiedCompact(showsTitle: false))
         .commands {
             KeyboardCommands()
         }

@@ -41,7 +41,6 @@ struct ContentView: View {
             )
         }
         .navigationSplitViewStyle(.balanced)
-        .toolbar(.hidden, for: .windowToolbar)
         .onReceive(
             NotificationCenter.default.publisher(
                 for: .addFeed
