@@ -137,12 +137,27 @@ struct SidebarView: View {
                                 feed.id
                             )
                         )
+                        // DisclosureGroup content doesn't properly
+                        // propagate selection to List(selection:),
+                        // so we need manual tap handling here.
+                        .onTapGesture {
+                            viewModel.selection = .feed(
+                                feed.id
+                            )
+                        }
                         .contextMenu {
                             feedContextMenu(feed: feed)
                         }
                 }
             } label: {
                 FolderRowView(folder: folder)
+                    // DisclosureGroup labels need manual tap handling
+                    // to select without toggling expansion.
+                    .onTapGesture {
+                        viewModel.selection = .folder(
+                            folder.id
+                        )
+                    }
                     .contextMenu {
                         folderContextMenu(folder: folder)
                     }
