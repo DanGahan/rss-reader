@@ -11,8 +11,9 @@ struct SidebarFoldersView: View {
     @ObservedObject var viewModel: SidebarViewModel
     let folders: FetchedResults<CDFolder>
     
-    @Environment(\.managedObjectContext)
-    private var contextvar body: some View {ForEach(folders, id: \.id) { folder in
+        @Environment(\.managedObjectContext)
+    
+        private var contextvar body: some View {ForEach(folders, id: \.id) { folder in
             DisclosureGroup(
                 isExpanded: viewModel.expandedBinding(
                     for: folder.id
@@ -48,7 +49,6 @@ struct SidebarFoldersView: View {
                             feedContextMenu(feed: feed)
                         }
                 }
-            } label: {
             } label: {
                 FolderRowView(folder: folder)
                     .contentShape(Rectangle())
@@ -192,5 +192,4 @@ struct SidebarFoldersView: View {
 
     // MARK: - Actions
 
-    private func deleteFeed(_ feed: CDFeed) {    }
-}
+    private func deleteFeed(_ feed: CDFeed) {}

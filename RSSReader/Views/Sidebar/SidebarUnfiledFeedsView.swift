@@ -13,7 +13,7 @@ struct SidebarUnfiledFeedsView: View {
     let folders: FetchedResults<CDFolder>
     
     @Environment(\.managedObjectContext)
-    private var contextvar body: some View {if !unfiledFeeds.isEmpty {
+    private var context
             Section("Unfiled") {
                 ForEach(
                     unfiledFeeds, id: \.id
