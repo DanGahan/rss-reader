@@ -14,6 +14,9 @@ struct SidebarUnfiledFeedsView: View {
     
     @Environment(\.managedObjectContext)
     private var context
+    
+    var body: some View {
+        if !unfiledFeeds.isEmpty {
             Section("Unfiled") {
                 ForEach(
                     unfiledFeeds, id: \.id
@@ -69,7 +72,7 @@ struct SidebarUnfiledFeedsView: View {
     // MARK: - Context Menus
 
     @ViewBuilder
-    private func feedContextMenu(
+    private funcfeedContextMenu(
         feed: CDFeed
     ) -> some View {
         Menu("Move to Folder") {
