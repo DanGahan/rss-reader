@@ -12,10 +12,8 @@ struct SidebarFoldersView: View {
     let folders: FetchedResults<CDFolder>
     
     @Environment(\.managedObjectContext)
-    private var context
-    
-    var body: some View {
-        ForEach(folders, id: \.id) { folder in
+    private var context    
+    var body: some View {        ForEach(folders, id: \.id) { folder in
             DisclosureGroup(
                 isExpanded: viewModel.expandedBinding(
                     for: folder.id
@@ -194,8 +192,7 @@ struct SidebarFoldersView: View {
 
     // MARK: - Actions
 
-    private func deleteFeed(_ feed: CDFeed) {
-        context.delete(feed)
+    private func deleteFeed(_ feed: CDFeed) {        context.delete(feed)
         try? context.save()
     }
 }
