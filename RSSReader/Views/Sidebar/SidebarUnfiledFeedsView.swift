@@ -14,6 +14,8 @@ struct SidebarUnfiledFeedsView: View {
     
     @Environment(\.managedObjectContext)
     private var context
+    
+    var body: some View {
         if !unfiledFeeds.isEmpty {
             Section("Unfiled") {
                 ForEach(

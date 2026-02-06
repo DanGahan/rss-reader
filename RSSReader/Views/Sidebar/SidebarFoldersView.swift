@@ -13,6 +13,8 @@ struct SidebarFoldersView: View {
     
     @Environment(\.managedObjectContext)
     private var context
+    
+    var body: some View {
         ForEach(folders, id: \.id) { folder in
             DisclosureGroup(
                 isExpanded: viewModel.expandedBinding(
