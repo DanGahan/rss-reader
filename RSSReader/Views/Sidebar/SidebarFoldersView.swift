@@ -12,7 +12,7 @@ struct SidebarFoldersView: View {
     let folders: FetchedResults<CDFolder>
     
     @Environment(\.managedObjectContext)
-    private var contextvar body: some View {
+    private var context
         ForEach(folders, id: \.id) { folder in
             DisclosureGroup(
                 isExpanded: viewModel.expandedBinding(
