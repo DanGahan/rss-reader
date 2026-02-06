@@ -12,7 +12,7 @@ struct SidebarFoldersView: View {
     let folders: FetchedResults<CDFolder>
     
     @Environment(\.managedObjectContext)
-    private var context    var body: some View {ForEach(folders, id: \.id) { folder in
+    private var contextvar body: some View {ForEach(folders, id: \.id) { folder in
             DisclosureGroup(
                 isExpanded: viewModel.expandedBinding(
                     for: folder.id
@@ -49,6 +49,7 @@ struct SidebarFoldersView: View {
                         }
                 }
             } label: {
+            } label: {
                 FolderRowView(folder: folder)
                     .contentShape(Rectangle())
                     // highPriorityGesture ensures tap fires
@@ -78,7 +79,7 @@ struct SidebarFoldersView: View {
                             targetFolderId: folder.id
                         )
                     }
-                }
+            }
             .tag(SidebarSelection.folder(folder.id))
         }
     }
@@ -191,6 +192,5 @@ struct SidebarFoldersView: View {
 
     // MARK: - Actions
 
-    private func deleteFeed(_ feed: CDFeed) {        try? context.save()
-    }
+    private func deleteFeed(_ feed: CDFeed) {    }
 }
