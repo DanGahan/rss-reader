@@ -10,7 +10,7 @@
 		36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FE84A2A91578025301D2 /* FolderNameSheet.swift */; };
 		AAAAAA01DEADBEEF00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAA02DEADBEEF00000001 /* Assets.xcassets */; };
 		37037A842F33ECD600245B95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37037A832F33ECD600245B95 /* SettingsView.swift */; };
-		A1000001 /* RSSReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* RSSReaderApp.swift */; };
+		A1000001 /* SyndicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* SyndicateApp.swift */; };
 		A1000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* AppState.swift */; };
 		A1000003 /* KeyboardCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003 /* KeyboardCommands.swift */; };
 		A1000010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* ContentView.swift */; };
@@ -121,7 +121,7 @@
 		AAAAAA02DEADBEEF00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4756FE84A2A91578025301D2 /* FolderNameSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FolderNameSheet.swift; sourceTree = "<group>"; };
 		71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLViewModel.swift; sourceTree = "<group>"; };
-		A2000001 /* RSSReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderApp.swift; sourceTree = "<group>"; };
+		A2000001 /* SyndicateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyndicateApp.swift; sourceTree = "<group>"; };
 		A2000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A2000003 /* KeyboardCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCommands.swift; sourceTree = "<group>"; };
 		A2000010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 		A7000010 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A2000001 /* RSSReaderApp.swift */,
+				A2000001 /* SyndicateApp.swift */,
 				A2000002 /* AppState.swift */,
 				A2000003 /* KeyboardCommands.swift */,
 			);
@@ -632,7 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000001 /* RSSReaderApp.swift in Sources */,
+				A1000001 /* SyndicateApp.swift in Sources */,
 				A1000002 /* AppState.swift in Sources */,
 				A1000003 /* KeyboardCommands.swift in Sources */,
 				A1000010 /* ContentView.swift in Sources */,
@@ -892,7 +892,7 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSReader/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "RSS Reader";
+				INFOPLIST_KEY_CFBundleDisplayName = Syndicate;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -900,7 +900,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = "0.0.1-alpha";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rssreader.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syndicate.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -924,7 +924,7 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSReader/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "RSS Reader";
+				INFOPLIST_KEY_CFBundleDisplayName = Syndicate;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -932,7 +932,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = "0.0.1-alpha";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rssreader.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syndicate.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
