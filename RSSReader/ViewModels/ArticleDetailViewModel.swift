@@ -48,6 +48,17 @@ final class ArticleDetailViewModel: ObservableObject {
         return raw.stripHTML()
     }
 
+    /// Returns the article body with preserved paragraph formatting,
+    /// inspired by Safari Reader Mode. Prefers `content` over `summary`.
+    func formattedContent(
+        for article: CDArticle
+    ) -> String {
+        let raw = article.content
+            ?? article.summary
+            ?? ""
+        return raw.htmlToFormattedText()
+    }
+
     // MARK: - Actions
 
     /// Marks the article as read in Core Data if it is
