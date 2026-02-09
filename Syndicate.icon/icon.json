@@ -1,0 +1,34 @@
+{
+  "fill" : "automatic",
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "icon_512x512_2x 2.png",
+          "name" : "icon_512x512_2x 2",
+          "position" : {
+            "scale" : 1.8,
+            "translation-in-points" : [
+              -26.23046875,
+              -5.684341886080802e-14
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
