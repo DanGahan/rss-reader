@@ -139,4 +139,7 @@ extension Notification.Name {
     static let newFolder = Notification.Name(
         "newFolder"
     )
+    static let refreshIntervalChanged = Notification.Name(
+        "refreshIntervalChanged"
+    )
 }
