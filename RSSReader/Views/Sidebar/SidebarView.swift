@@ -21,6 +21,7 @@ extension UTType {
 /// `SidebarViewModel`.
 struct SidebarView: View {
     @ObservedObject var viewModel: SidebarViewModel
+    @ObservedObject var refreshService: RefreshService
 
     @Environment(\.managedObjectContext)
     private var context
@@ -116,7 +117,7 @@ struct SidebarView: View {
 
     @ViewBuilder
     private var allArticlesRow: some View {
-        AllArticlesRowView()
+        AllArticlesRowView(isRefreshing: refreshService.isRefreshing)
             .tag(SidebarSelection.all)
             .onDrop(of: [UTType.feedDrag], isTargeted: nil) { providers in
                 handleDrop(providers: providers, toFolderId: nil)

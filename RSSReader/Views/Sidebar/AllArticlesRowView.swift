@@ -9,8 +9,11 @@ import CoreData
 import SwiftUI
 
 /// A row for "All Articles" showing a newspaper icon and
-/// total unread count across all feeds.
+/// total unread count across all feeds, with a spinner when refreshing.
 struct AllArticlesRowView: View {
+    /// Whether feeds are currently being refreshed.
+    var isRefreshing: Bool = false
+
     /// Fetch unread articles directly for accurate real-time count.
     @FetchRequest(
         sortDescriptors: [],
@@ -30,7 +33,11 @@ struct AllArticlesRowView: View {
                     .foregroundStyle(.primary)
             }
             Spacer()
-            if !unreadArticles.isEmpty {
+            if isRefreshing {
+                ProgressView()
+                    .controlSize(.small)
+                    .help("Refreshing feeds...")
+            } else if !unreadArticles.isEmpty {
                 Text("\(unreadArticles.count)")
                     .font(.caption)
                     .fontWeight(.medium)

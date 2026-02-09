@@ -28,7 +28,10 @@ struct ContentView: View {
 
     var body: some View {
         NavigationSplitView {
-            SidebarView(viewModel: sidebarViewModel)
+            SidebarView(
+                viewModel: sidebarViewModel,
+                refreshService: refreshService
+            )
         } content: {
             ArticleListView(
                 sidebarSelection:
@@ -75,6 +78,10 @@ struct ContentView: View {
         .onAppear {
             startAutoRefreshWithSavedInterval()
             setupKeyMonitor()
+            // Trigger initial refresh on app launch
+            Task {
+                await refreshService.refreshAllFeeds()
+            }
         }
         .onDisappear {
             refreshService.stopAutoRefresh()
@@ -102,6 +109,10 @@ struct ContentView: View {
             )
         ) { _ in
             refreshService.resumeAutoRefresh()
+            // Trigger refresh when app becomes active
+            Task {
+                await refreshService.refreshAllFeeds()
+            }
         }
     }
 
