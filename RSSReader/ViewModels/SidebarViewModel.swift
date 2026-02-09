@@ -204,6 +204,27 @@ final class SidebarViewModel: ObservableObject {
         try? context.save()
     }
 
+    /// Deletes a feed and clears selection if the feed
+    /// was currently selected. This prevents crashes from
+    /// SwiftUI trying to access deleted objects.
+    func deleteFeed(
+        id feedId: UUID,
+        in context: NSManagedObjectContext
+    ) {
+        // Clear selection first if this feed is selected
+        if case .feed(let selectedId) = selection,
+           selectedId == feedId {
+            selection = nil
+        }
+
+        guard let feed = fetchFeed(
+            id: feedId, in: context
+        ) else { return }
+
+        context.delete(feed)
+        try? context.save()
+    }
+
     /// Reorders a folder by moving it before or after
     /// another folder.
     func reorderFolder(

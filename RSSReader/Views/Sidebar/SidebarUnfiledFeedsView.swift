@@ -99,19 +99,15 @@ struct SidebarUnfiledFeedsView: View {
         }
         Divider()
         Button(role: .destructive) {
-            deleteFeed(feed)
+            viewModel.deleteFeed(
+                id: feed.id,
+                in: context
+            )
         } label: {
             Label(
                 "Remove Feed",
                 systemImage: "trash"
             )
         }
-    }
-
-    // MARK: - Actions
-
-    private func deleteFeed(_ feed: CDFeed) {
-        context.delete(feed)
-        try? context.save()
     }
 }
