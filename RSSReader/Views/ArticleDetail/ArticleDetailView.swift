@@ -201,23 +201,27 @@ struct ArticleDetailView: View {
 
     // MARK: - Body Text
 
+    /// Reader-mode style body font (slightly larger than system body)
+    private static let readerFont = Font.system(size: 16)
+
     private func bodyText(
         _ article: CDArticle
     ) -> some View {
-        let text = viewModel.plainTextContent(
+        let text = viewModel.formattedContent(
             for: article
         )
 
         return Group {
-            if text.isEmpty {
+            if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 Text("No content available.")
                     .foregroundStyle(.tertiary)
                     .italic()
             } else {
                 Text(text)
-                    .font(.body)
-                    .lineSpacing(6)
+                    .font(Self.readerFont)
+                    .lineSpacing(8)
                     .textSelection(.enabled)
+                    .frame(maxWidth: 700, alignment: .leading)
             }
         }
     }
