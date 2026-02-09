@@ -96,6 +96,12 @@ struct SettingsView: View {
                 set: { newValue in
                     settings?.refreshInterval = newValue
                     saveSettings()
+                    // Notify RefreshService to restart with new interval
+                    NotificationCenter.default.post(
+                        name: .refreshIntervalChanged,
+                        object: nil,
+                        userInfo: ["interval": TimeInterval(newValue)]
+                    )
                 }
             )) {
                 ForEach(refreshIntervals, id: \.1) { option in

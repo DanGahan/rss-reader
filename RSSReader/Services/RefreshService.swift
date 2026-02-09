@@ -68,6 +68,18 @@ final class RefreshService: ObservableObject {
                 }
             }
             .store(in: &cancellables)
+
+        NotificationCenter.default
+            .publisher(for: .refreshIntervalChanged)
+            .sink { [weak self] notification in
+                guard let self else { return }
+                let newInterval = notification.userInfo?["interval"]
+                    as? TimeInterval ?? 600
+                Task { @MainActor in
+                    self.startAutoRefresh(interval: newInterval)
+                }
+            }
+            .store(in: &cancellables)
     }
 
     // MARK: - Manual Refresh

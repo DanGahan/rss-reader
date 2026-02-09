@@ -73,7 +73,7 @@ struct ContentView: View {
             showingImportOPML = true
         }
         .onAppear {
-            refreshService.startAutoRefresh()
+            startAutoRefreshWithSavedInterval()
             setupKeyMonitor()
         }
         .onDisappear {
@@ -103,6 +103,19 @@ struct ContentView: View {
         ) { _ in
             refreshService.resumeAutoRefresh()
         }
+    }
+
+    // MARK: - Auto Refresh
+
+    /// Starts auto-refresh using the interval saved in settings.
+    private func startAutoRefreshWithSavedInterval() {
+        let interval: TimeInterval
+        if let settings = try? CDAppSettings.current(in: context) {
+            interval = TimeInterval(settings.refreshInterval)
+        } else {
+            interval = TimeInterval(CDAppSettings.defaultRefreshInterval)
+        }
+        refreshService.startAutoRefresh(interval: interval)
     }
 
     // MARK: - Keyboard Shortcuts

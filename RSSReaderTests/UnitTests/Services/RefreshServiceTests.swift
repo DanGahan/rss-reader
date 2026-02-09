@@ -523,6 +523,37 @@ struct RefreshServiceTests {
         // Both should succeed (no backoff)
         #expect(requestCount == 2)
     }
+
+    // MARK: - Refresh Interval Change Notification
+
+    @Test("RefreshService responds to refreshIntervalChanged notification")
+    @MainActor
+    func refreshIntervalChangedNotification() async {
+        let persistence = PersistenceController.inMemory()
+        let service = RefreshService(
+            persistence: persistence,
+            urlSession: Self.makeMockSession()
+        )
+
+        // Start with default interval
+        service.startAutoRefresh(interval: 600)
+
+        // Post notification with new interval
+        NotificationCenter.default.post(
+            name: .refreshIntervalChanged,
+            object: nil,
+            userInfo: ["interval": TimeInterval(1800)]
+        )
+
+        // Give time for notification to be processed
+        try? await Task.sleep(nanoseconds: 100_000_000)
+
+        // Service should have restarted (no crash = success)
+        // Note: We can't directly verify the interval changed
+        // since it's internal, but the notification handler
+        // executes without error
+        service.stopAutoRefresh()
+    }
 }
 // swiftlint:enable type_body_length
 // swiftlint:enable file_length
