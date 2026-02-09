@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct SidebarUnfiledFeedsView: View {
     @ObservedObject var viewModel: SidebarViewModel
     let unfiledFeeds: FetchedResults<CDFeed>
     let folders: FetchedResults<CDFolder>
-    
+
     @Environment(\.managedObjectContext)
     private var context
-    
+
     var body: some View {
         if !unfiledFeeds.isEmpty {
             Section("Unfiled") {
@@ -72,7 +73,7 @@ struct SidebarUnfiledFeedsView: View {
     // MARK: - Context Menus
 
     @ViewBuilder
-    private funcfeedContextMenu(
+    private func feedContextMenu(
         feed: CDFeed
     ) -> some View {
         Menu("Move to Folder") {

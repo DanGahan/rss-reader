@@ -60,6 +60,8 @@
 		A1000135 /* FolderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000135 /* FolderRowView.swift */; };
 		A1000136 /* AddFeedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000136 /* AddFeedSheet.swift */; };
 		A1000137 /* AllArticlesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000137 /* AllArticlesRowView.swift */; };
+		A1000138 /* SidebarFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000138 /* SidebarFoldersView.swift */; };
+		A1000139 /* SidebarUnfiledFeedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000139 /* SidebarUnfiledFeedsView.swift */; };
 		A1000140 /* CoreDataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000140 /* CoreDataTestHelper.swift */; };
 		A1000141 /* CDArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000141 /* CDArticleTests.swift */; };
 		A1000142 /* CDFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000142 /* CDFeedTests.swift */; };
@@ -169,6 +171,8 @@
 		A2000135 /* FolderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowView.swift; sourceTree = "<group>"; };
 		A2000136 /* AddFeedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedSheet.swift; sourceTree = "<group>"; };
 		A2000137 /* AllArticlesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesRowView.swift; sourceTree = "<group>"; };
+		A2000138 /* SidebarFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarFoldersView.swift; sourceTree = "<group>"; };
+		A2000139 /* SidebarUnfiledFeedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarUnfiledFeedsView.swift; sourceTree = "<group>"; };
 		A2000140 /* CoreDataTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestHelper.swift; sourceTree = "<group>"; };
 		A2000141 /* CDArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDArticleTests.swift; sourceTree = "<group>"; };
 		A2000142 /* CDFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeedTests.swift; sourceTree = "<group>"; };
@@ -393,6 +397,8 @@
 			isa = PBXGroup;
 			children = (
 				A2000133 /* SidebarView.swift */,
+				A2000138 /* SidebarFoldersView.swift */,
+				A2000139 /* SidebarUnfiledFeedsView.swift */,
 				A2000134 /* FeedRowView.swift */,
 				A2000135 /* FolderRowView.swift */,
 				A2000136 /* AddFeedSheet.swift */,
@@ -638,6 +644,8 @@
 				A1000135 /* FolderRowView.swift in Sources */,
 				A1000136 /* AddFeedSheet.swift in Sources */,
 				A1000137 /* AllArticlesRowView.swift in Sources */,
+				A1000138 /* SidebarFoldersView.swift in Sources */,
+				A1000139 /* SidebarUnfiledFeedsView.swift in Sources */,
 				A1000020 /* FeedlyUser.swift in Sources */,
 				A1000021 /* AppError.swift in Sources */,
 				A1000022 /* AuthenticationToken.swift in Sources */,

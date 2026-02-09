@@ -10,8 +10,8 @@ import SwiftUI
 struct SidebarFoldersView: View {
     @ObservedObject var viewModel: SidebarViewModel
     let folders: FetchedResults<CDFolder>
-    
-        @Environment(\.managedObjectContext)
+
+    @Environment(\.managedObjectContext)
     private var context
 
     var body: some View {
@@ -137,7 +137,7 @@ struct SidebarFoldersView: View {
         }
         return true
     }
-    
+
     // MARK: - Context Menus
 
     @ViewBuilder
@@ -194,4 +194,8 @@ struct SidebarFoldersView: View {
 
     // MARK: - Actions
 
-    private func deleteFeed(_ feed: CDFeed) {}
+    private func deleteFeed(_ feed: CDFeed) {
+        context.delete(feed)
+        try? context.save()
+    }
+}
