@@ -23,6 +23,10 @@ final class ArticleListViewModel: ObservableObject {
     /// When true the view should filter to unread articles.
     @Published var showUnreadOnly = false
 
+    /// When true, articles are sorted newest-first; otherwise oldest-first.
+    /// Defaults to false (oldest-first).
+    @Published var sortNewestFirst = false
+
     /// Indicates a feed refresh is in progress.
     @Published var isLoading = false
 
