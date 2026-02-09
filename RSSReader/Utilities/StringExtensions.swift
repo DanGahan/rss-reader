@@ -60,4 +60,19 @@ extension String {
 
         return self
     }
+
+    /// Normalizes whitespace by collapsing newlines and multiple spaces
+    /// into single spaces, then trims leading/trailing whitespace.
+    /// Useful for cleaning up author names and other metadata that may
+    /// contain stray formatting.
+    func normalizingWhitespace() -> String {
+        self
+            .replacingOccurrences(of: "\r\n", with: " ")
+            .replacingOccurrences(of: "\n", with: " ")
+            .replacingOccurrences(of: "\r", with: " ")
+            .replacingOccurrences(of: "\t", with: " ")
+            .components(separatedBy: .whitespaces)
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
+    }
 }

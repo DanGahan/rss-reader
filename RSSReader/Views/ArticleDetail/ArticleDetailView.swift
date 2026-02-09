@@ -171,7 +171,7 @@ struct ArticleDetailView: View {
         _ article: CDArticle
     ) -> some View {
         HStack(spacing: 12) {
-            if let author = article.author,
+            if let author = article.author?.normalizingWhitespace(),
                !author.isEmpty {
                 Label(author, systemImage: "person")
                     .font(.subheadline)
