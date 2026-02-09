@@ -51,7 +51,7 @@ struct ArticleRowView: View {
                 )
 
             HStack {
-                if let author = article.author,
+                if let author = article.author?.normalizingWhitespace(),
                    !author.isEmpty {
                     Text(author)
                         .font(.caption)
