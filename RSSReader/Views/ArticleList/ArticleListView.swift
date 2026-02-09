@@ -43,8 +43,10 @@ struct ArticleListView: View {
             for: sidebarSelection,
             showUnreadOnly: viewModel.showUnreadOnly
         )
+        // Default sort order: oldest first (forward)
+        let sortOrder: SortOrder = viewModel.sortNewestFirst ? .reverse : .forward
         _articles = FetchRequest(
-            sortDescriptors: [SortDescriptor(\CDArticle.published, order: .reverse)],
+            sortDescriptors: [SortDescriptor(\CDArticle.published, order: sortOrder)],
             predicate: predicate,
             animation: .default
         )
@@ -87,6 +89,9 @@ struct ArticleListView: View {
         .ignoresSafeArea(.all, edges: .top)
         .onChange(of: viewModel.showUnreadOnly) { _, _ in
             updatePredicate()
+        }
+        .onChange(of: viewModel.sortNewestFirst) { _, newValue in
+            updateSortOrder(newestFirst: newValue)
         }
         .onReceive(NotificationCenter.default.publisher(for: .markAllAsRead)) { _ in
             viewModel.markAllAsRead(Array(articles), in: context)
@@ -175,9 +180,19 @@ struct ArticleListView: View {
         red: 247 / 255, green: 247 / 255, blue: 247 / 255
     )
 
-    /// Capsule control grouping unread filter and refresh buttons.
+    /// Capsule control grouping sort, unread filter, and refresh buttons.
     private var capsuleControls: some View {
         HStack(spacing: 2) {
+            MailStyleButton(
+                isOn: $viewModel.sortNewestFirst,
+                systemImage: "arrow.up.arrow.down"
+            )
+            .help(
+                viewModel.sortNewestFirst
+                    ? "Sort: Newest first (click for oldest first)"
+                    : "Sort: Oldest first (click for newest first)"
+            )
+
             MailStyleButton(
                 isOn: $viewModel.showUnreadOnly,
                 systemImage: "line.3.horizontal.decrease"
@@ -237,7 +252,7 @@ struct ArticleListView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    // MARK: - Predicate
+    // MARK: - Predicate & Sort
 
     /// Updates the fetch request predicate for unread filter toggle.
     private func updatePredicate() {
@@ -245,6 +260,14 @@ struct ArticleListView: View {
             for: sidebarSelection,
             showUnreadOnly: viewModel.showUnreadOnly
         )
+    }
+
+    /// Updates the fetch request sort order.
+    private func updateSortOrder(newestFirst: Bool) {
+        let sortOrder: SortOrder = newestFirst ? .reverse : .forward
+        articles.sortDescriptors = [
+            SortDescriptor(\CDArticle.published, order: sortOrder)
+        ]
     }
 }
 
