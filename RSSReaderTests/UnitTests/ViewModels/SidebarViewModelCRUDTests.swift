@@ -186,4 +186,111 @@ struct SidebarViewModelCRUDTests {
         )
         #expect(feed.folder == nil)
     }
+
+    // MARK: - Feed Deletion
+
+    @Test("deleteFeed removes feed from context")
+    @MainActor
+    func deleteFeedRemovesFeed() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Test Feed",
+            feedURL: "https://test.com/feed"
+        )
+        try context.save()
+
+        let vm = SidebarViewModel()
+        vm.deleteFeed(id: feed.id, in: context)
+
+        let request = CDFeed.fetchRequest()
+        let feeds = try context.fetch(request)
+        #expect(feeds.isEmpty)
+    }
+
+    @Test("deleteFeed clears selection when deleting selected feed")
+    @MainActor
+    func deleteFeedClearsSelection() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Test Feed",
+            feedURL: "https://test.com/feed"
+        )
+        try context.save()
+
+        let vm = SidebarViewModel()
+        vm.selection = .feed(feed.id)
+        #expect(vm.selection == .feed(feed.id))
+
+        vm.deleteFeed(id: feed.id, in: context)
+
+        #expect(vm.selection == nil)
+    }
+
+    @Test("deleteFeed preserves selection when deleting different feed")
+    @MainActor
+    func deleteFeedPreservesOtherSelection() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed1 = CDFeed.create(
+            in: context,
+            title: "Feed 1",
+            feedURL: "https://test1.com/feed"
+        )
+        let feed2 = CDFeed.create(
+            in: context,
+            title: "Feed 2",
+            feedURL: "https://test2.com/feed"
+        )
+        try context.save()
+
+        let vm = SidebarViewModel()
+        vm.selection = .feed(feed1.id)
+
+        vm.deleteFeed(id: feed2.id, in: context)
+
+        // Selection should still be feed1
+        #expect(vm.selection == .feed(feed1.id))
+
+        // feed2 should be deleted
+        let request = CDFeed.fetchRequest()
+        let feeds = try context.fetch(request)
+        #expect(feeds.count == 1)
+        #expect(feeds.first?.id == feed1.id)
+    }
+
+    @Test("deleteFeed cascades to delete articles")
+    @MainActor
+    func deleteFeedCascadesToArticles() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Test Feed",
+            feedURL: "https://test.com/feed"
+        )
+        CDArticle.create(
+            in: context,
+            id: "article-1",
+            title: "Article 1",
+            link: "https://test.com/1",
+            published: Date(),
+            feed: feed
+        )
+        CDArticle.create(
+            in: context,
+            id: "article-2",
+            title: "Article 2",
+            link: "https://test.com/2",
+            published: Date(),
+            feed: feed
+        )
+        try context.save()
+
+        let vm = SidebarViewModel()
+        vm.deleteFeed(id: feed.id, in: context)
+
+        let articleRequest = CDArticle.fetchRequest()
+        let articles = try context.fetch(articleRequest)
+        #expect(articles.isEmpty)
+    }
 }
