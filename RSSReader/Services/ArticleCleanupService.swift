@@ -91,21 +91,38 @@ struct ArticleCleanupService {
 
 private extension ArticleCleanupService {
     /// Deletes all read articles added before the
-    /// cutoff date.
+    /// cutoff date using batch delete for performance.
     func deleteByAge(
         before cutoffDate: Date,
         in context: NSManagedObjectContext
     ) throws -> Int {
-        let request = CDArticle.fetchRequest()
-        request.predicate = NSPredicate(
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> =
+            CDArticle.fetchRequest()
+        fetchRequest.predicate = NSPredicate(
             format: "isRead == YES AND dateAdded < %@",
             cutoffDate as NSDate
         )
-        let staleArticles = try context.fetch(request)
-        for article in staleArticles {
-            context.delete(article)
+
+        let batchDelete = NSBatchDeleteRequest(
+            fetchRequest: fetchRequest
+        )
+        batchDelete.resultType = .resultTypeCount
+
+        let result = try context.execute(batchDelete)
+            as? NSBatchDeleteResult
+        let deletedCount = result?.result as? Int ?? 0
+
+        // Merge changes into context to keep UI in sync
+        if deletedCount > 0 {
+            NSManagedObjectContext.mergeChanges(
+                fromRemoteContextSave: [
+                    NSDeletedObjectsKey: []
+                ],
+                into: [context]
+            )
         }
-        return staleArticles.count
+
+        return deletedCount
     }
 
     /// Deletes read articles beyond the per-feed
@@ -130,34 +147,48 @@ private extension ArticleCleanupService {
         return totalDeleted
     }
 
-    /// Deletes excess read articles for a single feed.
+    /// Deletes excess read articles for a single feed using
+    /// batch delete for performance.
     func deleteExcess(
         for feed: CDFeed,
         maxCount: Int,
         in context: NSManagedObjectContext
     ) throws -> Int {
-        let request = CDArticle.fetchRequest()
-        request.predicate = NSPredicate(
+        // First, fetch only IDs to minimize memory usage
+        let countRequest = CDArticle.fetchRequest()
+        countRequest.predicate = NSPredicate(
             format: "feed == %@ AND isRead == YES",
             feed
         )
-        request.sortDescriptors = [
+        countRequest.sortDescriptors = [
             NSSortDescriptor(
                 key: "dateAdded", ascending: false
             )
         ]
+        countRequest.propertiesToFetch = ["id"]
+        countRequest.resultType = .managedObjectIDResultType
 
-        let readArticles = try context.fetch(request)
+        let objectIDs = try context.fetch(countRequest)
+            as? [NSManagedObjectID] ?? []
 
-        guard readArticles.count > maxCount else {
+        guard objectIDs.count > maxCount else {
             return 0
         }
 
-        // Keep the newest `maxCount`, delete the rest
-        let excess = readArticles.dropFirst(maxCount)
-        for article in excess {
-            context.delete(article)
-        }
-        return excess.count
+        // Get IDs of articles to delete (all beyond maxCount)
+        let idsToDelete = Array(objectIDs.dropFirst(maxCount))
+
+        guard !idsToDelete.isEmpty else { return 0 }
+
+        // Use batch delete with specific object IDs
+        let batchDelete = NSBatchDeleteRequest(
+            objectIDs: idsToDelete
+        )
+        batchDelete.resultType = .resultTypeCount
+
+        let result = try context.execute(batchDelete)
+            as? NSBatchDeleteResult
+
+        return result?.result as? Int ?? idsToDelete.count
     }
 }
