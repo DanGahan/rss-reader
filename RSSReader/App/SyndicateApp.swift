@@ -1,6 +1,6 @@
 //
-//  RSSReaderApp.swift
-//  RSSReader
+//  SyndicateApp.swift
+//  Syndicate
 //
 //  Created on 2026-01-28.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct RSSReaderApp: App {
+struct SyndicateApp: App {
     let persistence = PersistenceController.shared
 
     var body: some Scene {

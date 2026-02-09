@@ -1,6 +1,6 @@
 //
 //  PersistenceController.swift
-//  RSSReader
+//  Syndicate
 //
 //  Created on 2026-01-29.
 //
@@ -52,7 +52,7 @@ final class PersistenceController: @unchecked Sendable {
     init(inMemory: Bool = false) {
         let model = CoreDataModel.makeModel()
         container = NSPersistentContainer(
-            name: "RSSReader",
+            name: "Syndicate",
             managedObjectModel: model
         )
 

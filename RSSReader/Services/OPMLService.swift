@@ -111,7 +111,7 @@ struct OPMLService {
         <?xml version="1.0" encoding="UTF-8"?>
         <opml version="2.0">
         <head>
-            <title>RSS Reader Export</title>
+            <title>Syndicate Export</title>
         </head>
         <body>\n
         """
