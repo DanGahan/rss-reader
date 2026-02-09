@@ -893,6 +893,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSReader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Syndicate;
+				INFOPLIST_KEY_CFBundleName = Syndicate;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -925,6 +926,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSReader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Syndicate;
+				INFOPLIST_KEY_CFBundleName = Syndicate;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
