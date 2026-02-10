@@ -10,7 +10,7 @@ import CoreData
 import SwiftUI
 
 /// Reading pane displaying the selected article's title,
-/// metadata, and plain-text content.
+/// metadata, and rich text content.
 ///
 /// Clicking the article title opens it in Safari.
 /// Automatically marks the article as read when displayed.
@@ -201,26 +201,20 @@ struct ArticleDetailView: View {
 
     // MARK: - Body Text
 
-    /// Reader-mode style body font (slightly larger than system body)
-    private static let readerFont = Font.system(size: 16)
-
     private func bodyText(
         _ article: CDArticle
     ) -> some View {
-        let text = viewModel.formattedContent(
+        let attributedString = viewModel.attributedContent(
             for: article
         )
 
         return Group {
-            if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            if attributedString.length == 0 {
                 Text("No content available.")
                     .foregroundStyle(.tertiary)
                     .italic()
             } else {
-                Text(text)
-                    .font(Self.readerFont)
-                    .lineSpacing(8)
-                    .textSelection(.enabled)
+                RichTextView(attributedString: attributedString)
                     .frame(maxWidth: 700, alignment: .leading)
             }
         }
