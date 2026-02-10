@@ -594,6 +594,11 @@
 				TargetAttributes = {
 					A5000001 = {
 						CreatedOnToolsVersion = 15.0;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					A5000002 = {
 						CreatedOnToolsVersion = 15.0;
