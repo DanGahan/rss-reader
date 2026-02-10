@@ -96,45 +96,29 @@ struct HTMLAttributedStringConverter {
         <html>
         <head>
         <meta charset="UTF-8">
-        <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-                font-size: \(Self.baseFontSize)px;
-                line-height: 1.5;
-            }
-            p { margin-bottom: \(Self.paragraphSpacing)px; }
-            h1, h2, h3, h4, h5, h6 {
-                font-weight: bold;
-                margin-top: \(Self.headingSpacing * 1.5)px;
-                margin-bottom: \(Self.headingSpacing / 2)px;
-            }
-            h1 { font-size: \(Self.headingFontSizes[1] ?? 32)px; }
-            h2 { font-size: \(Self.headingFontSizes[2] ?? 24)px; }
-            h3 { font-size: \(Self.headingFontSizes[3] ?? 20)px; }
-            h4, h5, h6 { font-size: \(Self.headingFontSizes[4] ?? 18)px; }
-            blockquote {
-                margin-left: \(Self.blockquoteIndent)px;
-                padding-left: 10px;
-                border-left: 3px solid #ccc;
-            }
-            pre, code {
-                font-family: Menlo, Monaco, monospace;
-                font-size: \(Self.baseFontSize - 1)px;
-            }
-            pre {
-                padding: 10px;
-                border-radius: 4px;
-                overflow-x: auto;
-            }
-            ul, ol {
-                margin-top: \(Self.listSpacing)px;
-                margin-bottom: \(Self.listSpacing * 2)px;
-            }
-            li { margin-bottom: \(Self.listItemSpacing)px; }
-        </style>
+        <style>\(Self.cssStyles)</style>
         </head>
         <body>\(html)</body>
         </html>
+        """
+    }
+
+    /// CSS styles for the HTML document.
+    private static var cssStyles: String {
+        """
+        body { font-family: -apple-system, sans-serif; font-size: \(baseFontSize)px; line-height: 1.5; }
+        p { margin-bottom: \(paragraphSpacing)px; }
+        h1, h2, h3, h4, h5, h6 { font-weight: bold; margin-top: \(headingSpacing * 1.5)px; \
+        margin-bottom: \(headingSpacing / 2)px; }
+        h1 { font-size: \(headingFontSizes[1] ?? 32)px; }
+        h2 { font-size: \(headingFontSizes[2] ?? 24)px; }
+        h3 { font-size: \(headingFontSizes[3] ?? 20)px; }
+        h4, h5, h6 { font-size: \(headingFontSizes[4] ?? 18)px; }
+        blockquote { margin-left: \(blockquoteIndent)px; padding-left: 10px; border-left: 3px solid #ccc; }
+        pre, code { font-family: Menlo, Monaco, monospace; font-size: \(baseFontSize - 1)px; }
+        pre { padding: 10px; border-radius: 4px; overflow-x: auto; }
+        ul, ol { margin-top: \(listSpacing)px; margin-bottom: \(listSpacing * 2)px; }
+        li { margin-bottom: \(listItemSpacing)px; }
         """
     }
 
