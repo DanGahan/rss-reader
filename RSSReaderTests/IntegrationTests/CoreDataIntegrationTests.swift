@@ -9,9 +9,11 @@ import CoreData
 import XCTest
 @testable import RSSReader
 
+// swiftlint:disable implicitly_unwrapped_optional
 final class CoreDataIntegrationTests: XCTestCase {
     var persistence: PersistenceController!
     var context: NSManagedObjectContext!
+// swiftlint:enable implicitly_unwrapped_optional
 
     override func setUp() {
         super.setUp()
