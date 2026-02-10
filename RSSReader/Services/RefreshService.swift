@@ -264,38 +264,33 @@ final class RefreshService: ObservableObject {
         }
 
         // Step 5: Persist new articles on context queue.
+        // Uses explicit fetch-based de-duplication for CloudKit compatibility.
         await context.perform {
             guard let feed = try? context
                 .existingObject(with: objectID) as? CDFeed
             else { return }
 
-            // Dedup by existing article IDs.
-            let existingIDs: Set<String>
-            if let articles = feed.articles
-                as? Set<CDArticle> {
-                existingIDs = Set(articles.map(\.id))
-            } else {
-                existingIDs = []
-            }
-
-            for parsed in parsedFeed.articles
-            where !existingIDs.contains(parsed.id) {
-                let article = CDArticle(
-                    context: context
+            for parsed in parsedFeed.articles {
+                // Use createIfNotExists for CloudKit-compatible de-duplication.
+                // This performs an explicit fetch request instead of relying on
+                // unique constraints (which CloudKit doesn't support).
+                let (article, isNew) = CDArticle.createIfNotExists(
+                    in: context,
+                    id: parsed.id,
+                    title: parsed.title,
+                    link: parsed.link.absoluteString,
+                    published: parsed.published,
+                    feed: feed
                 )
-                article.id = parsed.id
-                article.title = parsed.title
-                article.author = parsed.author
-                article.published = parsed.published
-                article.summary = parsed.summary
-                article.content = parsed.content
-                article.link =
-                    parsed.link.absoluteString
-                article.thumbnailURL =
-                    parsed.thumbnailURL?.absoluteString
-                article.isRead = false
-                article.dateAdded = Date()
-                article.feed = feed
+
+                // Only set additional properties for new articles
+                if isNew {
+                    article.author = parsed.author
+                    article.summary = parsed.summary
+                    article.content = parsed.content
+                    article.thumbnailURL =
+                        parsed.thumbnailURL?.absoluteString
+                }
             }
 
             feed.lastFetched = Date()

@@ -161,4 +161,195 @@ struct CDArticleTests {
 
         #expect(feed.folder == nil)
     }
+
+    // MARK: - De-duplication (CloudKit Compatibility)
+
+    @Test("findExisting returns nil when no article exists")
+    func findExistingNoMatch() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Feed",
+            feedURL: "https://example.com/feed"
+        )
+        try context.save()
+
+        let result = CDArticle.findExisting(
+            articleId: "non-existent-id",
+            feed: feed,
+            in: context
+        )
+
+        #expect(result == nil)
+    }
+
+    @Test("findExisting returns existing article")
+    func findExistingMatch() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Feed",
+            feedURL: "https://example.com/feed"
+        )
+        let article = CDArticle.create(
+            in: context,
+            id: "article-123",
+            title: "Test Article",
+            link: "https://example.com/article",
+            published: Date(),
+            feed: feed
+        )
+        try context.save()
+
+        let result = CDArticle.findExisting(
+            articleId: "article-123",
+            feed: feed,
+            in: context
+        )
+
+        #expect(result === article)
+    }
+
+    @Test("findExisting does not match article in different feed")
+    func findExistingDifferentFeed() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed1 = CDFeed.create(
+            in: context,
+            title: "Feed 1",
+            feedURL: "https://example.com/feed1"
+        )
+        let feed2 = CDFeed.create(
+            in: context,
+            title: "Feed 2",
+            feedURL: "https://example.com/feed2"
+        )
+        _ = CDArticle.create(
+            in: context,
+            id: "shared-id",
+            title: "Article in Feed 1",
+            link: "https://example.com/article",
+            published: Date(),
+            feed: feed1
+        )
+        try context.save()
+
+        // Same ID but different feed should not match
+        let result = CDArticle.findExisting(
+            articleId: "shared-id",
+            feed: feed2,
+            in: context
+        )
+
+        #expect(result == nil)
+    }
+
+    @Test("createIfNotExists creates new article when none exists")
+    func createIfNotExistsNew() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Feed",
+            feedURL: "https://example.com/feed"
+        )
+        try context.save()
+
+        let (article, isNew) = CDArticle.createIfNotExists(
+            in: context,
+            id: "new-article",
+            title: "New Article",
+            link: "https://example.com/new",
+            published: Date(),
+            feed: feed
+        )
+        try context.save()
+
+        #expect(isNew == true)
+        #expect(article.id == "new-article")
+        #expect(article.title == "New Article")
+
+        let request = CDArticle.fetchRequest()
+        let count = try context.count(for: request)
+        #expect(count == 1)
+    }
+
+    @Test("createIfNotExists returns existing article without creating duplicate")
+    func createIfNotExistsDuplicate() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed = CDFeed.create(
+            in: context,
+            title: "Feed",
+            feedURL: "https://example.com/feed"
+        )
+        let existing = CDArticle.create(
+            in: context,
+            id: "existing-article",
+            title: "Original Title",
+            link: "https://example.com/original",
+            published: Date(),
+            feed: feed
+        )
+        try context.save()
+
+        // Try to create article with same ID
+        let (article, isNew) = CDArticle.createIfNotExists(
+            in: context,
+            id: "existing-article",
+            title: "Different Title",
+            link: "https://example.com/different",
+            published: Date(),
+            feed: feed
+        )
+
+        #expect(isNew == false)
+        #expect(article === existing)
+        #expect(article.title == "Original Title") // Not overwritten
+
+        let request = CDArticle.fetchRequest()
+        let count = try context.count(for: request)
+        #expect(count == 1) // Still only one article
+    }
+
+    @Test("createIfNotExists allows same ID in different feeds")
+    func createIfNotExistsSameIdDifferentFeeds() throws {
+        let context = CoreDataTestHelper.makeContext()
+        let feed1 = CDFeed.create(
+            in: context,
+            title: "Feed 1",
+            feedURL: "https://example.com/feed1"
+        )
+        let feed2 = CDFeed.create(
+            in: context,
+            title: "Feed 2",
+            feedURL: "https://example.com/feed2"
+        )
+
+        let (article1, isNew1) = CDArticle.createIfNotExists(
+            in: context,
+            id: "shared-id",
+            title: "Article in Feed 1",
+            link: "https://example.com/1",
+            published: Date(),
+            feed: feed1
+        )
+
+        let (article2, isNew2) = CDArticle.createIfNotExists(
+            in: context,
+            id: "shared-id",
+            title: "Article in Feed 2",
+            link: "https://example.com/2",
+            published: Date(),
+            feed: feed2
+        )
+        try context.save()
+
+        #expect(isNew1 == true)
+        #expect(isNew2 == true)
+        #expect(article1 !== article2)
+        #expect(article1.feed === feed1)
+        #expect(article2.feed === feed2)
+
+        let request = CDArticle.fetchRequest()
+        let count = try context.count(for: request)
+        #expect(count == 2)
+    }
 }
