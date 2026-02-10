@@ -13,6 +13,7 @@ struct SettingsView: View {
 
     @State private var settings: CDAppSettings?
     @State private var errorMessage: String?
+    @StateObject private var syncViewModel = SyncStatusViewModel()
 
     // Refresh interval options in seconds
     private let refreshIntervals: [(String, Int32)] = [
@@ -51,6 +52,11 @@ struct SettingsView: View {
                     Label("General", systemImage: "gearshape")
                 }
 
+            iCloudTab
+                .tabItem {
+                    Label("iCloud", systemImage: "icloud")
+                }
+
             cleanupTab
                 .tabItem {
                     Label("Cleanup", systemImage: "trash")
@@ -61,7 +67,7 @@ struct SettingsView: View {
                     Label("About", systemImage: "info.circle")
                 }
         }
-        .frame(width: 500, height: 300)
+        .frame(width: 500, height: 320)
         .onAppear {
             loadSettings()
         }
@@ -116,6 +122,82 @@ struct SettingsView: View {
             .pickerStyle(.menu)
             .frame(width: 200)
         }
+    }
+
+    // MARK: - iCloud Tab
+
+    private var iCloudTab: some View {
+        Form {
+            Section {
+                // Sync Enable/Disable Toggle
+                HStack {
+                    Text("iCloud Sync:")
+                        .frame(width: 150, alignment: .trailing)
+
+                    Toggle("", isOn: $syncViewModel.iCloudSyncEnabled)
+                        .toggleStyle(.switch)
+                        .labelsHidden()
+
+                    Text(syncViewModel.iCloudSyncEnabled ? "Enabled" : "Disabled")
+                        .foregroundColor(.secondary)
+
+                    Spacer()
+                }
+
+                // Sync Status
+                HStack {
+                    Text("Status:")
+                        .frame(width: 150, alignment: .trailing)
+
+                    Image(systemName: syncViewModel.status.icon)
+                        .foregroundColor(syncViewModel.status.color)
+
+                    Text(syncViewModel.status.displayText)
+                        .foregroundColor(syncViewModel.status.color)
+
+                    Spacer()
+
+                    Button("Refresh") {
+                        syncViewModel.refreshStatus()
+                    }
+                    .buttonStyle(.bordered)
+                }
+
+                // Last Sync Date
+                if let lastSync = syncViewModel.lastSyncDate {
+                    HStack {
+                        Text("Last sync:")
+                            .frame(width: 150, alignment: .trailing)
+
+                        Text(lastSync, style: .relative)
+                            .foregroundColor(.secondary)
+
+                        Spacer()
+                    }
+                }
+
+                // CloudKit Availability Warning
+                if !syncViewModel.isCloudKitAvailable && syncViewModel.iCloudSyncEnabled {
+                    HStack {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundColor(.yellow)
+
+                        Text("iCloud is not available. Make sure you're signed in to iCloud.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.top, 8)
+                }
+            } header: {
+                Text("iCloud Sync")
+                    .font(.headline)
+            } footer: {
+                Text("Sync your feeds, folders, and read status across all your devices")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .padding()
     }
 
     // MARK: - Cleanup Tab
