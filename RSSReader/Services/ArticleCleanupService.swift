@@ -134,13 +134,13 @@ private extension ArticleCleanupService {
     }
 
     /// Performs batch delete (only call for SQLite stores).
-    private func batchDelete<T: NSManagedObject>(
-        fetchRequest: NSFetchRequest<T>,
+    private func batchDelete(
+        fetchRequest: NSFetchRequest<CDArticle>,
         in context: NSManagedObjectContext
     ) throws -> Int {
-        let batchRequest = NSBatchDeleteRequest(
-            fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>
-        )
+        // swiftlint:disable:next force_cast
+        let request = fetchRequest as! NSFetchRequest<NSFetchRequestResult>
+        let batchRequest = NSBatchDeleteRequest(fetchRequest: request)
         batchRequest.resultType = .resultTypeCount
 
         let result = try context.execute(batchRequest)
