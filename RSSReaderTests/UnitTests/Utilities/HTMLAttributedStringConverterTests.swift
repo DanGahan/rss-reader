@@ -183,26 +183,25 @@ struct HTMLAttributedStringConverterTests {
 
     // MARK: - Whitespace Handling
 
-    @Test("Trims leading whitespace")
-    func trimsLeadingWhitespace() {
-        let html = "   \n  <p>Content starts here</p>"
+    @Test("Adds leading newline for spacing after header")
+    func addsLeadingNewline() {
+        let html = "<p>Content starts here</p>"
         let result = sut.convert(html)
 
         let string = result.string
-        #expect(!string.hasPrefix(" "), "Expected leading spaces to be trimmed")
-        #expect(!string.hasPrefix("\n"), "Expected leading newlines to be trimmed")
+        #expect(string.hasPrefix("\n"), "Expected leading newline for header spacing")
+        #expect(!string.hasPrefix("\n\n"), "Expected only one leading newline")
     }
 
-    @Test("Trims leading whitespace from content")
-    func trimsLeadingWhitespaceFromContent() {
-        let html = "\n\n   First line of content"
+    @Test("Normalizes excessive leading whitespace to single newline")
+    func normalizesLeadingWhitespace() {
+        let html = "   \n\n  <p>Content starts here</p>"
         let result = sut.convert(html)
 
         let string = result.string
-        #expect(
-            string.first?.isWhitespace == false,
-            "Expected first character to not be whitespace"
-        )
+        // Should have exactly one leading newline after normalization
+        #expect(string.hasPrefix("\n"), "Expected leading newline")
+        #expect(string.dropFirst().first != "\n", "Expected only one leading newline")
     }
 
     // MARK: - Nested Formatting

@@ -80,8 +80,9 @@ struct HTMLAttributedStringConverter {
         // Post-process the attributed string
         applyCustomStyling(to: attributedString)
 
-        // Trim leading whitespace
+        // Normalize whitespace: trim then add leading newline for spacing after header
         trimLeadingWhitespace(from: attributedString)
+        addLeadingNewline(to: attributedString)
 
         return attributedString
     }
@@ -104,7 +105,7 @@ struct HTMLAttributedStringConverter {
             p { margin-bottom: \(Self.paragraphSpacing)px; }
             h1, h2, h3, h4, h5, h6 {
                 font-weight: bold;
-                margin-top: \(Self.headingSpacing)px;
+                margin-top: \(Self.headingSpacing * 1.5)px;
                 margin-bottom: \(Self.headingSpacing / 2)px;
             }
             h1 { font-size: \(Self.headingFontSizes[1] ?? 32)px; }
@@ -127,7 +128,7 @@ struct HTMLAttributedStringConverter {
             }
             ul, ol {
                 margin-top: \(Self.listSpacing)px;
-                margin-bottom: \(Self.listSpacing)px;
+                margin-bottom: \(Self.listSpacing * 2)px;
             }
             li { margin-bottom: \(Self.listItemSpacing)px; }
         </style>
@@ -221,6 +222,20 @@ struct HTMLAttributedStringConverter {
                 in: NSRange(location: 0, length: trimLength)
             )
         }
+    }
+
+    /// Adds a leading newline for spacing after the article header.
+    private func addLeadingNewline(to attributedString: NSMutableAttributedString) {
+        guard attributedString.length > 0 else { return }
+
+        let newline = NSAttributedString(
+            string: "\n",
+            attributes: [
+                .font: NSFont.systemFont(ofSize: Self.baseFontSize),
+                .foregroundColor: NSColor.textColor
+            ]
+        )
+        attributedString.insert(newline, at: 0)
     }
 }
 
