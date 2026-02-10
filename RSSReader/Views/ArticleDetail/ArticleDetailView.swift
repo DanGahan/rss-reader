@@ -201,6 +201,9 @@ struct ArticleDetailView: View {
 
     // MARK: - Body Text
 
+    /// Maximum width for article content for comfortable reading.
+    private static let maxContentWidth: CGFloat = 700
+
     private func bodyText(
         _ article: CDArticle
     ) -> some View {
@@ -214,8 +217,11 @@ struct ArticleDetailView: View {
                     .foregroundStyle(.tertiary)
                     .italic()
             } else {
-                RichTextView(attributedString: attributedString)
-                    .frame(maxWidth: 700, alignment: .leading)
+                RichTextView(
+                    attributedString: attributedString,
+                    containerWidth: Self.maxContentWidth
+                )
+                .frame(maxWidth: Self.maxContentWidth, alignment: .leading)
             }
         }
     }

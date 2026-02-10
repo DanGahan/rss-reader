@@ -12,18 +12,18 @@ import SwiftUI
 ///
 /// Provides a non-editable, selectable text view with link detection
 /// and proper dark mode support for rendering NSAttributedString content.
+/// Calculates its own height based on content for proper SwiftUI layout.
 struct RichTextView: NSViewRepresentable {
     /// The attributed string to display.
     let attributedString: NSAttributedString
 
+    /// The width to use for calculating text height.
+    let containerWidth: CGFloat
+
     // MARK: - NSViewRepresentable
 
-    func makeNSView(context: Context) -> NSScrollView {
-        let scrollView = NSTextView.scrollableTextView()
-
-        guard let textView = scrollView.documentView as? NSTextView else {
-            return scrollView
-        }
+    func makeNSView(context: Context) -> NSTextView {
+        let textView = NSTextView()
 
         // Configure for reading
         textView.isEditable = false
@@ -32,6 +32,16 @@ struct RichTextView: NSViewRepresentable {
 
         // Remove text container insets for cleaner layout
         textView.textContainerInset = NSSize(width: 0, height: 0)
+
+        // Configure text container for proper wrapping
+        textView.textContainer?.lineFragmentPadding = 0
+        textView.textContainer?.widthTracksTextView = true
+        textView.textContainer?.heightTracksTextView = false
+
+        // Allow vertical resizing
+        textView.isVerticallyResizable = true
+        textView.isHorizontallyResizable = false
+        textView.autoresizingMask = [.width]
 
         // Reader-friendly settings
         textView.isAutomaticLinkDetectionEnabled = true
@@ -52,30 +62,45 @@ struct RichTextView: NSViewRepresentable {
         textView.setAccessibilityLabel("Article content")
         textView.setAccessibilityRole(.textArea)
 
-        // Configure scroll view
-        scrollView.hasVerticalScroller = false
-        scrollView.hasHorizontalScroller = false
-        scrollView.drawsBackground = false
-        scrollView.autohidesScrollers = true
-
         // Set initial content
         textView.textStorage?.setAttributedString(attributedString)
 
-        return scrollView
+        return textView
     }
 
-    func updateNSView(_ nsView: NSScrollView, context: Context) {
-        guard let textView = nsView.documentView as? NSTextView else {
-            return
-        }
-
+    func updateNSView(_ textView: NSTextView, context: Context) {
         // Only update if content changed
         if textView.textStorage?.string != attributedString.string {
             textView.textStorage?.setAttributedString(attributedString)
-
-            // Scroll to top when content changes
-            textView.scrollToBeginningOfDocument(nil)
         }
+    }
+
+    func sizeThatFits(
+        _ proposal: ProposedViewSize,
+        nsView textView: NSTextView,
+        context: Context
+    ) -> CGSize? {
+        let width = proposal.width ?? containerWidth
+
+        // Set the text container width
+        textView.textContainer?.containerSize = CGSize(
+            width: width,
+            height: CGFloat.greatestFiniteMagnitude
+        )
+
+        // Force layout
+        textView.layoutManager?.ensureLayout(
+            for: textView.textContainer!  // swiftlint:disable:this force_unwrapping
+        )
+
+        // Get the used rect
+        guard let layoutManager = textView.layoutManager,
+              let textContainer = textView.textContainer else {
+            return CGSize(width: width, height: 100)
+        }
+
+        let usedRect = layoutManager.usedRect(for: textContainer)
+        return CGSize(width: width, height: usedRect.height + 20)
     }
 }
 
@@ -102,8 +127,14 @@ struct RichTextView: NSViewRepresentable {
     let converter = HTMLAttributedStringConverter()
     let attributedString = converter.convert(sampleHTML)
 
-    return RichTextView(attributedString: attributedString)
-        .frame(width: 600, height: 400)
+    return ScrollView {
+        RichTextView(
+            attributedString: attributedString,
+            containerWidth: 600
+        )
+        .frame(width: 600)
         .padding()
+    }
+    .frame(width: 650, height: 400)
 }
 #endif
