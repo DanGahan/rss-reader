@@ -195,4 +195,101 @@ struct ArticleDetailViewModelTests {
         let vm = ArticleDetailViewModel()
         #expect(!vm.showOpenedToast)
     }
+
+    // MARK: - Attributed Content
+
+    @Test("attributedContent returns non-empty for HTML content")
+    @MainActor
+    func attributedContentNonEmpty() {
+        let context = CoreDataTestHelper.makeContext()
+        let article = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "Test",
+            link: "https://example.com",
+            published: Date()
+        )
+        article.content = "<p>Hello <strong>world</strong></p>"
+
+        let vm = ArticleDetailViewModel()
+        let result = vm.attributedContent(for: article)
+        #expect(result.length > 0)
+        #expect(result.string.contains("Hello"))
+        #expect(result.string.contains("world"))
+    }
+
+    @Test("attributedContent sanitizes script tags")
+    @MainActor
+    func attributedContentSanitizes() {
+        let context = CoreDataTestHelper.makeContext()
+        let article = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "Test",
+            link: "https://example.com",
+            published: Date()
+        )
+        article.content = "<p>Safe</p><script>alert('xss')</script>"
+
+        let vm = ArticleDetailViewModel()
+        let result = vm.attributedContent(for: article)
+        #expect(!result.string.contains("alert"))
+        #expect(!result.string.contains("xss"))
+        #expect(result.string.contains("Safe"))
+    }
+
+    @Test("attributedContent returns empty for nil content")
+    @MainActor
+    func attributedContentEmpty() {
+        let context = CoreDataTestHelper.makeContext()
+        let article = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "Test",
+            link: "https://example.com",
+            published: Date()
+        )
+
+        let vm = ArticleDetailViewModel()
+        let result = vm.attributedContent(for: article)
+        #expect(result.length == 0)
+    }
+
+    @Test("attributedContent prefers content over summary")
+    @MainActor
+    func attributedContentPrefersContent() {
+        let context = CoreDataTestHelper.makeContext()
+        let article = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "Test",
+            link: "https://example.com",
+            published: Date()
+        )
+        article.content = "Full content"
+        article.summary = "Summary only"
+
+        let vm = ArticleDetailViewModel()
+        let result = vm.attributedContent(for: article)
+        #expect(result.string.contains("Full content"))
+        #expect(!result.string.contains("Summary only"))
+    }
+
+    @Test("attributedContent falls back to summary")
+    @MainActor
+    func attributedContentFallsBackToSummary() {
+        let context = CoreDataTestHelper.makeContext()
+        let article = CDArticle.create(
+            in: context,
+            id: "a1",
+            title: "Test",
+            link: "https://example.com",
+            published: Date()
+        )
+        article.summary = "Summary text here"
+
+        let vm = ArticleDetailViewModel()
+        let result = vm.attributedContent(for: article)
+        #expect(result.string.contains("Summary text here"))
+    }
 }

@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3636756C9C9F2C7B6DA4B712 /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A48BDA6BB02DDDF5252D6DD /* RichTextView.swift */; };
 		36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FE84A2A91578025301D2 /* FolderNameSheet.swift */; };
-		AAAAAA01DEADBEEF00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAA02DEADBEEF00000001 /* Assets.xcassets */; };
-		BBBBBB01DEADBEEF00000001 /* Syndicate.icon in Resources */ = {isa = PBXBuildFile; fileRef = BBBBBB02DEADBEEF00000001 /* Syndicate.icon */; };
 		37037A842F33ECD600245B95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37037A832F33ECD600245B95 /* SettingsView.swift */; };
+		54FFA2A46DD9570E6F6DA36B /* HTMLAttributedStringConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BDDAA1239CC115403F1FCA /* HTMLAttributedStringConverterTests.swift */; };
+		6A99B7C275F21DD6F6649CE0 /* HTMLSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75C6A7C3E5B349FC0C3C50 /* HTMLSanitizer.swift */; };
+		70A48A0308CDE02D22895C5A /* HTMLAttributedStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0DDE8B964CB4007B347D07 /* HTMLAttributedStringConverter.swift */; };
 		A1000001 /* SyndicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* SyndicateApp.swift */; };
 		A1000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* AppState.swift */; };
 		A1000003 /* KeyboardCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003 /* KeyboardCommands.swift */; };
@@ -96,7 +98,9 @@
 		A1000170C /* FeedParserServiceJSONParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000170C /* FeedParserServiceJSONParsingTests.swift */; };
 		A1000180 /* AddFeedSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000180 /* AddFeedSheetTests.swift */; };
 		A1000181 /* ContentViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000181 /* ContentViewLayoutTests.swift */; };
+		AAAAAA01DEADBEEF00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAA02DEADBEEF00000001 /* Assets.xcassets */; };
 		BA6AC78B436740B553E58F60 /* ImportOPMLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */; };
+		E49F5E8988E8D2EE78DEBE90 /* HTMLSanitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CE4E0BDF6A69EC817C9DC /* HTMLSanitizerTests.swift */; };
 		F70ECE0C1940A7B9106B1811 /* ImportOPMLWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA525B0747B598B613FDFCB3 /* ImportOPMLWizard.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,11 +122,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		202CE4E0BDF6A69EC817C9DC /* HTMLSanitizerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTMLSanitizerTests.swift; sourceTree = "<group>"; };
 		37037A832F33ECD600245B95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
-		AAAAAA02DEADBEEF00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BBBBBB02DEADBEEF00000001 /* Syndicate.icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Syndicate.icon; sourceTree = SOURCE_ROOT; };
 		4756FE84A2A91578025301D2 /* FolderNameSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FolderNameSheet.swift; sourceTree = "<group>"; };
+		6D0DDE8B964CB4007B347D07 /* HTMLAttributedStringConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTMLAttributedStringConverter.swift; sourceTree = "<group>"; };
 		71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLViewModel.swift; sourceTree = "<group>"; };
+		9A48BDA6BB02DDDF5252D6DD /* RichTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
 		A2000001 /* SyndicateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyndicateApp.swift; sourceTree = "<group>"; };
 		A2000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A2000003 /* KeyboardCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCommands.swift; sourceTree = "<group>"; };
@@ -212,6 +217,10 @@
 		A2100002 /* RSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2100003 /* RSSReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA525B0747B598B613FDFCB3 /* ImportOPMLWizard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLWizard.swift; sourceTree = "<group>"; };
+		AAAAAA02DEADBEEF00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBBBBB02DEADBEEF00000001 /* Syndicate.icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Syndicate.icon; sourceTree = SOURCE_ROOT; };
+		C8BDDAA1239CC115403F1FCA /* HTMLAttributedStringConverterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLAttributedStringConverterTests.swift; path = Utilities/HTMLAttributedStringConverterTests.swift; sourceTree = "<group>"; };
+		CE75C6A7C3E5B349FC0C3C50 /* HTMLSanitizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTMLSanitizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +249,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		577291694187B1E5667361E8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C8BDDAA1239CC115403F1FCA /* HTMLAttributedStringConverterTests.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		A7000000 = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +384,7 @@
 				A2000119 /* RetryPolicy.swift */,
 				A200011A /* ErrorLogger.swift */,
 				A200011B /* RefreshService.swift */,
+				CE75C6A7C3E5B349FC0C3C50 /* HTMLSanitizer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -375,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				A2000060 /* StringExtensions.swift */,
+				6D0DDE8B964CB4007B347D07 /* HTMLAttributedStringConverter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -392,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				A2000132 /* ArticleDetailView.swift */,
+				9A48BDA6BB02DDDF5252D6DD /* RichTextView.swift */,
 			);
 			path = ArticleDetail;
 			sourceTree = "<group>";
@@ -418,6 +438,7 @@
 				A7000023 /* ViewModels */,
 				A7000024 /* Services */,
 				A7000025 /* Views */,
+				577291694187B1E5667361E8 /* Utilities */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -479,6 +500,7 @@
 				A2000169 /* RSSReaderErrorTests.swift */,
 				A200016A /* RetryPolicyTests.swift */,
 				A200016B /* RefreshServiceTests.swift */,
+				202CE4E0BDF6A69EC817C9DC /* HTMLSanitizerTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -710,6 +732,9 @@
 				F70ECE0C1940A7B9106B1811 /* ImportOPMLWizard.swift in Sources */,
 				BA6AC78B436740B553E58F60 /* ImportOPMLViewModel.swift in Sources */,
 				36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */,
+				6A99B7C275F21DD6F6649CE0 /* HTMLSanitizer.swift in Sources */,
+				70A48A0308CDE02D22895C5A /* HTMLAttributedStringConverter.swift in Sources */,
+				3636756C9C9F2C7B6DA4B712 /* RichTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +777,8 @@
 				A1000180 /* AddFeedSheetTests.swift in Sources */,
 				A1000181 /* ContentViewLayoutTests.swift in Sources */,
 				A1000170 /* IntegrationTestsPlaceholder.swift in Sources */,
+				E49F5E8988E8D2EE78DEBE90 /* HTMLSanitizerTests.swift in Sources */,
+				54FFA2A46DD9570E6F6DA36B /* HTMLAttributedStringConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,8 +931,8 @@
 		AB000011 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_APPICON_NAME = Syndicate;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RSSReader/RSSReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -927,7 +954,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = "0.0.1-alpha";
+				MARKETING_VERSION = "0.0.2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syndicate.app;
 				PRODUCT_MODULE_NAME = RSSReader;
 				PRODUCT_NAME = Syndicate;
@@ -939,8 +966,8 @@
 		AB000012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_APPICON_NAME = Syndicate;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RSSReader/RSSReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -962,7 +989,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = "0.0.1-alpha";
+				MARKETING_VERSION = "0.0.2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syndicate.app;
 				PRODUCT_MODULE_NAME = RSSReader;
 				PRODUCT_NAME = Syndicate;

@@ -55,6 +55,11 @@ struct SettingsView: View {
                 .tabItem {
                     Label("Cleanup", systemImage: "trash")
                 }
+
+            aboutTab
+                .tabItem {
+                    Label("About", systemImage: "info.circle")
+                }
         }
         .frame(width: 500, height: 300)
         .onAppear {
@@ -188,6 +193,40 @@ struct SettingsView: View {
             .pickerStyle(.menu)
             .frame(width: 200)
         }
+    }
+
+    // MARK: - About Tab
+
+    private var aboutTab: some View {
+        VStack(spacing: 16) {
+            Spacer()
+
+            Image(nsImage: NSApp.applicationIconImage)
+                .resizable()
+                .frame(width: 80, height: 80)
+
+            Text("Syndicate")
+                .font(.title)
+                .fontWeight(.bold)
+
+            Text("Version \(appVersion)")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+
+            Text("A native RSS reader for macOS")
+                .font(.caption)
+                .foregroundColor(.secondary)
+
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private var appVersion: String {
+        let info = Bundle.main.infoDictionary
+        let version = info?["CFBundleShortVersionString"] as? String ?? "0.0.2"
+        let build = info?["CFBundleVersion"] as? String ?? "1"
+        return "\(version) (\(build))"
     }
 
     // MARK: - Data Management

@@ -59,6 +59,26 @@ final class ArticleDetailViewModel: ObservableObject {
         return raw.htmlToFormattedText()
     }
 
+    /// Returns the article body as rich text NSAttributedString.
+    ///
+    /// Sanitizes HTML content for security and converts to
+    /// NSAttributedString with formatting. Prefers `content` over `summary`.
+    func attributedContent(
+        for article: CDArticle
+    ) -> NSAttributedString {
+        let raw = article.content
+            ?? article.summary
+            ?? ""
+
+        // Sanitize HTML to remove dangerous elements
+        let sanitizer = HTMLSanitizer()
+        let safeHTML = sanitizer.sanitize(raw)
+
+        // Convert to attributed string with formatting
+        let converter = HTMLAttributedStringConverter()
+        return converter.convert(safeHTML)
+    }
+
     // MARK: - Actions
 
     /// Marks the article as read in Core Data if it is
