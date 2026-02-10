@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		36D917EE3D5BD7D17D8BBB2F /* FolderNameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FE84A2A91578025301D2 /* FolderNameSheet.swift */; };
 		AAAAAA01DEADBEEF00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAA02DEADBEEF00000001 /* Assets.xcassets */; };
+		BBBBBB01DEADBEEF00000001 /* Syndicate.icon in Resources */ = {isa = PBXBuildFile; fileRef = BBBBBB02DEADBEEF00000001 /* Syndicate.icon */; };
 		37037A842F33ECD600245B95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37037A832F33ECD600245B95 /* SettingsView.swift */; };
 		A1000001 /* SyndicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* SyndicateApp.swift */; };
 		A1000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* AppState.swift */; };
@@ -119,6 +120,7 @@
 /* Begin PBXFileReference section */
 		37037A832F33ECD600245B95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
 		AAAAAA02DEADBEEF00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBBBBB02DEADBEEF00000001 /* Syndicate.icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Syndicate.icon; sourceTree = SOURCE_ROOT; };
 		4756FE84A2A91578025301D2 /* FolderNameSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FolderNameSheet.swift; sourceTree = "<group>"; };
 		71580E74704C862B24CED8D4 /* ImportOPMLViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLViewModel.swift; sourceTree = "<group>"; };
 		A2000001 /* SyndicateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyndicateApp.swift; sourceTree = "<group>"; };
@@ -206,7 +208,7 @@
 		A2000170C /* FeedParserServiceJSONParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParserServiceJSONParsingTests.swift; sourceTree = "<group>"; };
 		A2000180 /* AddFeedSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedSheetTests.swift; sourceTree = "<group>"; };
 		A2000181 /* ContentViewLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewLayoutTests.swift; sourceTree = "<group>"; };
-		A2100001 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2100001 /* Syndicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syndicate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2100002 /* RSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2100003 /* RSSReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA525B0747B598B613FDFCB3 /* ImportOPMLWizard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportOPMLWizard.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				A7000015 /* Utilities */,
 				A2000080 /* RSSReader.xcdatamodeld */,
 				AAAAAA02DEADBEEF00000001 /* Assets.xcassets */,
+				BBBBBB02DEADBEEF00000001 /* Syndicate.icon */,
 			);
 			path = RSSReader;
 			sourceTree = "<group>";
@@ -283,7 +286,7 @@
 		A7000004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A2100001 /* RSSReader.app */,
+				A2100001 /* Syndicate.app */,
 				A2100002 /* RSSReaderTests.xctest */,
 				A2100003 /* RSSReaderUITests.xctest */,
 			);
@@ -507,6 +510,7 @@
 				A9000001 /* Sources */,
 				A6000001 /* Frameworks */,
 				AA000001 /* Resources */,
+				CCCCCC01DEADBEEF00000001 /* Compile Tahoe Icon */,
 			);
 			buildRules = (
 			);
@@ -517,7 +521,7 @@
 				AC000001 /* FeedKit */,
 			);
 			productName = RSSReader;
-			productReference = A2100001 /* RSSReader.app */;
+			productReference = A2100001 /* Syndicate.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A5000002 /* RSSReaderTests */ = {
@@ -626,6 +630,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCCCCC01DEADBEEF00000001 /* Compile Tahoe Icon */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Tahoe Icon";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Compile Syndicate.icon for macOS Tahoe Liquid Glass\nif [ -d \"${SRCROOT}/Syndicate.icon\" ]; then\n    TEMP_ICON_DIR=\"${TEMP_DIR}/SyndicateIcon\"\n    mkdir -p \"${TEMP_ICON_DIR}\"\n    \n    xcrun actool \"${SRCROOT}/Syndicate.icon\" \\\n        --compile \"${TEMP_ICON_DIR}\" \\\n        --app-icon Syndicate \\\n        --platform macosx \\\n        --minimum-deployment-target ${MACOSX_DEPLOYMENT_TARGET} \\\n        --output-partial-info-plist \"${TEMP_ICON_DIR}/Info.plist\"\n    \n    # Copy the compiled icon assets using install to bypass restrictions\n    RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\n    if [ -f \"${TEMP_ICON_DIR}/Assets.car\" ]; then\n        rm -f \"${RESOURCES_DIR}/Assets.car\" 2>/dev/null || true\n        install -m 644 \"${TEMP_ICON_DIR}/Assets.car\" \"${RESOURCES_DIR}/Assets.car\"\n    fi\n    if [ -f \"${TEMP_ICON_DIR}/Syndicate.icns\" ]; then\n        rm -f \"${RESOURCES_DIR}/Syndicate.icns\" 2>/dev/null || true\n        install -m 644 \"${TEMP_ICON_DIR}/Syndicate.icns\" \"${RESOURCES_DIR}/Syndicate.icns\"\n    fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9000001 /* Sources */ = {
@@ -791,7 +817,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -856,7 +882,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -879,6 +905,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Syndicate;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RSSReader/RSSReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -893,6 +920,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSReader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Syndicate;
+				INFOPLIST_KEY_CFBundleName = Syndicate;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -901,7 +929,8 @@
 				);
 				MARKETING_VERSION = "0.0.1-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syndicate.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = RSSReader;
+				PRODUCT_NAME = Syndicate;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -911,6 +940,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Syndicate;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RSSReader/RSSReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -925,6 +955,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSReader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Syndicate;
+				INFOPLIST_KEY_CFBundleName = Syndicate;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -933,7 +964,8 @@
 				);
 				MARKETING_VERSION = "0.0.1-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syndicate.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = RSSReader;
+				PRODUCT_NAME = Syndicate;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -953,7 +985,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSSReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RSSReader";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Syndicate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Syndicate";
 			};
 			name = Debug;
 		};
@@ -971,7 +1003,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSSReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RSSReader";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Syndicate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Syndicate";
 			};
 			name = Release;
 		};

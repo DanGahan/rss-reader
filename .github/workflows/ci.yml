@@ -22,11 +22,15 @@ jobs:
 
       - name: Test
         run: |
+          # Skip UI tests in CI - they require a display context that GitHub Actions
+          # runners don't fully support, causing hangs. UI tests should be run locally.
           xcodebuild test \
             -scheme RSSReader \
             -destination 'platform=macOS' \
+            -skip-testing:RSSReaderUITests \
             -enableCodeCoverage YES \
             -resultBundlePath TestResults.xcresult
+        timeout-minutes: 15
 
       - name: Coverage Report
         run: |

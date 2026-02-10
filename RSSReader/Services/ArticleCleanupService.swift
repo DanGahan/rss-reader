@@ -90,29 +90,63 @@ struct ArticleCleanupService {
 // MARK: - Private Helpers
 
 private extension ArticleCleanupService {
+    /// Returns true if the store supports batch operations.
+    /// In-memory stores do NOT support batch delete.
+    func supportsBatchOperations(
+        _ context: NSManagedObjectContext
+    ) -> Bool {
+        guard let coordinator = context
+            .persistentStoreCoordinator
+        else { return false }
+
+        return coordinator.persistentStores.allSatisfy {
+            $0.type == NSSQLiteStoreType
+        }
+    }
+
     /// Deletes all read articles added before the
-    /// cutoff date using batch delete for performance.
+    /// cutoff date. Uses batch delete for SQLite stores,
+    /// falls back to regular delete for in-memory stores.
     func deleteByAge(
         before cutoffDate: Date,
         in context: NSManagedObjectContext
     ) throws -> Int {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> =
+        let fetchRequest: NSFetchRequest<CDArticle> =
             CDArticle.fetchRequest()
         fetchRequest.predicate = NSPredicate(
             format: "isRead == YES AND dateAdded < %@",
             cutoffDate as NSDate
         )
 
-        let batchDelete = NSBatchDeleteRequest(
-            fetchRequest: fetchRequest
-        )
-        batchDelete.resultType = .resultTypeCount
+        // Use batch delete only for SQLite stores
+        if supportsBatchOperations(context) {
+            return try batchDelete(
+                fetchRequest: fetchRequest, in: context
+            )
+        }
 
-        let result = try context.execute(batchDelete)
+        // Regular delete for in-memory stores
+        let articles = try context.fetch(fetchRequest)
+        for article in articles {
+            context.delete(article)
+        }
+        return articles.count
+    }
+
+    /// Performs batch delete (only call for SQLite stores).
+    private func batchDelete(
+        fetchRequest: NSFetchRequest<CDArticle>,
+        in context: NSManagedObjectContext
+    ) throws -> Int {
+        // swiftlint:disable:next force_cast
+        let request = fetchRequest as! NSFetchRequest<NSFetchRequestResult>
+        let batchRequest = NSBatchDeleteRequest(fetchRequest: request)
+        batchRequest.resultType = .resultTypeCount
+
+        let result = try context.execute(batchRequest)
             as? NSBatchDeleteResult
         let deletedCount = result?.result as? Int ?? 0
 
-        // Merge changes into context to keep UI in sync
         if deletedCount > 0 {
             NSManagedObjectContext.mergeChanges(
                 fromRemoteContextSave: [
@@ -121,7 +155,6 @@ private extension ArticleCleanupService {
                 into: [context]
             )
         }
-
         return deletedCount
     }
 
@@ -147,15 +180,16 @@ private extension ArticleCleanupService {
         return totalDeleted
     }
 
-    /// Deletes excess read articles for a single feed using
-    /// batch delete for performance.
+    /// Deletes excess read articles for a single feed.
+    /// Uses batch delete for SQLite, regular delete for
+    /// in-memory stores.
     func deleteExcess(
         for feed: CDFeed,
         maxCount: Int,
         in context: NSManagedObjectContext
     ) throws -> Int {
-        // First, fetch only IDs to minimize memory usage
-        let countRequest = CDArticle.fetchRequest()
+        let countRequest: NSFetchRequest<CDArticle> =
+            CDArticle.fetchRequest()
         countRequest.predicate = NSPredicate(
             format: "feed == %@ AND isRead == YES",
             feed
@@ -165,30 +199,47 @@ private extension ArticleCleanupService {
                 key: "dateAdded", ascending: false
             )
         ]
-        countRequest.propertiesToFetch = ["id"]
-        countRequest.resultType = .managedObjectIDResultType
 
-        let objectIDs = try context.fetch(countRequest)
-            as? [NSManagedObjectID] ?? []
+        let articles = try context.fetch(countRequest)
 
-        guard objectIDs.count > maxCount else {
+        guard articles.count > maxCount else {
             return 0
         }
 
-        // Get IDs of articles to delete (all beyond maxCount)
-        let idsToDelete = Array(objectIDs.dropFirst(maxCount))
+        // Get articles to delete (all beyond maxCount)
+        let articlesToDelete = Array(
+            articles.dropFirst(maxCount)
+        )
 
-        guard !idsToDelete.isEmpty else { return 0 }
+        guard !articlesToDelete.isEmpty else { return 0 }
 
-        // Use batch delete with specific object IDs
+        // Use batch delete only for SQLite stores
+        if supportsBatchOperations(context) {
+            let objectIDs = articlesToDelete.map {
+                $0.objectID
+            }
+            return try batchDeleteByIDs(objectIDs, in: context)
+        }
+
+        // Regular delete for in-memory stores
+        for article in articlesToDelete {
+            context.delete(article)
+        }
+        return articlesToDelete.count
+    }
+
+    /// Performs batch delete by object IDs.
+    private func batchDeleteByIDs(
+        _ objectIDs: [NSManagedObjectID],
+        in context: NSManagedObjectContext
+    ) throws -> Int {
         let batchDelete = NSBatchDeleteRequest(
-            objectIDs: idsToDelete
+            objectIDs: objectIDs
         )
         batchDelete.resultType = .resultTypeCount
 
         let result = try context.execute(batchDelete)
             as? NSBatchDeleteResult
-
-        return result?.result as? Int ?? idsToDelete.count
+        return result?.result as? Int ?? objectIDs.count
     }
 }

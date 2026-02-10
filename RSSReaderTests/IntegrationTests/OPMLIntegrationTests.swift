@@ -9,10 +9,12 @@ import CoreData
 import XCTest
 @testable import RSSReader
 
+// swiftlint:disable implicitly_unwrapped_optional
 final class OPMLIntegrationTests: XCTestCase {
     var persistence: PersistenceController!
     var context: NSManagedObjectContext!
     var opmlService: OPMLService!
+// swiftlint:enable implicitly_unwrapped_optional
 
     override func setUp() {
         super.setUp()
@@ -30,7 +32,7 @@ final class OPMLIntegrationTests: XCTestCase {
 
     // MARK: - Import -> Create -> Verify
 
-    // swiftlint:disable line_length
+    // swiftlint:disable:next function_body_length
     func testImportOPMLCreatesFeedsAndFolders() throws {
         let opmlContent = """
         <?xml version="1.0" encoding="UTF-8"?>
@@ -45,7 +47,6 @@ final class OPMLIntegrationTests: XCTestCase {
         </body>
         </opml>
         """
-    // swiftlint:enable line_length
 
         guard let data = opmlContent.data(using: .utf8) else {
             XCTFail("Failed to create OPML data")
@@ -109,6 +110,7 @@ final class OPMLIntegrationTests: XCTestCase {
 
     // MARK: - Export -> Re-Import Roundtrip
 
+    // swiftlint:disable:next function_body_length
     func testExportAndReimportRoundtrip() throws {
         // Create test data
         let folder = CDFolder(context: context)
@@ -138,7 +140,10 @@ final class OPMLIntegrationTests: XCTestCase {
         XCTAssertFalse(exportedData.isEmpty)
 
         // Verify export contains expected content
-        let exportedString = String(data: exportedData, encoding: .utf8)!
+        guard let exportedString = String(data: exportedData, encoding: .utf8) else {
+            XCTFail("Failed to convert exported data to string")
+            return
+        }
         XCTAssertTrue(exportedString.contains("Syndicate Export"))
         XCTAssertTrue(exportedString.contains("Test Feed 1"))
         XCTAssertTrue(exportedString.contains("Unfiled Feed"))
